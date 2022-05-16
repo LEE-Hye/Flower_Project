@@ -75,6 +75,31 @@
 </head>
 
 <body>
+    <header id="header" class="alt">
+			<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+			<nav>
+				<c:choose>			
+					<c:when test = "${empty loginM}">
+						<a href="#menu">로그인</a>
+					</c:when>
+					<c:otherwise>
+					<!-- 단순 if문 -->
+					<c:if test="${loginM.email eq 'admin'}">
+						<a href = "select.jsp">전체회원정보</a>
+					</c:if>
+						<a href = "LogoutCon">로그아웃</a>
+						<a href = "update.jsp">개인정보수정</a>
+					</c:otherwise>
+				</c:choose>
+
+				<!-- 로그인 후 Logout.jsp로 이동할 수 있는'로그아웃'링크와 '개인정보수정'링크를 출력하시오. -->
+			</nav><%
+				%>
+		</header>
+    
+    
+    
+    
     
 <!-- Styleswitcher
 ================================================== -->
