@@ -119,7 +119,7 @@
     <!-- Start Navigation Section -->
     <div class="navigation">
         
-        <div class="navbar navbar-default navbar-top">
+        <div class= "navbar navbar-default navbar-top">
             <div class="navbar-header">
                 <!-- Stat Toggle Nav Link For Mobiles -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
