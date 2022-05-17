@@ -1,15 +1,15 @@
 window.onload = function() {
     drawMap('#container');
-    drawMap2('#container2');
+    drawMap2('#container2')
 };
 
 //지도 그리기
 function drawMap(target) {
-    var width = 700; //지도의 넓이
-    var height = 800; //지도의 높이
-    var initialScale = 5450; //확대시킬 값
-    var initialX = -11800; //초기 위치값 X
-    var initialY = 3900; //초기 위치값 Y
+    var width = 500; //지도의 넓이
+    var height = 700; //지도의 높이
+    var initialScale = 5500; //확대시킬 값
+    var initialX = -12000; //초기 위치값 X
+    var initialY = 4050; //초기 위치값 Y
     var labels;
 
     var projection = d3.geo
@@ -100,12 +100,13 @@ function drawMap(target) {
     }
 }
 
+
 function drawMap2(target) {
-    var width = 700; //지도의 넓이
-    var height = 800; //지도의 높이
-    var initialScale = 5450; //확대시킬 값
-    var initialX = -11800; //초기 위치값 X
-    var initialY = 3900; //초기 위치값 Y
+    var width = 500; //지도의 넓이
+    var height = 700; //지도의 높이
+    var initialScale = 5500; //확대시킬 값
+    var initialX = -12000; //초기 위치값 X
+    var initialY = 4050; //초기 위치값 Y
     var labels;
 
     var projection = d3.geo

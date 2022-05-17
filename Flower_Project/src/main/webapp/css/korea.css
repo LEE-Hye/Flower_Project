@@ -2,9 +2,17 @@
 
 #container {
     width: 500px;
-    min-height: 500px;
+    min-height: 700px;
     float: left;
+    margin: 15px 30px;
     
+}
+#container2 {
+    width: 500px;
+    min-height: 700px;
+    float: left;
+    margin: 15px 30px;
+    height: auto;
 }
 #states path {
     fill: #585858;
