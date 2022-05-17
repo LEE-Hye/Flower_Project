@@ -157,15 +157,15 @@
     <!-- End Navigation Section -->
     </div>
 
-    <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
+    <form action="JoinCon" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
                                                                                                
         <h2>회원가입</h2>
         <div class="textForm">
-          <input name="loginId" type="text" class="id" placeholder="아이디">
+          <input name="id" type="text" class="id" placeholder="아이디">
           </input>
         </div>
         <div class="textForm">
-          <input name="loginPw" type="password" class="pw" placeholder="비밀번호">
+          <input name="pw" type="password" class="pw" placeholder="비밀번호">
         </div>
          <div class="textForm">
           <input name="loginPwConfirm" type="password" class="pw" placeholder="비밀번호 확인">

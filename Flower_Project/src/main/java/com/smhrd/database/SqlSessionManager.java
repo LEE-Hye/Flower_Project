@@ -11,22 +11,22 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 // SqlSessionFactory 생성
 
 public class SqlSessionManager {
-	
-	   public static SqlSessionFactory sqlSession;
+   
+      public static SqlSessionFactory sqlSession;
 
-	   static {
-	      String resource = "com/smhrd/database/mybatis-config.xml";
-	      Reader reader;
-	      try {
-	         reader = Resources.getResourceAsReader(resource);
-	         sqlSession = new SqlSessionFactoryBuilder().build(reader);
-	      } catch (IOException e) {
-	         e.printStackTrace();
-	      }
-	   }
-	   public static SqlSessionFactory getSqlSession() {
-	      return sqlSession;
-	   }
-	   
-	   
+      static {
+         String resource = "com/smhrd/database/mybatis-config.xml";
+         Reader reader;
+         try {
+            reader = Resources.getResourceAsReader(resource);
+            sqlSession = new SqlSessionFactoryBuilder().build(reader);
+         } catch (IOException e) {
+            e.printStackTrace();
+         }
+      }
+      public static SqlSessionFactory getSqlSession() {
+         return sqlSession;
+      }
+      
+      
 }
