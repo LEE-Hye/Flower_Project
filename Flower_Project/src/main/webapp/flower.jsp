@@ -100,10 +100,10 @@
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                        <a href = "login.html">
+                        <a href = "login.jsp">
                             <li>로그인</li>
                         </a>
-                        <a href = "join.html">
+                        <a href = "join.jsp">
                             <li>회원가입</li>
                         </a>
                     </ul>
@@ -132,20 +132,20 @@
                 <!-- 네비게이션 시작 -->
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="main.html">Home</a>
+                        <a href="main.jsp">Home</a>
                     </li>
                     <li>
-                        <a class="active" href="flower.html">꽃도감</a>
+                        <a class="active" href="flower.jsp">꽃도감</a>
                     </li>
                     <li>
-                        <a href="select.html">축제/나들이 조회</a>
+                        <a href="select.jsp">축제/나들이 조회</a>
                     </li>
                     
                     <li>
-                        <a href="flower_rec.html">꽃레시피</a>
+                        <a href="flower_rec.jsp">꽃레시피</a>
                     </li>
                     <li>
-                        <a href="post.html">커뮤니티</a>
+                        <a href="post.jsp">커뮤니티</a>
                     </li>
                 <!-- 네비게이션 끝 -->
             </div>
