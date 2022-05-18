@@ -159,11 +159,11 @@
     <div class="wrapper">
         <h1>LOGIN</h1>
         <div class="id">
-            <input type="text" name ="id" text="id" id="id" placeholder="ID"><br>
-        </div>
+            <input type="text" name ="id" text="id" id="id" placeholder="ID">
+        </div><br>
         <div class="pw">
-            <input type="text" name ="pw" text="pw" id="pw" placeholder="Password"><br><br>
-        </div>
+            <input type="text" name ="pw" text="pw" id="pw" placeholder="Password">
+        </div><br><br>
         <div class="submit_button">
             <input type="submit" value="L o g   I n" class="btn"/>
         </div>
