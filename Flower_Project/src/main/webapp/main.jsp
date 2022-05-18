@@ -38,7 +38,7 @@
     <!-- Construction CSS Styles  -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
-    <!-- Default Color -->
+    <!-- Default Color --> 
     <link rel="stylesheet" type="text/css" href="css/colors/light-red.css">
     
     <!-- Colors CSS -->
