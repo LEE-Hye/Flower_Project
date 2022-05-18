@@ -155,7 +155,7 @@
     </div>
     <!-- End Navigation Section -->
     </div>
-    <form action="IdPwCheck" name="idfindscreen" method = "POST"onsubmit="return id_search()">
+    <form action="IdPwCheck" name="idfindscreen" method = "POST" onsubmit="return id_search()">
          <div class = "wrapper">
             <h3>아이디/비밀번호 확인</h3><br><br>
          
@@ -178,53 +178,11 @@
     </div>
  </form>
     
-    <!-- <form action="IdPwCkCon.jsp" method="post">
-    <div class="wrapper">
-        <h3>아이디/비밀번호 찾기</h3>
-        <br>
-        <div class="name">
-            <input type="text" name ="name" text="name" id="name" placeholder="등록한 이름"><br><br>
-        </div><br><br>
-        <div class="birth">
-            <input type="date" name ="birth" text="birth" id="birth" placeholder="등록한 생년월일"><br><br>
-        </div><br><br><br>
-        
-        <div class="submit_button"><input type="submit" name ="enter"  value="찾 기" class="btn" onclick="id_search()"/></div><br>
-        <div class="submit_button"><input type="submit" name ="cancle" value="취 소" class="btn" onclick=""/></div>
-      <input type="button" name="enter" value="찾기"  onClick="id_search()">
-      <input type="button" name="cancle" value="취소" onClick="history.back()">
-       
-        </form> -->
-   <!-- <div>
-         <div class = "search-title">
-            <h3>아이디 찾기</h3>
-         </div>
-      <section class = "form-search">
-         <div class = "find-name">
-            <label>이름</label>
-            <input type="text" name="member_name" class = "btn-name" placeholder = "등록한 이름">
-         <br>
-         </div>
-         <div class = "find-phone">
-            <label>생년월일</label>
-            <input type="text" onKeyup = "addHypen(this);" name="member_phone" class = "btn-phone" placeholder = "휴대폰번호를 '-'없이 입력">
-         </div>
-         <br>
-   </section>
-   <div class ="btnSearch">
-      <input type="button" name="enter" value="찾기"  onClick="id_search()">
-      <input type="button" name="cancle" value="취소" onClick="history.back()">
-    </div>
- </form>
- </div>
-  -->
+  
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br>
     <script type="text/javascript">
-    frm.method = "post";
-    frm.action = "FindIdResult.jsp"; //넘어간화면
-    frm.submit(); 
-    }
+    
     function id_search(){
        if(!document.idfindscreen.name.value){
           alert("이름을 입력해주세요");

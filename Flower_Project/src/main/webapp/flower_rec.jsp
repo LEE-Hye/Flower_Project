@@ -145,7 +145,7 @@
             </div>
         </div>
         
-    <!-- Start Testimonial Page -->
+        <!-- Start Testimonial Page -->
     <div class="row">
         <div class="col-md-4 col-sm-6">
             <div class="testimonial-page">
@@ -195,9 +195,14 @@
         <div class="col-md-4 col-sm-6">
             <div class="testimonial-page">
                 <div class="testimonial">
-                    <img src="images/team/manage-2.png" class="img-responsive" alt="">
-                    <h4>John Doe</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                    <img src="https://mblogthumb-phinf.pstatic.net/20140307_110/tongkuen_13941879262213lO1a_JPEG/139408792444_20140307.jpg?type=w2" class="img-responsive" alt="">
+                    <h2>월남꽃쌈</h2>
+                    <h5>라이스페이퍼10장, 식용꽃 20g, 새우 10개, 파인애플 100g, 오이 100g, 붉은 피망 100g, 붉은 양파 50g, 고수 30g, 양상추 50g, 타이칠리소스 50g</h5>
+                    <p>① 라이스페이퍼를 찬물에 담갔다가 빼서 편다.</p>
+                    <p>② 새우는 끓는 물에 10초 정도 데친다.</p>
+                    <p>③ 그 위에 양상추, 붉은 양파, 오이, 붉은 피망, 파인애플, 새우, 고수, 꽃 순서대로 올린다.</p>
+                    <p>④ 찢어지지 않도록 살살 만 뒤 접시에 담는다.</p>
+                    <p>⑤ 타이칠리소스 재료를 다 섞어 소스를 만든다.</p>
                 </div>
             </div>
         </div>
@@ -205,24 +210,35 @@
         <div class="col-md-4 col-sm-6">
             <div class="testimonial-page">
                 <div class="testimonial">
-                    <img src="images/team/team-4.jpg" class="img-responsive" alt="">
-                    <h4>John Doe</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                    <img src="https://mblogthumb-phinf.pstatic.net/20140307_230/tongkuen_1394187926874UMbmt_JPEG/139408792512_20140307.jpg?type=w2" class="img-responsive" alt="">
+                    <h2>유채꽃 김밥롤</h2>
+                    <h5>유채꽃 30g, 게살 30g, 마요네즈 10g, 날치알 10g, 표고버섯 20g, 단무지 20g, 김 1장, 산마 5g, 소금 약간, 다시마 우린 물 약간, 밥 200g</h5>
+                    <p>① 유채꽃을 다듬어서 뜨거운 물에 소금을 조금 넣고 살짝 데친다.</p>
+                    <p>② 게살, 마요네즈 소량, 산마 소량을 섞고 치댄다.</p>
+                    <p>③ 단무지는 다시마 우린 물에 10분간 재운다</p>
+                    <p>④ 표고버섯은 채 썬 뒤에 데친다.</p>
+                    <p>⑤ 4를 간장 1큰술, 설탕 1큰술, 간 마늘 1작은술, 참기름 1작은술 넣어 무친다.</p>
+                    <p>⑥ 김에 2를 바르고 날치알을 뿌린 뒤 준비한 모든 재료를 넣고 만다. </p>
+                    <p>⑦ 6을 먹기 좋게 자른다. </p>
                 </div>
             </div>
         </div>
-        
+                
         <div class="col-md-4 col-sm-6">
             <div class="testimonial-page">
                 <div class="testimonial">
-                    <img src="images/team/manage-3.png" class="img-responsive" alt="">
-                    <h4>John Doe</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+                    <img src="https://mblogthumb-phinf.pstatic.net/20140307_5/tongkuen_1394187927138x1VAN_JPEG/139408792572_20140307.jpg?type=w2" class="img-responsive" alt="">
+                    <h2>화전</h2>
+                    <h5>찹쌀가루 1㎏, 소금 약간, 설탕 약간, 생수 400㎖, 진달래 등의 식용꽃들 약간, 시럽 약간</h5>
+                    <p>① 찹쌀가루에 소금과 생수를 넣고 걸쭉하게 반죽 덩이를 만든다.</p>
+                    <p>② 달궈진 팬에 오일을 적당히 두르고 반죽을 한입 크기로 잘라 둥글게 펴서 전을 부친다.</p>
+                    <p>③ 완전히 익으면 뒤집고 식용꽃을 얹어 살짝 한번 더 뒤집어 익힌다.</p>
+                    <p>④ 접시에 설탕을 고루 뿌리고 화전을 얹고 시럽과 함께 낸다.</p>
                 </div>
             </div>
         </div>
-        
         
     </div>
+    <!-- End Testimonial Page -->
 </body>
 </html>

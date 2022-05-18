@@ -21,29 +21,28 @@ public class JoinCon extends HttpServlet {
     * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
     */
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      // TODO Auto-generated method stub
-      System.out.println("[JOINCON]");
-      request.setCharacterEncoding("UTF-8");
       
-      String id = request.getParameter("id");
-      String pw = request.getParameter("pw");
-      String name = request.getParameter("name");
-      String birth = request.getParameter("birth");
-      
-      MemberVO m_vo = new MemberVO(id,pw,name,birth);
-      MemberDAO dao = new MemberDAO();
-      int cnt = dao.insertMember(m_vo);
-      System.out.println("1");
-      
-      if(cnt>0) {
-         System.out.println("회원가입 성공");
-         RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
-         request.setAttribute("JoinId", id);
-         rd.forward(request, response);
-      }else {
-         System.out.println("회원가입 실패");
-         response.sendRedirect("main.jsp");
-      }
+	   System.out.println("[JOINCON]");
+	      request.setCharacterEncoding("UTF-8");
+	      
+	      String id = request.getParameter("id");
+	      String pw = request.getParameter("pw");
+	      String name = request.getParameter("name");
+	      String birth = request.getParameter("birth");
+	      
+	      MemberVO m_vo = new MemberVO(id,pw,name,birth);
+	      MemberDAO dao = new MemberDAO();
+	      int cnt = dao.insertMember(m_vo);
+	      
+	      if(cnt>0) {
+	         System.out.println("회원가입 성공");
+	         RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
+	         request.setAttribute("JoinId", id);
+	         rd.forward(request, response);
+	      }else {
+	         System.out.println("회원가입 실패");
+	         response.sendRedirect("main.jsp");
+	      }
       
       
    }

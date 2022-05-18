@@ -150,28 +150,100 @@
     <!-- End Navigation Section -->
     </div>
 
-    <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
-                                                                                               
-        <h2>회원가입</h2>
-        <div class="textForm">
-          <input name="loginId" type="text" class="id" placeholder="아이디">
-          </input>
-        </div>
-        <div class="textForm">
-          <input name="loginPw" type="password" class="pw" placeholder="비밀번호">
-        </div>
-         <div class="textForm">
-          <input name="loginPwConfirm" type="password" class="pw" placeholder="비밀번호 확인">
-        </div>
-        <div class="textForm">
-          <input name="name" type="text" class="name" placeholder="이름">
-        </div>
-         <div class="textForm">
-          <input name="birth" type="text" class="birth" placeholder="생년월일 6자리">
-        </div>
-        <input type="submit" class="btn" value="J O I N"/>
-      </form>
+    <form action="JoinCon" method="POST" name="joinform" class="joinForm"
+      onsubmit="return checkJoin();">
+
+      <h2>회원가입</h2>
+      <div class="textForm">
+         <input name="id" type="text" class="id" id="userid" placeholder="아이디">
+      </div>
+
+      <button class="btn btn-primary" onclick="idCheck()" type="button">중복체크</button>
+
+      <div class="textForm">
+         <input name="pw" type="password" class="pw" id="pw1"
+            placeholder="비밀번호">
+      </div>
+      <div class="textForm">
+         <input name="loginPwConfirm" type="password" class="pw" id="pw2"
+            placeholder="비밀번호 확인">
+      </div>
+      <div class="textForm">
+         <input name="name" type="text" class="name" placeholder="이름">
+      </div>
+      <div class="textForm">
+         <input name="birth" type="date" class="birth" placeholder="생년월일">
+      </div>
+      <input type="submit" class="btn" value="J O I N" />
+   </form>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+    
+      var inputbotton = 0
+   
+       function idCheck(){
+         let userid = $("#userid").val()
+
+         $.ajax({
+            data : {
+               'userid' : userid
+            },
+            url : 'IdCheckCon',
+            type : 'get',
+            contentType : 'application/json; charset=UTF-8',
+            dataType : 'text',
+            success : function(data) {
+               if (data == 'true') {
+                  inputbotton = 1
+                  alert("사용할 수 있는 아이디입니다.")
+                  $("#userid").val(userid)
+                  
+               } else {
+                  alert("사용할 수 없는 아이디입니다.")
+                  $("#userid").val("")
+               }
+            },
+            error : function(data) { 
+               alert("통신실패!")
+            }
+         })
+
+      }
+
+      function checkJoin() {
+         if (!document.joinform.id.value) {
+            alert("ID를 입력하세요")
+            return false;
+         }
+         if(inputbotton == 0){
+            alert("중복체크를 하세요")
+            return false;
+         }
+         if (!document.joinform.pw.value) {
+            alert("비밀번호를 입력하세요")
+            return false;
+         }
+         if (document.joinform.pw.value != document.joinform.loginPwConfirm.value) {
+            alert("Password가 서로 다릅니다")
+            return false;
+         }
+         if (!document.joinform.name.value) {
+            alert("이름을 입력하세요")
+            return false;
+         }
+         if (!document.joinform.birth.value) {
+            alert("생년월일을 입력하세요")
+            return false;
+         }
+
+      }
+   </script>
+    
+    
+    
+    
 </body>
 </html>

@@ -1,9 +1,16 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import = "com.smhrd.domain.MemberVO" %>
+<%@ page import = "com.smhrd.domain.MemberDAO" %>
+<%@ page import = "java.util.List" %>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 <head>
-<meta charset="utf-8" />
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <meta charset="utf-8" />
     <title>koreaMap</title>
     <link rel="stylesheet" href="css/korea.css" />
 
@@ -70,8 +77,12 @@
     <script src="js/supersubs.js"></script>
     <script src="js/styleswitcher.js"></script>
     <script src="js/script.js"></script>
+    
 </head>
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/korea.js"></script>
 <body>
+
 <!-- Start Loader -->   
 <div id="loader">
     <div class="spinner">
@@ -89,7 +100,7 @@
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div class="logo-img">
-                    <a href="main.jsp"><img src="images/client/5055151.jpg" class="img-responsive" id="main_pic"></a>
+                    <a href="#"><img src="images/client/11d1.jpg" class="img-responsive" alt=""></a>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
@@ -140,7 +151,7 @@
                         <a href="flower_rec.jsp">꽃레시피</a>
                     </li>
                     <li>
-                        <a href="post_view.jsp">커뮤니티</a>
+                        <a href="post.jsp">커뮤니티</a>
                     </li>
                 <!-- 네비게이션 끝 -->
             </div>
@@ -149,30 +160,39 @@
     </div>
     <!-- End Navigation Section -->
     </div>
-
-    <form action="LoginCon" method="post">
-    <div class="wrapper">
-        <h1>LOGIN</h1>
-        <div class="id">
-            <input type="text" name ="id" text="id" id="id" placeholder="ID"><br>
-        </div>
-        <div class="pw">
-            <input type="password" name ="pw" text="pw" id="pw" placeholder="Password"><br><br>
-        </div>
-        <div class="submit_button">
-            <input type="submit" value="L o g   I n" class="btn"/>
-        </div>
-        <div>
-            <div class="join_member">
-                <a href="join.jsp">회원가입</a>
-            <div>
-        </div>
-        <div>
-            <div class="find">
-                <a href="idpwck.jsp">아이디/비밀번호 찾기</a>
-            </div>
-        </div>
-        </form>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-</body>
+    <form action="IdPwCheck" name="idfindscreen" method = "POST"onsubmit="return id_search()">
+         <div class = "wrapper">
+            <h3>아이디/비밀번호 결과</h3><br><br>
+            <h4>${showMember.name}의 정보</h4>
+      <section class = "form-search">
+         <div class = "find-name">
+            <label>아이디</label>
+            <h5><c:out value="${showMember.id}"/></h5>
+            
+         <br><br><br>
+         </div>
+         
+         <div class = "find-birth">
+            <label>비밀번호</label>
+            <h5><c:out value="${showMember.pw}"/></h5>
+            
+         </div>
+         <br><br><br>
+   </section>
+   <div class ="btnSearch">
+      
+      <button class="btn btn-primary" onclick="back_login()" type="button">로그인 하기</button>
+    </div>
+    </div>
+ </form>
+ <script type="text/javascript">
+   function back_login(){
+       var frm = document.idfindscreen;
+       
+       frm.method = "post"
+       frm.action = "login.jsp;"
+       frm.submit();
+    }
+   </script>
+ </body>
 </html>
