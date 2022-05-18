@@ -155,17 +155,17 @@
     </div>
     <!-- End Navigation Section -->
     </div>
-
+	<form action="LoginCon" method="post">
     <div class="wrapper">
         <h1>LOGIN</h1>
-        <div class="email">
-            <input text="email" id="email" placeholder="ID"><br>
+        <div class="id">
+            <input type="text" name ="id" text="id" id="id" placeholder="ID"><br>
         </div>
-        <div class="password">
-            <input text="password" id="password" placeholder="Password"><br><br>
+        <div class="pw">
+            <input type="text" name ="pw" text="pw" id="pw" placeholder="Password"><br><br>
         </div>
-        <div class="div_button">
-            <button class="button" type="button">Log In</button>
+        <div class="submit_button">
+            <input type="submit" value="L o g   I n" class="btn"/>
         </div>
         <div>
             <div class="join_member">
@@ -177,6 +177,7 @@
                 <a href="#">아이디/비밀번호 찾기</a>
             </div>
         </div>
+        </form>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br>
 </body>

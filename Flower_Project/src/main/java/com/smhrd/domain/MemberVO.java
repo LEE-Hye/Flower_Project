@@ -14,9 +14,18 @@ public class MemberVO {
       this.name = name;
       this.birth = birth;
    }
+   
 
 
-   public String getId() {
+   public MemberVO(String id, String pw) {
+	super();
+	this.id = id;
+	this.pw = pw;
+}
+
+
+
+public String getId() {
       return id;
    }
 

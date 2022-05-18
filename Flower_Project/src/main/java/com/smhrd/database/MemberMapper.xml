@@ -7,21 +7,21 @@
       insert into member values (#{id}, #{name}, #{pw}, #{birth})
    </insert>
    <select id="selectMember" parameterType="com.smhrd.domain.MemberVO" resultType="com.smhrd.domain.MemberVO">
-      select * from web_member where email=#{email} and pw=#{pw}
+      select * from member where m_id=#{id} and m_pw=#{pw}
    </select>
 
    <update id="updateMember" parameterType="com.smhrd.domain.MemberVO">
-      update web_member set pw=#{pw}, tel=#{tel}, address=#{address} where email =#{email}
+      update member set m_pw=#{pw}, tel=#{tel}, address=#{address} where email =#{email}
    </update>
    
    <select id="selectAll" resultType="com.smhrd.domain.MemberVO">
-      select * from web_member
+      select * from member
    
    </select>
    
    
    <delete id = "deleteMember" parameterType="String">
-      delete from web_member where email = #{email}
+      delete from member where email = #{email}
    </delete>
    
    
