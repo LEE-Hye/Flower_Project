@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
- <meta charset="utf-8" />
+<meta charset="utf-8" />
     <title>koreaMap</title>
     <link rel="stylesheet" href="css/korea.css" />
 
@@ -72,11 +70,9 @@
     <script src="js/supersubs.js"></script>
     <script src="js/styleswitcher.js"></script>
     <script src="js/script.js"></script>
+    
 </head>
-    <script type="text/javascript" src="js/d3.js"></script>
-    <script type="text/javascript" src="js/korea.js"></script>
 <body>
-
 <!-- Start Loader -->   
 <div id="loader">
     <div class="spinner">
@@ -94,7 +90,7 @@
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div class="logo-img">
-                    <a href="#"><img src="images/client/11d1.jpg" class="img-responsive" alt=""></a>
+                    <a href="#"><img id="main_pic" src="images/client/5055151.jpg" class="img-responsive" alt=""></a>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
@@ -119,7 +115,7 @@
     <!-- Start Navigation Section -->
     <div class="navigation">
         
-        <div class= "navbar navbar-default navbar-top">
+        <div class="navbar navbar-default navbar-top">
             <div class="navbar-header">
                 <!-- Stat Toggle Nav Link For Mobiles -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -145,13 +141,28 @@
                         <a href="flower_rec.jsp">꽃레시피</a>
                     </li>
                     <li>
-                        <a href="post.jsp">커뮤니티</a>
+                        <a href="post_view.jsp">커뮤니티</a>
                     </li>
                 <!-- 네비게이션 끝 -->
             </div>
         </div>
     </div>
     <!-- End Navigation Section -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="call-to-action">
+                <div class="overlay">
+                    <h1>원하시는 계절의 사진을 클릭하세요!</h1>
+                    <p>해당 계절의 꽃 도감으로 넘어갑니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <!-- Start Featured Project Section -->
     <div class="row">
@@ -162,45 +173,37 @@
                     <ul id="portfolio-list" data-animated="fadeIn">
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/building/project-5.jpg" class="img-responsive" alt=""/>
-                                <div class="figure-caption">
-                                    <h4>Project No. 1</h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam voluptatem accusantium.</p>
-                                    <a href="#">View Details</a>
-                                </div>			
+                                <a href="flower_spring.jsp">
+                                <img src="images/flower/봄.PNG" class="img-responsive">
+                                <h3 class="season_color">봄</h3>
+                                </a>
                             </div>
 
                         </li>
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/building/project-1.jpg" class="img-responsive" alt=""/>
-                                <div class="figure-caption">
-                                    <h4>Project No. 2</h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam voluptatem accusantium.</p>
-                                    <a href="#">View Details</a>
-                                </div>			
+                                <a href = "flower_sum.jsp">
+                                <img src="images/flower/여름.PNG" class="img-responsive">
+                                <h3 class="season_color">여름</h3>		
+                                </a>
                             </div>  
 
                         </li>
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/building/project-2.jpg" class="img-responsive" alt=""/>
-                                <div class="figure-caption">
-                                    <h4>Project No. 3</h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam voluptatem accusantium.</p>
-                                    <a href="#">View Details</a>
-                                </div>			
+                                <a href = "flower_fall.jsp">
+                                <img src="images/flower/가을.jpg" class="img-responsive">
+                                <h3 class="season_color">가을</h3>	
+                                </a>
                             </div>
 
                         </li>
                         <li>
                             <div class="portfolio-item">
-                                <img src="images/building/project-3.jpg" class="img-responsive" alt=""/>
-                                <div class="figure-caption">
-                                    <h4>Project No. 4</h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam voluptatem accusantium.</p>
-                                    <a href="#">View Details</a>
-                                </div>			
+                                <a href="flower_winter.jsp">
+                                <img src="images/flower/겨울.PNG" class="img-responsive">
+                                <h3 class="season_color">겨울</h3>
+                                </a>
                             </div>
 
                         </li> 
@@ -210,6 +213,9 @@
         </div>
     </div>
     <!-- End Featured Project Section -->
+
+    
+<br><br><br><br><br>
 
     </div>
 </body>

@@ -1,17 +1,10 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page import = "com.smhrd.domain.MemberVO" %>
-<%@ page import = "com.smhrd.domain.MemberDAO" %>
-<%@ page import = "java.util.List" %>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
- <meta charset="utf-8" />
-    <title>koreaMap</title>
+<meta charset="utf-8" />
+    <title>Flower_Project</title>
     <link rel="stylesheet" href="css/korea.css" />
 
     <!-- Basic -->
@@ -77,13 +70,11 @@
     <script src="js/supersubs.js"></script>
     <script src="js/styleswitcher.js"></script>
     <script src="js/script.js"></script>
+    
 </head>
  <script type="text/javascript" src="js/d3.js"></script>
- <script type="text/javascript" src="js/korea.js"></script>
-
+    <script type="text/javascript" src="js/korea.js"></script>
 <body>
-   
-
 <!-- Start Loader -->   
 <div id="loader">
     <div class="spinner">
@@ -101,24 +92,18 @@
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div class="logo-img">
-                    <a href="#"><img src="images/client/11d1.jpg" class="img-responsive" alt=""></a>
+                    <a href="main.jsp"><img id="main_pic" src="images/client/5055151.jpg" class="img-responsive" alt=""></a>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                    <c:choose>
-                    	<c:when test="${empty loginMember }">
-                        	<a href = "login.jsp"><li>로그인</li></a>
-                        	<a href = "join.jsp"><li>회원가입</li></a>
-                        </c:when>
-                        <c:otherwise>
-                        	<c:if test="${!empty loginMember }">
-                        		<h5>${loginMember.id}님 환영합니다</h5>
-                        		<a href="LogoutCon">로그아웃</a>	
-                        	</c:if>
-                        </c:otherwise>
-                    </c:choose>
+                        <a href = "login.jsp">
+                            <li>로그인</li>
+                        </a>
+                        <a href = "join.jsp">
+                            <li>회원가입</li>
+                        </a>
                     </ul>
                 </div>
             </div>
@@ -145,7 +130,7 @@
                         <a class="active" href="main.jsp">Home</a>
                     </li>
                     <li>
-                        <a href="flower.jsp" >꽃도감</a>
+                        <a href="flower.jsp">꽃도감</a>
                     </li>
                     <li>
                         <a href="select.jsp">축제/나들이 조회</a>
@@ -155,7 +140,7 @@
                         <a href="flower_rec.jsp">꽃레시피</a>
                     </li>
                     <li>
-                        <a href="post.jsp">커뮤니티</a>
+                        <a href="post_view.jsp">커뮤니티</a>
                     </li>
                 <!-- 네비게이션 끝 -->
             </div>
@@ -233,12 +218,13 @@
     <!-- End Services Section -->
 
     <div class="row">
-        <div class="col-md-5">
+        <a href="flower_rec.jsp"><div class="col-md-5">
             <div class="home-about-us">
-                <h3 class="section-title">호감도 베스트사진</h3>
-                <img src="images/about.jpg" class="img-responsive" alt="">
-                <p>게시판 내용 q부에엥엙우뿌이ㅐ아오우웅 내 사진이 제일 짱이다 붕루웰렐에ㅜㄹㅇԅ(¯﹃¯ԅ)(っ´Ι`)っ(￣﹃￣)</p>
+                <h3 class="section-title">🌹꽃 요리 레시피🌹 </h3>
+                <img src="images/f_rec.jpg" class="img-responsive" alt="">
+                <p>꽃으로 만드는 맛있는 음식🌼</p>
             </div>
+        </a>
         </div>
         <div class="col-md-7">
             <div class="running-project">
@@ -283,13 +269,13 @@
                 <div class="overlay">
                     <h1>당신의 꽃구경을 자랑하세요!</h1>
                     <p>게시판에 여러분의 자랑글을 작성하세요!</p>
-                    <a class="custom-btn" href="post.jsp" role="button">게시판으로 이동</a>
+                    <a class="custom-btn" href="post_view.jsp" role="button">게시판으로 이동</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Call To Action Section -->
-    
+    <br>
     <!-- Start Footer Section -->
     <div class="row">
         <div class="col-md-12">
@@ -314,39 +300,44 @@
                         </div>
                     </div>
                     
-                
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-gallery">
+                            <h3>Photo Gallery</h3>
+                            <ul>
+                                <li><a href="images/building/project-1.jpg" data-lightbox="project-1"><img src="images/building/project-1.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="images/building/project-2.jpg" data-lightbox="project-2"><img src="images/building/project-2.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="images/building/project-3.jpg" data-lightbox="project-3"><img src="images/building/project-3.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="images/building/project-4.jpg" data-lightbox="project-4"><img src="images/building/project-4.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="images/building/project-5.jpg" data-lightbox="project-5"><img src="images/building/project-5.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="images/building/project-6.jpg" data-lightbox="project-6"><img src="images/building/project-6.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="images/building/project-7.jpg" data-lightbox="project-7"><img src="images/building/project-7.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="images/building/project-8.jpg" data-lightbox="project-8"><img src="images/building/project-8.jpg" class="img-responsive" alt=""></a></li>
+                                <li><a href="images/building/project-9.jpg" data-lightbox="project-9"><img src="images/building/project-9.jpg" class="img-responsive" alt=""></a></li>
+                            </ul>
+                        
+                        </div>
+                    </div>
                     
                     <div class="col-md-3 col-sm-6">
                         <div class="footer-link">
-                            <h3>Important Link</h3>
+                            <h3>Our Team Introduce</h3>
                             <ul>
-                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>At vero eos et accusamus et</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>Dignissimos ducimus qui blanditiis</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>Voluptatum deleniti atque</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>Occaecati cupiditate non provident</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>Similique sunt in</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>Et harum quidem rerum facilis</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>팀장 : 방제엽</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>팀원 : 이혜빈</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>팀원 : 박동명</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>팀원 : 조용호</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>팀원 : 서지현</a></li>
+                                <li><a href="#"><i class="fa fa-chevron-circle-right"></i>팀원 : 김순기</a></li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="col-md-3 col-sm-6">
                         <div class="footer-social">
-                            <h3>Get In Touch</h3>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                            <h3>Subscribe With Us</h3>
-                            <form class="navbar-form navbar-left" role="search">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="E-mail">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Subscribe</button>
-                            </form>
+                            <h3>꽃 보러 갈래?</h3>
+                            <br><br><br><br><br><br><br>
+                            <h3>Flower_Project</h3>
+                           
                         </div>
                     </div>
                     
@@ -380,4 +371,5 @@
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 </body>
+
 </html>

@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-  <meta charset="utf-8" />
+<meta charset="utf-8" />
     <title>koreaMap</title>
     <link rel="stylesheet" href="css/korea.css" />
 
@@ -72,12 +70,8 @@
     <script src="js/supersubs.js"></script>
     <script src="js/styleswitcher.js"></script>
     <script src="js/script.js"></script>
-    
 </head>
-    <script type="text/javascript" src="js/d3.js"></script>
-    <script type="text/javascript" src="js/korea.js"></script>
 <body>
-
 <!-- Start Loader -->   
 <div id="loader">
     <div class="spinner">
@@ -95,7 +89,7 @@
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div class="logo-img">
-                    <a href="#"><img src="images/client/11d1.jpg" class="img-responsive" alt=""></a>
+                    <a href="main.jsp"><img src="images/client/5055151.jpg" class="img-responsive" id="main_pic"></a>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
@@ -146,7 +140,7 @@
                         <a href="flower_rec.jsp">꽃레시피</a>
                     </li>
                     <li>
-                        <a href="post.jsp">커뮤니티</a>
+                        <a href="post_view.jsp">커뮤니티</a>
                     </li>
                 <!-- 네비게이션 끝 -->
             </div>
@@ -155,17 +149,17 @@
     </div>
     <!-- End Navigation Section -->
     </div>
-	<form action="LoginCon" method="post">
+
     <div class="wrapper">
         <h1>LOGIN</h1>
-        <div class="id">
-            <input type="text" name ="id" text="id" id="id" placeholder="ID">
+        <div class="email">
+            <input text="email" id="email" placeholder="ID">
         </div><br>
-        <div class="pw">
-            <input type="text" name ="pw" text="pw" id="pw" placeholder="Password">
+        <div class="password">
+            <input text="password" id="password" placeholder="Password">
         </div><br><br>
-        <div class="submit_button">
-            <input type="submit" value="L o g   I n" class="btn"/>
+        <div class="div_button">
+            <button class="button" type="button">Log In</button>
         </div>
         <div>
             <div class="join_member">
@@ -177,7 +171,6 @@
                 <a href="#">아이디/비밀번호 찾기</a>
             </div>
         </div>
-        </form>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br>
 </body>

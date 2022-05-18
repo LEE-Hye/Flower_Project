@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
@@ -9,7 +11,7 @@
     <link rel="stylesheet" href="css/korea.css" />
 
     <!-- Basic -->
-    <title>Construction | Home</title>
+    <title>Construction | 꽃</title>
 
     <!-- Define Charset -->
     <meta charset="utf-8">
@@ -96,16 +98,16 @@
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div class="logo-img">
-                    <a href="#"><img src="images/client/11d1.jpg" class="img-responsive" alt=""></a>
+                    <a href="main.jsp"><img src="images/client/5055151.jpg" class="img-responsive" id="main_pic"></a>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                        <a href = "login.html">
+                        <a href = "login.jsp">
                             <li>로그인</li>
                         </a>
-                        <a href ="join.html">
+                        <a href = "join.jsp">
                             <li>회원가입</li>
                         </a>
                     </ul>
@@ -114,6 +116,9 @@
         </div>
     </div>
     <!-- End Header Section -->
+    
+
+
     
     <!-- Start Navigation Section -->
     <div class="navigation">
@@ -131,82 +136,26 @@
                 <!-- 네비게이션 시작 -->
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="main.html">Home</a>
+                        <a href="main.jsp">Home</a>
                     </li>
                     <li>
-                        <a href="flower.html">꽃도감</a>
+                        <a href="flower.jsp">꽃도감</a>
                     </li>
                     <li>
-                        <a href="select.html">축제/나들이 조회</a>
+                        <a class="active" href="select.jsp">축제/나들이 조회</a>
                     </li>
                     
                     <li>
-                        <a class="active" href="flower_rec.html">꽃레시피</a>
+                        <a href="flower_rec.jsp">꽃레시피</a>
                     </li>
                     <li>
-                        <a href="post.html">커뮤니티</a>
+                        <a href="post_view.jsp">커뮤니티</a>
                     </li>
                 <!-- 네비게이션 끝 -->
             </div>
         </div>
         
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="default-page">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                            </ol>
-
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="images/running-project/running1.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="images/running-project/running2.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="images/running-project/running3.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="images/running-project/running4.jpg" class="img-responsive" alt="">
-                                </div>
-    
-                            </div>
-
-                            <!-- Controls -->
-                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div><!-- /.col-md-7 -->
-                    
-                    <div class="col-md-5">
-                        <h4>Service Name</h4>
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Itaque earum rerum hic tenetur a sapiente delectus</p>
-                        <div class="service-details">
-                            <ul>
-                                <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
-                                <li><i class="fa fa-check-square-o"></i>Nam libero tempore cum soluta nobis est</li>
-                                <li><i class="fa fa-check-square-o"></i>Temporibus autem quibusdam et aut officiis </li>
-                                <li><i class="fa fa-check-square-o"></i>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- End Navigation Section -->
     </div>
-</div>
-</body>
+    </body>

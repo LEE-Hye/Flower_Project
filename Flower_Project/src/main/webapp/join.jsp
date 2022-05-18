@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
 <meta charset="utf-8" />
     <title>koreaMap</title>
     <link rel="stylesheet" href="css/korea.css" />
@@ -72,13 +70,8 @@
     <script src="js/supersubs.js"></script>
     <script src="js/styleswitcher.js"></script>
     <script src="js/script.js"></script>
-    
-    
 </head>
-    <script type="text/javascript" src="js/d3.js"></script>
-    <script type="text/javascript" src="js/korea.js"></script>
 <body>
-
 <!-- Start Loader -->   
 <div id="loader">
     <div class="spinner">
@@ -96,7 +89,7 @@
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div class="logo-img">
-                    <a href="#"><img src="images/client/11d1.jpg" class="img-responsive" alt=""></a>
+                    <a href="main.jsp"><img id="main_pic" src="images/client/5055151.jpg" class="img-responsive" alt=""></a>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
@@ -147,7 +140,7 @@
                         <a href="flower_rec.jsp">꽃레시피</a>
                     </li>
                     <li>
-                        <a href="post.jsp">커뮤니티</a>
+                        <a href="post_view.jsp">커뮤니티</a>
                     </li>
                 <!-- 네비게이션 끝 -->
             </div>
@@ -157,15 +150,15 @@
     <!-- End Navigation Section -->
     </div>
 
-    <form action="JoinCon" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
+    <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
                                                                                                
         <h2>회원가입</h2>
         <div class="textForm">
-          <input name="id" type="text" class="id" placeholder="아이디">
+          <input name="loginId" type="text" class="id" placeholder="아이디">
           </input>
         </div>
         <div class="textForm">
-          <input name="pw" type="password" class="pw" placeholder="비밀번호">
+          <input name="loginPw" type="password" class="pw" placeholder="비밀번호">
         </div>
          <div class="textForm">
           <input name="loginPwConfirm" type="password" class="pw" placeholder="비밀번호 확인">
@@ -174,7 +167,7 @@
           <input name="name" type="text" class="name" placeholder="이름">
         </div>
          <div class="textForm">
-          <input name="birth" type="date" class="birth" placeholder="생년월일">
+          <input name="birth" type="text" class="birth" placeholder="생년월일 6자리">
         </div>
         <input type="submit" class="btn" value="J O I N"/>
       </form>
