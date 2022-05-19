@@ -276,6 +276,8 @@
 
         <div class="post_form_container">
             <form action="#" class="post_form">
+                <input value="${loginMember.id}" readonly></input>
+                
                 <div id="in_title">
                     <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required></textarea>
                 </div>
@@ -301,7 +303,7 @@
                 </p>
                 <br>
 
-                <form enctype="multipart/form-data" action="write_ok.php?board_id=<?echo $board_id;?>" method="post">
+                <div>
                     
                    
 
@@ -478,7 +480,7 @@
                   </form>
 
                 <input class="submit_btn" type="submit" value="저장">
-            </form>
+            </div>
 
         </div>
 
