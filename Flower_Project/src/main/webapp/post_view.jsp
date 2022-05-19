@@ -1,5 +1,12 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import = "com.smhrd.domain.MemberVO" %>
+<%@ page import = "com.smhrd.domain.MemberDAO" %>
+<%@ page import = "java.util.List" %>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -201,12 +208,18 @@
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul id=login class="top-social" >
-                        <a href = "login.jsp" >
-                            <li>로그인</li>
-                        </a>
-                        <a href = "join.jsp">
-                            <li>회원가입</li>
-                        </a>
+                    <c:choose>
+                       <c:when test="${empty loginMember }">
+                           <a href = "login.jsp"><li>로그인</li></a>
+                           <a href = "join.jsp"><li>회원가입</li></a>
+                        </c:when>
+                        <c:otherwise>
+                           <c:if test="${!empty loginMember }">
+                              <h5>${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon">로그아웃</a>   
+                           </c:if>
+                        </c:otherwise>
+                    </c:choose>
                     </ul>
                 </div>
             </div>
@@ -265,11 +278,17 @@
     </div>
 </div>
 <br><br><br>
-    
-    <div>
+     
+    <!-- 로그인해야지만 글쓰기 버튼누르기 -->
+    <c:choose>
+    <c:when test="${!empty loginMember }">
+    	<div>
         <input type="button" id="write" value="글쓰기" style="float: right" onclick="location.href='post_write.jsp'">
+        </div>
+    </c:when>
+    </c:choose>
+    
 
-    </div>
  
 <br><br><br>
     

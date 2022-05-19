@@ -104,7 +104,7 @@
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                         <c:choose>
+                    <c:choose>
                        <c:when test="${empty loginMember }">
                            <a href = "login.jsp"><li>로그인</li></a>
                            <a href = "join.jsp"><li>회원가입</li></a>
@@ -116,7 +116,6 @@
                            </c:if>
                         </c:otherwise>
                     </c:choose>
-
                     </ul>
                 </div>
             </div>
