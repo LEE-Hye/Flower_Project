@@ -10,7 +10,7 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8" />
-    <title>Flower_Project</title>
+    <title>Flower_Project</title>\
     <link rel="stylesheet" href="css/korea.css" />
 
     <!-- Basic -->
@@ -217,11 +217,15 @@
             <section class="gallery_main">
                 <article class="arts half">
                     <h3>현재 개화시기</h3>
-                    <p id = "container"></p>
+                    <div>
+                    <iframe width="100%" height="700px" src="ex02.jsp"></iframe>       
+                	</div>
                 </article>
                 <article class="arts half">
                     <h3>현재 축제시기</h3>
-                    <p id = "container2"></p>
+                    <div>
+                    <iframe width="100%" height="700px" src="ex03.jsp"></iframe>
+                    </div>
                 </article>
             </section>
         </div>
