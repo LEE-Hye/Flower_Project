@@ -280,13 +280,13 @@
 <br><br><br>
      
     <!-- 로그인해야지만 글쓰기 버튼누르기 -->
-    <c:choose>
-    <c:when test="${!empty loginMember }">
+   
+    <c:if test="${!empty loginMember }">
     	<div>
         <input type="button" id="write" value="글쓰기" style="float: right" onclick="location.href='post_write.jsp'">
         </div>
-    </c:when>
-    </c:choose>
+    </c:if>
+    
     
 
  
@@ -299,6 +299,7 @@
 
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -307,10 +308,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -319,10 +322,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -331,10 +336,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -343,10 +350,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -355,10 +364,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -367,10 +378,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -379,10 +392,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -391,10 +406,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -403,10 +420,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -415,10 +434,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -427,10 +448,12 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
+        <a href="detail_page.jsp">
         <dtitle>게시글1</dtitle>
         <hr>
       <div class="thumbnail">
@@ -439,9 +462,9 @@
       <h1>user 님의 게시글입니다.</h1>
       <h3>글 내용 동백나무꽃 너무이쁘다 글을 길게 써봐요~</h3>
       <br>
+    </a>
     </div>
 </div>
-    </div>
 
 
 
@@ -459,8 +482,8 @@
         </div>
     </li>
 
- <!-- 검색 폼 영역 -->
- <li id='liSearchOption'>
+    <!-- 검색 폼 영역 -->
+    <li id='liSearchOption'>
     <div>
         <select id='selSearchOption' >
             <option value='A'>제목+내용</option>
