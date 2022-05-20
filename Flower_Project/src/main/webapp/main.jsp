@@ -194,13 +194,13 @@
 
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                        <span class="sr-only">Previous</span>
+                        <img class = "arrow" src="/img/prev.png">
+                        
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <span class="sr-only">Next</span>
+                        <img class = "arrow" src="/img/next.png">
                     </a>
+
                 </div>
                 
             </div>

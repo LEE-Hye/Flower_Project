@@ -215,7 +215,7 @@
     <section class="mysection">
         <article class="myarticle">1</article>
         <article class="myarticle">복수초</article>
-        <article class="myarticle_img"><img class= "a" src="https://ssl.pstatic.net/sstatic/keypage/outside/flower/img2/fcs_13118_Y.jpg" /></article>
+        <article class="myarticle_img"><img class= "a" src="https://post-phinf.pstatic.net/MjAxOTEwMjhfOTgg/MDAxNTcyMjQ5NDQxNzA2.jNiQpFnI2qeceQQaPiTp5ZFFE3nl0VMagznXzj2OX70g.EeVLh3rgckvdfIzpOys76sKWyeDYuNqXla6jJzSY7Aog.JPEG/GettyImages-1067171152.jpg?type=w1200" /></article>
         <article class="myarticle">4월</article>
         <article class="myarticle">영원한 사랑</article>
         <article><input class = "f_btn" type="button" value="조회"  onclick ="location.href = 'main.jsp'"></article>

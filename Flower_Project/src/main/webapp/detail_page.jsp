@@ -23,9 +23,6 @@
     <link rel="stylesheet" href="css/detail-page.css">
    
 
-    <!-- Basic -->
-    <title>Construction | Home</title>
-
     <!-- Define Charset -->
     <meta charset="utf-8">
 
