@@ -1,10 +1,13 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
 
 
 body {
-    font-family: 'Open Sans', sans-serif;
+   
+    font-family: 'Open Sans', sans-serif; 
     font-weight: 300;
     background: #f7f7f7;
 }
@@ -79,7 +82,7 @@ ul li {
 }
 
 /* * { margin: 0; padding: 0; } */
-        body { background-color: #ffe2e2; color: rgb(0, 0, 0); }
+        body { background-color: rgb(255, 226, 226);; color: rgb(0, 0, 0); font-family: 'Noto Sans KR', sans-serif;}
 
         /* .wrap { width: 60%; margin: 4em auto; text-align: center; } */
 
@@ -143,11 +146,14 @@ h3.section-title {
 /**** Start Header Section ****/
 
 .header-section {
-    padding: 30px 20px;
-    background: #fff;
+    padding: 30px 20px; 
+
+    width: 100%;
+    background: white;
     border: 1px solid #f1f1f1;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    /* margin-bottom: 30px;
+    margin-top: 30px; */
+    box-shadow: 0px 6px 6px 0px rgb(41 42 42 / 15%);
 }
 
 .header-section .logo a {
@@ -242,7 +248,8 @@ ul.top-social li a i {
 
 .navbar .navbar-collapse {
     padding: 0;
-    background-color: #222;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 
@@ -271,7 +278,7 @@ ul.top-social li a i {
     border-right: 1px solid #333;
 	display: block;
     font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     //text-transform: uppercase;
 	font-weight: 300;
     padding: 5px 25px;
@@ -400,8 +407,8 @@ ul.top-social li a i {
 .main-slider {
     background: #fff;
     border: 1px solid #f1f1f1;
-    padding: 20px;
-    margin-top: 30px;
+    /* padding: 20px;
+    margin-top: 30px; */
 }
 
 .main-slider img {
@@ -580,10 +587,12 @@ ul.top-social li a i {
 
 .project-section {
     padding: 0 20px 20px 20px;
-    background: #fff;
+    background: white;
     border: 1px solid #f1f1f1;
     margin-top: 30px;
-    //margin-bottom: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 5px #d4d4d4;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .project-2-col, .project-3-col, .project-4-col {
@@ -806,7 +815,7 @@ and (max-width : 768px) {
 
 .call-to-action h1 {
     color: #fff;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     font-size: 40px;
     line-height: 50px;
@@ -915,13 +924,11 @@ and (max-width : 768px) {
 }
 
 .testimonial-page {
-     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    //margin-bottom: 30px;
     background: #fff;
     border: 1px solid #f1f1f1;
     padding:20px;
-    min-height: 600px;
-    
 }
 
 .testimonial {
@@ -933,6 +940,7 @@ and (max-width : 768px) {
     margin-left: 25%;
     padding-bottom: 5px;
     border-radius: 100%;
+    
 }
 
 
@@ -1425,7 +1433,7 @@ and (max-width : 768px) {
 	display: block;
 	padding: 13px 12px;
     font-size: 14px;
-	//background-color: #fff;
+	background-color: #fff;
 	box-shadow: none;
 	-o-box-shadow: none;
 	-moz-box-shadow: none;
@@ -1669,9 +1677,6 @@ ul.post-meta li, ul.post-meta li a {
     padding: 0 20px 20px 20px;
 }
 
-.widget .section-title {
-    
-}
 
 .sidebar {
     margin-top: 30px;
@@ -2639,7 +2644,7 @@ button {
     width:225px;
     height:30px;
     border: none;
-    background: pink;
+    background: #ffe2e2;
     }
 
     #flower_tag2{
@@ -2647,18 +2652,21 @@ button {
         width:225px;
         height:30px;
         border: none;
-        background: pink;
+        background: #ffe2e2;
         }
 
 
         .mysection {
-            background-color: #e5eb91;
+            background-color: rgb(255, 226, 226);
             display: grid;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            /* border-bottom: 1px solid #333; */
             grid-template-columns: 5% 20% 15% 10% 40% 10%;
             
         }
         .myarticle {
-            background-color: #e5eb91;
+            background-color: rgb(255, 226, 226);
             color: black;
             margin: 0.6em;
             font-size: 25px;
@@ -2667,12 +2675,13 @@ button {
             align-items: center; /* 수직 정렬 */
             flex-direction: row; /* default: row */
             justify-content: center; /* flex direction에 대해서 정렬방식 선택 */
+            border-radius: 
         }
         
         
         
         .myarticle_img{
-            background-color: #e5eb91;
+            background-color:rgb(255, 226, 226);
             margin: 0.6em;
             min-height: 2em;
             padding-left: 10px;
@@ -2682,10 +2691,11 @@ button {
         .a{
             height: 70px;
             width: 120px;
+            border-radius: 10%;
         }
         
         .f_btn{
-            background-color: #e5eb91;
+            background-color: rgb(255, 226, 226);
             height: 50px;
             width: 70px;
             margin-top: 18px;
@@ -2697,6 +2707,13 @@ button {
         #img-responsive{
             height: 100px;
             width: 100px;
+            
+            
+        }
+        .img-responsive2{
+            border-radius: 10% 10% 10% 10%;
+            height: 120%;
+            width: 80%;
         }
 
 
@@ -2705,7 +2722,8 @@ button {
             padding-bottom:10px;
             border: 1px solid #383737;
             background-image:url('../images/sep-half.png');
-            background-color: #ec9e9e;
+            background-color: white;
+            /* background-color: #ec9e9e; */
             color:white;
             height:290px;
         }
@@ -2721,7 +2739,8 @@ button {
         .dash-unit dtitle {
             font-size:11px;
             text-transform:uppercase;
-            color:#ffffff;
+            color : black;
+            /* color:#ffffff; */
             margin:8px;
             padding:0px;
             height:inherit	
@@ -2825,4 +2844,20 @@ button {
             text-align: center;
             color:#000000
         }
+
+.imgs_wrap{
+    width: 80%;
+
+    height: 80%;
+}
+
+#cont_show{
+    width: 597px;
+    height: 390px;
+}
+
+
+.arrow{
+    padding-top: 220px;
+}
 

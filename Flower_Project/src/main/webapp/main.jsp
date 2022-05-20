@@ -194,11 +194,11 @@
 
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <img class = "arrow" src="/img/prev.png">
+                        <img class = "arrow" src="img/prev.png">
                         
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <img class = "arrow" src="/img/next.png">
+                        <img class = "arrow" src="img/next.png">
                     </a>
 
                 </div>

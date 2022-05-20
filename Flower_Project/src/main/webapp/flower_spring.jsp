@@ -1,18 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.domain.FlowerVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.domain.FlowerDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
+    
+    
+<% 
+	FlowerDAO dao = new FlowerDAO();
+	List<FlowerVO> flowerList_Spring = dao.selectSpring();
+    pageContext.setAttribute("flowerList_Spring", flowerList_Spring);
+%>
+
 <!doctype html>
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
+
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8" />
-    <title>koreaMap</title>
-    <link rel="stylesheet" href="css/korea.css" />
-
-    <!-- Basic -->
-    <title>Construction | 꽃</title>
-
+    <title>Flower_Project</title>
+    
+    
     <!-- Define Charset -->
     <meta charset="utf-8">
 
@@ -211,16 +220,19 @@
     </div>
     <!-- End Featured Project Section -->
 
-<section>
+
+    <c:forEach var="f" items="${flowerList_Spring}">
     <section class="mysection">
         <article class="myarticle">1</article>
-        <article class="myarticle">복수초</article>
-        <article class="myarticle_img"><img class= "a" src="https://post-phinf.pstatic.net/MjAxOTEwMjhfOTgg/MDAxNTcyMjQ5NDQxNzA2.jNiQpFnI2qeceQQaPiTp5ZFFE3nl0VMagznXzj2OX70g.EeVLh3rgckvdfIzpOys76sKWyeDYuNqXla6jJzSY7Aog.JPEG/GettyImages-1067171152.jpg?type=w1200" /></article>
-        <article class="myarticle">4월</article>
-        <article class="myarticle">영원한 사랑</article>
+        <article class="myarticle"><c:out value="${f.f_name }" /></article>
+        <article class="myarticle_img"><img src='<c:out value="${f.f_img}" />'></article>
+        <article class="myarticle"><c:out value="${f.f_month}" />월</article>
+        <article class="myarticle"><c:out value="${f.f_story}" /></article>
         <article><input class = "f_btn" type="button" value="조회"  onclick ="location.href = 'main.jsp'"></article>
     </section><br>
-</section>
+    </c:forEach>
+
+
 <br><br><br><br><br>
 </body>
 </html>

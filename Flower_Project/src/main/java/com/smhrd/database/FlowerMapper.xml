@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.domain.FlowerDAO">
+   
+   <select id="selectAll" resultType="com.smhrd.domain.FlowerVO">
+		select * from F_SEASON
+	</select>
+	
+	 <select id="selectSpring" resultType="com.smhrd.domain.FlowerVO">
+		select * from F_SEASON where F_SEASON_N = '1'
+	</select>
+	
+   <select id="selectSummer" resultType="com.smhrd.domain.FlowerVO">
+		select * from F_SEASON where F_SEASON_N = '2'
+	</select>
+	
+	<select id="selectfall" resultType="com.smhrd.domain.FlowerVO">
+		select * from F_SEASON where F_SEASON_N = '3'
+	</select>
+   
+   <select id="selectWinter" resultType="com.smhrd.domain.FlowerVO">
+		select * from F_SEASON where F_SEASON_N = '4'
+	</select>
+   
+</mapper>

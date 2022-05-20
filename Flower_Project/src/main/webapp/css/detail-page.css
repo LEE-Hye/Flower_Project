@@ -266,7 +266,9 @@
 
 }
 
+.bottom_icons .left_icons > div.on{
 
+}
 
 .sprite_heart_icon_outline.on{
     background: url('../imgs/background01.png') no-repeat -26px -261px;
@@ -352,7 +354,9 @@
     pointer-events: initial;
     opacity: 1;
 }
+.commit_field .upload_btn.on{
 
+}
 
 
 
@@ -406,19 +410,6 @@
     border-bottom: 1px solid rgba(0,0,0,0.09);
     color:#ed4956;
 }
-
-
- .like_button{
-    width: 26px;
-    height: 20px;
-    background-color: #fff;
-    border-bottom: #fff;
- }
-
-
-
-
-
 /*---------------------------detail-page*/
 
 

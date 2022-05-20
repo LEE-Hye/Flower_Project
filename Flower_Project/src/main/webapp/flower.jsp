@@ -1,15 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.domain.FlowerVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.domain.FlowerDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
+    
+    
+    <% 
+	FlowerDAO dao = new FlowerDAO();
+	List<FlowerVO> flowerlist = dao.selectAll();
+    pageContext.setAttribute("flowerlist", flowerlist);
+%>
+<!doctype html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
 <html lang="en" dir="ltr">
+
 <head>
-<meta charset="utf-8" />
-    <title>koreaMap</title>
-    <link rel="stylesheet" href="css/korea.css" />
+    <meta charset="utf-8" />
+    <title>Flower_Porject</title>
 
-    <!-- Basic -->
-    <title>Construction | 꽃</title>
-
+    
     <!-- Define Charset -->
     <meta charset="utf-8">
 
@@ -71,8 +83,13 @@
     <script src="js/styleswitcher.js"></script>
     <script src="js/script.js"></script>
     
+    
 </head>
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/korea.js"></script>
 <body>
+    
+
 <!-- Start Loader -->   
 <div id="loader">
     <div class="spinner">
@@ -153,8 +170,8 @@
         <div class="col-md-12">
             <div class="call-to-action">
                 <div class="overlay">
-                    <h1>원하시는 계절의 사진을 클릭하세요!</h1>
-                    <p>해당 계절의 꽃 도감으로 넘어갑니다.</p>
+                    <h1>원하는 계절을 클릭해봐!</h1>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -174,7 +191,7 @@
                         <li>
                             <div class="portfolio-item">
                                 <a href="flower_spring.jsp">
-                                <img src="images/flower/봄.PNG" class="img-responsive">
+                                <img src="images/flower/spring봄.jpg" class="img-responsive2">
                                 <h3 class="season_color">봄</h3>
                                 </a>
                             </div>
@@ -183,7 +200,7 @@
                         <li>
                             <div class="portfolio-item">
                                 <a href = "flower_sum.jsp">
-                                <img src="images/flower/여름.PNG" class="img-responsive">
+                                <img src="images/flower/summer여름.jpg" class="img-responsive2">
                                 <h3 class="season_color">여름</h3>		
                                 </a>
                             </div>  
@@ -192,7 +209,7 @@
                         <li>
                             <div class="portfolio-item">
                                 <a href = "flower_fall.jsp">
-                                <img src="images/flower/가을.jpg" class="img-responsive">
+                                <img src="images/flower/autumn가을.jpg" class="img-responsive2">
                                 <h3 class="season_color">가을</h3>	
                                 </a>
                             </div>
@@ -201,7 +218,7 @@
                         <li>
                             <div class="portfolio-item">
                                 <a href="flower_winter.jsp">
-                                <img src="images/flower/겨울.PNG" class="img-responsive">
+                                <img src="images/flower/winter겨울.jpg" class="img-responsive2">
                                 <h3 class="season_color">겨울</h3>
                                 </a>
                             </div>
@@ -215,8 +232,21 @@
     <!-- End Featured Project Section -->
 
     
+    <c:forEach var="f" items="${flowerlist}">
+    <section class="mysection">
+        <article class="myarticle">1</article>
+        <article class="myarticle"><c:out value="${f.f_name }" /></article>
+        <article class="myarticle_img"><img src='<c:out value="${f.f_img}" />'></article>
+        <article class="myarticle"><c:out value="${f.f_month}" />월</article>
+        <article class="myarticle"><c:out value="${f.f_story}" /></article>
+        <article><input class = "f_btn" type="button" value="조회"  onclick ="location.href = 'main.jsp'"></article>
+    </section><br>
+    </c:forEach>
+    
+    
+    
 <br><br><br><br><br>
 
     </div>
-</body>
-</html>
+    </body>
+    </html>

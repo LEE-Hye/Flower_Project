@@ -1,5 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.domain.FlowerVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.domain.FlowerDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
+    
+    
+<% 
+	FlowerDAO dao = new FlowerDAO();
+	List<FlowerVO> flowerList_winter = dao.selectWinter();
+    pageContext.setAttribute("flowerList_winter", flowerList_winter);
+%>
+
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
@@ -208,16 +221,17 @@
     </div>
     <!-- End Featured Project Section -->
 
-<section>
+
+    <c:forEach var="f" items="${flowerList_winter}">
     <section class="mysection">
         <article class="myarticle">1</article>
-        <article class="myarticle">동백나무</article>
-        <article class="myarticle_img"><img class= "a" src="https://ssl.pstatic.net/sstatic/keypage/outside/flower/img2/fcs_14043_R.jpg" /></article>
-        <article class="myarticle">1월</article>
-        <article class="myarticle">누구보다 당신을 사랑합니다</article>
+        <article class="myarticle"><c:out value="${f.f_name }" /></article>
+        <article class="myarticle_img"><img src='<c:out value="${f.f_img}" />'></article>
+        <article class="myarticle"><c:out value="${f.f_month}" />월</article>
+        <article class="myarticle"><c:out value="${f.f_story}" /></article>
         <article><input class = "f_btn" type="button" value="조회"  onclick ="location.href = 'main.jsp'"></article>
     </section><br>
-</section>
+    </c:forEach>
 
 
 <br><br><br><br><br><br><br><br><br><br>

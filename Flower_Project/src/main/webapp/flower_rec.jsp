@@ -5,10 +5,6 @@
 <head>
  <meta charset="utf-8" />
     <title>Flower_Project</title>
-    <link rel="stylesheet" href="css/korea.css" />
-
-    <!-- Basic -->
-    <title>Construction | Home</title>
 
     <!-- Define Charset -->
     <meta charset="utf-8">
