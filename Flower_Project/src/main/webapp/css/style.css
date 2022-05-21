@@ -101,11 +101,13 @@ ul li {
 
 
         .gallery_main, .gallery_sub { background-color: #F6F6F6; }
+        
         .gallery_main {
-            width: 500%;
-            display: block;
-            
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
         }
+        
         .gallery_main .cont {
             min-height: 20em;
         }

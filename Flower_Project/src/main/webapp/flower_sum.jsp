@@ -220,8 +220,9 @@
     <!-- End Featured Project Section -->
 
     <c:forEach var="f" items="${flowerList_Summer}">
+    <c:set var="i" value="${i+1 }"/>
     <section class="mysection">
-        <article class="myarticle">1</article>
+        <article class="myarticle">${i }</article>
         <article class="myarticle"><c:out value="${f.f_name }" /></article>
         <article class="myarticle_img"><img class="fsize" src='<c:out value="${f.f_img}" />'></article>
         <article class="myarticle"><c:out value="${f.f_month}" />월</article>
