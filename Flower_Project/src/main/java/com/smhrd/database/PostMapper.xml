@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.domain.PostDAO">
+	<insert id="insertPost" parameterType="com.smhrd.domain.PostVO">
+		insert into post values (pnumseq.nextval , #{mid}, #{title}, #{content}, #{fid}, #{plike}, sysdate, #{hit}, #{oname}, #{sname}, #{sload})
+	</insert>
+	
+	
+	
+	
+	
+	
+	
+</mapper>
