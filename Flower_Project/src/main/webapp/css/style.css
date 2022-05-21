@@ -103,7 +103,7 @@ ul li {
         .gallery_main, .gallery_sub { background-color: #F6F6F6; }
         .gallery_main {
             width: 500%;
-            display: flex;
+            display: block;
             
         }
         .gallery_main .cont {
