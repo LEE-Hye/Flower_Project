@@ -279,7 +279,7 @@
                 <input name="hit" type="text" value ="0" hidden>
                 
                 <div id="in_title">
-                    <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required></textarea>
+                    <textarea style="resize: none;" name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required></textarea>
                 </div>
                 <div class="preview">
                     <div class="upload">
@@ -298,7 +298,7 @@
                     <input type="file" name="photo" id="id_photo" required="required">
                 </p>
                 <p>
-                    <textarea name="content" id="text_field" cols="50" rows="5" placeholder="내용은 1000자 까지 가능합니다"></textarea>
+                    <textarea style="resize: none;" name="content" id="text_field" cols="50" rows="5" placeholder="내용은 1000자 까지 가능합니다"></textarea>
 
                 </p>
                 <br>
