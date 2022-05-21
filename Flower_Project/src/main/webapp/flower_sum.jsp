@@ -223,7 +223,7 @@
     <section class="mysection">
         <article class="myarticle">1</article>
         <article class="myarticle"><c:out value="${f.f_name }" /></article>
-        <article class="myarticle_img"><img src='<c:out value="${f.f_img}" />'></article>
+        <article class="myarticle_img"><img class="fsize" src='<c:out value="${f.f_img}" />'></article>
         <article class="myarticle"><c:out value="${f.f_month}" />월</article>
         <article class="myarticle"><c:out value="${f.f_story}" /></article>
         <article><input class = "f_btn" type="button" value="조회"  onclick ="location.href = 'main.jsp'"></article>

@@ -166,7 +166,7 @@
                 <article>
                     <h3>현재 개화시기</h3>
                     <div>
-                    <iframe width="100%" height="700px" src="ex02.jsp"></iframe>       
+                    <iframe width="1000px" height="900px" src="ex02.jsp"></iframe>       
                 	</div>
                 </article>
             </section>
