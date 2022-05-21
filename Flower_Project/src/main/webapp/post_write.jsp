@@ -6,7 +6,6 @@
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
 
-
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
@@ -275,8 +274,9 @@
     <div id="main_container">
 
         <div class="post_form_container">
-            <form action="#" class="post_form">
-                <input value="${loginMember.id}" readonly></input>
+            <form action="AddPostCon" class="post_form" method="post" enctype="multipart/form-data">
+                <input name="mid" type="text" value="${loginMember.id}" readonly></input>
+                <input name="hit" type="text" value ="0" hidden>
                 
                 <div id="in_title">
                     <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required></textarea>
@@ -304,15 +304,10 @@
                 <br>
 
                 <div>
-                    
-                   
-
-
+    
                     <div class="wi_line"></div>
                     
- 
-                    
-                          
+
                       <br>
                       <div>대표 꽃 태그를 선택해 주세요</div>
 
@@ -324,7 +319,7 @@
                          </tr>
                         <tr>
                             <td>
-                                <input type="text" id="flower_hash"  readonly>
+                                <input type="text" name="fid" id="flower_hash"  readonly>
                                 
                             </td>
                         </tr>

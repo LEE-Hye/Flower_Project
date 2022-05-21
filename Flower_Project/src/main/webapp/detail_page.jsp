@@ -5,6 +5,8 @@
 <%@ page import = "com.smhrd.domain.MemberVO" %>
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
+<%@page import="com.smhrd.domain.ReplyVO"%>
+<%@page import="com.smhrd.domain.ReplyDAO"%>
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
@@ -235,7 +237,24 @@
                                     <div class="time">2시간</div>
                                 </div>
                             </div>
-
+							
+							<c:forEach var="r" items="${replyList}">
+                            <div class="user_container-detail">
+                                <div class="user"><img src="imgs/thumb02.jpg" alt="user"></div>
+                                <div class="comment">
+                                    <span class="user_id"><c:out value="${r.replyid}"/>  </span><c:out value="${r.replucontent}" />
+                                    <div class="icon_wrap">
+                                        <div class="more_trigger">
+                                            <div class="sprite_more_icon"></div>
+                                        </div>
+                                        <div>
+                                            <div class="sprite_small_heart_icon_outline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </c:forEach>
+							
                             <div class="user_container-detail">
                                 <div class="user"><img src="imgs/thumb02.jpg" alt="user"></div>
                                 <div class="comment">
@@ -336,7 +355,7 @@
                                 <div class="sprite_bookmark_outline" data-name="book-mark"></div>
                             </div>
                         </div>
-
+					
                         <div class="count_likes">
                             <input type="button" value="🌼" class="like_button"></input>
                             좋아요
@@ -344,14 +363,36 @@
                             개
                         </div>
                         <div class="timer">2시간</div>
+                        
+                        <form action="ReplyCon" method="post" name="replyform">
+                        	<input name="b_num" value="1" type="text" hidden>
+                        	<input name="replyid" value="${loginMember.id}" type="text" readonly>
+                            <input name="replycontent" type="text" placeholder="댓글달기..">
 
+                            <input type="submit" value="게시" class="upload_btn">  
+                        
+                        </form>
+								<c:if test="${!empty loginMember }">
+									<div>
+										<input type="button" id="replyUpdate" value="댓글 수정하기"
+											style="float: right" onclick="">
+									</div>
+								</c:if>
+
+
+
+
+
+								<!-- 수정전    
+					<form action="ReplyCon" method="post" name="replyform">
                         <div class="commit_field">
-                            <input type="text" placeholder="댓글달기..">
+                        	<input name="b_num" type="text" hidden>
+                        	<input name="replyid" value="${loginMember.id}" type="text" readonly>
+                            <input name="replyContent" type="text" placeholder="댓글달기..">
 
-                            <div class="upload_btn">게시</div>
-                        </div>
-
-
+                            <input type="submit" value="게시" class="upload_btn">                        </div>
+					</form>
+					 -->
 
                     </div>
 
@@ -377,5 +418,7 @@
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 </body>
+<script type="text/javascript">
 
+</script>
 </html>
