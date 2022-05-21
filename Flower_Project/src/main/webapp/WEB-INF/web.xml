@@ -43,6 +43,28 @@
 		<servlet-name>AddPostCon</servlet-name>
 		<servlet-class>com.smhrd.controller.AddPostCon</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteReplyCon</display-name>
+		<servlet-name>DeleteReplyCon</servlet-name>
+		<servlet-class>com.smhrd.controller.DeleteReplyCon</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ReplyCon</display-name>
+		<servlet-name>ReplyCon</servlet-name>
+		<servlet-class>com.smhrd.controller.ReplyCon</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ReplyUpdateCon</display-name>
+		<servlet-name>ReplyUpdateCon</servlet-name>
+		<servlet-class>com.smhrd.controller.ReplyUpdateCon</servlet-class>
+	</servlet>
+	
 	
 	<servlet-mapping>
 		<servlet-name>JoinCon</servlet-name>
@@ -67,6 +89,18 @@
 	<servlet-mapping>
 		<servlet-name>AddPostCon</servlet-name>
 		<url-pattern>/AddPostCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteReplyCon</servlet-name>
+		<url-pattern>/DeleteReplyCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReplyCon</servlet-name>
+		<url-pattern>/ReplyCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReplyUpdateCon</servlet-name>
+		<url-pattern>/ReplyUpdateCon</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

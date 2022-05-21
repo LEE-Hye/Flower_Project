@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.domain.BoardListVO"%>
+<%@page import="com.smhrd.domain.BoardListDAO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
@@ -5,6 +7,11 @@
 <%@ page import = "com.smhrd.domain.MemberVO" %>
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
+<% 
+	BoardListDAO dao = new BoardListDAO();
+	List<BoardListVO> BoardList = dao.selecAlltBoard();
+    pageContext.setAttribute("BoardList", BoardList);
+%>
 
 
 <!DOCTYPE html>
@@ -466,6 +473,29 @@
     </div>
 </div>
 
+<c:forEach var="b" items="${BoardList}">
+<div class="col-sm-3 col-lg-3">
+    <div class="dash-unit">
+        <a href="detail_page.jsp">
+
+        <dtitle><c:out value="${b.b_num}" /></dtitle>
+        <hr>
+      <div class="thumbnail">
+          <img src="images/flower/겨울_동백나무.jpg" class="img-circle">
+      </div><!-- /thumbnail -->
+      <h1><c:out value="${b.b_name}"/>님의 게시글입니다.</h1>
+      <h3><c:out value="${b.b_title}" /></h3>
+
+      <br>
+    </a>
+    </div>
+</div>
+</c:forEach>
+
+
+
+
+
 
 
 
@@ -484,16 +514,23 @@
 
     <!-- 검색 폼 영역 -->
     <li id='liSearchOption'>
-    <div>
-        <select id='selSearchOption' >
-            <option value='A'>제목+내용</option>
-            <option value='T'>제목</option>
-            <option value='C'>내용</option>
-        </select>
-        <input id='txtKeyWord' />
-        <input id ='search' type='button' value='검색'/>
-    </div>
-    </li>
+    
+    
+    <tr align="center">
+				<td colspan="5">
+					<form action="boardSearch.do" method="post">
+						<select name="part">
+							<option value="b_subject">제목</option>
+							<option value="b_content">내용</option>
+						</select> <input type="text" name="searchData" required="required" /> <input
+							type="submit" value="검색" />
+					</form>
+				</td>
+			</tr>
+
+
+
+		</li>
     
    
    

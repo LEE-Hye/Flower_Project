@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.smhrd.domain.ReplyDAO">
+	<insert id="insertReply" parameterType="com.smhrd.domain.ReplyVO">
+     	insert into reply values (reply_num_seq.nextval, #{b_num}, #{replyid}, #{replycontent})
+   </insert>
+
+	<select id="selectAllReply" parameterType="String" resultType="com.smhrd.domain.ReplyVO">
+		select * from reply where b_num=#{b_num}
+	</select>
+	
+	<update id="updateReply" parameterType="com.smhrd.domain.ReplyVO">
+		update reply set reply_content=#{reply_content}, where reply_id=#{reply_id}
+	</update>
+	
+</mapper>  
