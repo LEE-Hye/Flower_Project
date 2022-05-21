@@ -157,5 +157,36 @@
         
     </div>
     <!-- End Navigation Section -->
+    
+    
+    
+    <div class="wrap">
+        <div class="galleries">
+            <section class="gallery_main">
+                <article>
+                    <h3>현재 개화시기</h3>
+                    <div>
+                    <iframe width="100%" height="700px" src="ex02.jsp"></iframe>       
+                	</div>
+                </article>
+            </section>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br>
+    
+    
+    
+    
+    
     </div>
     </body>
+    </html>
