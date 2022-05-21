@@ -232,7 +232,7 @@
     <!-- End Featured Project Section -->
 
     
-    <c:forEach var="f" items="${flowerlist}">
+   <!--  <c:forEach var="f" items="${flowerlist}">
     <section class="mysection">
         <article class="myarticle">1</article>
         <article class="myarticle"><c:out value="${f.f_name }" /></article>
@@ -242,7 +242,7 @@
         <article><input class = "f_btn" type="button" value="조회"  onclick ="location.href = 'main.jsp'"></article>
     </section><br>
     </c:forEach>
-    
+     -->
     
     
 <br><br><br><br><br>
