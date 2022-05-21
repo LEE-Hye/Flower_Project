@@ -218,13 +218,13 @@
                 <article class="arts half">
                     <h3>현재 개화시기</h3>
                     <div>
-                    <iframe width="100%" height="700px" src="ex02.jsp"></iframe>       
+                    <iframe width="100%" height="700px" src="api_main1.jsp"></iframe>       
                 	</div>
                 </article>
                 <article class="arts half">
                     <h3>현재 축제시기</h3>
                     <div>
-                    <iframe width="100%" height="700px" src="ex03.jsp"></iframe>
+                    <iframe width="100%" height="700px" src="api_main2.jsp"></iframe>
                     </div>
                 </article>
             </section>

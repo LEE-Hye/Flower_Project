@@ -1,7 +1,7 @@
+<%@page import="com.smhrd.domain.MapDAO2"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.domain.MapVO"%>
 <%@page import="java.util.List"%>
-<%@page import="com.smhrd.domain.MapDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -53,19 +53,19 @@
         //DB에서 데이터 가져오기 ~ ★      
               
         <%
-        MapDAO dao = new MapDAO();
-        List<MapVO> MapList = dao.Allmap();
-        pageContext.setAttribute("MapList",MapList);
+        MapDAO2 dao2 = new MapDAO2();
+        List<MapVO> MapList2 = dao2.Allmap();
+        pageContext.setAttribute("MapList2",MapList2);
         %>
         
-      console.log('<%=MapList.get(0).getWi()%>')
-      console.log('<%=MapList.get(0).getGy()%>')
-        console.log('<%=MapList.size()%>')
+      console.log('<%=MapList2.get(0).getWi()%>')
+      console.log('<%=MapList2.get(0).getGy()%>')
+        console.log('<%=MapList2.size()%>')
         var a = 0;
       var 데이터 = []
-      console.log(<%=MapList.size()%>)
-      <%for(int i =0 ; i<MapList.size();i++){ %>
-         데이터.push([<%=MapList.get(i).getWi()%>, <%=MapList.get(i).getGy()%>, '<div style="padding:5px;"><%=MapList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>'])
+      console.log(<%=MapList2.size()%>)
+      <%for(int i =0 ; i<MapList2.size();i++){ %>
+         데이터.push([<%=MapList2.get(i).getWi()%>, <%=MapList2.get(i).getGy()%>, '<div style="padding:5px;"><%=MapList2.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>'])
       <%}%>
       
         
@@ -130,7 +130,47 @@
         }//반복문 끝 ~
         
         
-        
+        function createmonth5() {
+            for (var i=0; i<오월.length; i++){
+             // 지도에 마커를 생성하고 표시한다
+          var marker = new kakao.maps.Marker({
+              position: new kakao.maps.LatLng(오월[i][0], 오월[i][1]), // 마커의 좌표
+              image: markerImage5 // 마커이미지 설정
+             });
+            // 마커가 지도 위에 표시되도록 설정합니다
+            marker.setMap(map);
+            
+            var iwContent = '<div style="padding:5px;">Hello World! <br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                iwPosition = new kakao.maps.LatLng(33.450701, 126.570667); //인포윈도우 표시 위치입니다
+
+            // 인포윈도우를 생성합니다
+            var infowindow = new kakao.maps.InfoWindow({
+                position : iwPosition, 
+                content : 오월[i][2]
+            });
+            
+            // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+            // infowindow.open(map, marker);
+            오월markers.push(marker)
+
+            // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+            // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+            // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+            
+            kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+            kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+            
+            //마커 클릭시 1식 확대됨
+            kakao.maps.event.addListener(marker, 'click', function() {
+            var level = map.getLevel() - 1;
+            map.setLevel(level, {anchor: this.getPosition()});
+            });
+            //오른쪽 클릭시 이동 
+            kakao.maps.event.addListener(marker, 'rightclick', function() {
+               location.href = 'http://map.daum.net';
+               });
+              }
+          } 
         
         
         
