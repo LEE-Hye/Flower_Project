@@ -14,6 +14,8 @@
 	List<PostVO> postList = dao.selectAllBoard();
 	System.out.println("갯수 : "+ postList.size());
 	pageContext.setAttribute("postList", postList);
+	
+	System.out.print(postList.get(0));
 %>
 
 

@@ -151,6 +151,13 @@ public class PostVO {
 	public String getSload() {
 		return sload;
 	}
+
+	@Override
+	public String toString() {
+		return "PostVO [pnum=" + pnum + ", mid=" + mid + ", title=" + title + ", content=" + content + ", fid=" + fid
+				+ ", plike=" + plike + ", pdate=" + pdate + ", hit=" + hit + ", oname=" + oname + ", sname=" + sname
+				+ ", sload=" + sload + "]";
+	}
 	
 	
 	

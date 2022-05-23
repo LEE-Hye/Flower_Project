@@ -5,15 +5,19 @@
         
 <mapper namespace="com.smhrd.domain.ReplyDAO">
 	<insert id="insertReply" parameterType="com.smhrd.domain.ReplyVO">
-     	insert into reply values (reply_num_seq.nextval, #{b_num}, #{replyid}, #{replycontent})
+     	insert into reply values (reply_num_seq.nextval, #{pnum}, #{replyid}, #{replycontent})
    </insert>
 
-	<select id="selectAllReply" parameterType="String" resultType="com.smhrd.domain.ReplyVO">
-		select * from reply where b_num=#{b_num}
+	<select id="selectAllReply" parameterType="int" resultType="com.smhrd.domain.ReplyVO">
+		select * from reply
 	</select>
 	
 	<update id="updateReply" parameterType="com.smhrd.domain.ReplyVO">
-		update reply set reply_content=#{reply_content}, where reply_id=#{reply_id}
+		update reply set reply_content=#{reply_content} where reply_id=#{reply_id}
 	</update>
+	
+	<delete id="deleteReplyCon" parameterType="String">
+		delete from reply where reply_id=#{reply_id}
+	</delete>
 	
 </mapper>  

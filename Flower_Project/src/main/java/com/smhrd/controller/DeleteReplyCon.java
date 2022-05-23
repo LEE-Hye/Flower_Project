@@ -14,10 +14,10 @@ public class DeleteReplyCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
-		int reply_num = Integer.parseInt(request.getParameter("reply_num"));
+		String reply_content = request.getParameter("reply_content");
 		
 		ReplyDAO dao = new ReplyDAO();
-		int cnt = dao.deleteReply(reply_num);
+		int cnt = dao.deleteReply(reply_content);
 		
 		if(cnt>0) {
 			System.out.println("댓글삭제 성공");

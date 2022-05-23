@@ -1,24 +1,42 @@
 package com.smhrd.domain;
 
+import java.math.BigDecimal;
+
 public class ReplyVO {
 	private int reply_num;
-	private int b_num;
+	private int pnum;
 	private String replyid;
 	private String replycontent;
 	
-	public ReplyVO(int reply_num, int b_num, String replyid, String replycontent) {
+	
+	
+	public ReplyVO() {
+		super();
+	}
+
+
+
+	public ReplyVO(String replyid, String replycontent) {
+		super();
+		this.replyid = replyid;
+		this.replycontent = replycontent;
+	}
+
+
+
+	public ReplyVO(int reply_num, int pnum, String replyid, String replycontent) {
 		super();
 		this.reply_num = reply_num;
-		this.b_num = b_num;
+		this.pnum = pnum;
 		this.replyid = replyid;
 		this.replycontent = replycontent;
 	}
 	
 	
 
-	public ReplyVO(int b_num, String replyid, String replycontent) {
+	public ReplyVO(int pnum, String replyid, String replycontent) {
 		super();
-		this.b_num = b_num;
+		this.pnum = pnum;
 		this.replyid = replyid;
 		this.replycontent = replycontent;
 	}
@@ -32,12 +50,12 @@ public class ReplyVO {
 		this.reply_num = reply_num;
 	}
 
-	public int getB_num() {
-		return b_num;
+	public int getpnum() {
+		return pnum;
 	}
 
-	public void setB_num(int b_num) {
-		this.b_num = b_num;
+	public void setpnum(int pnum) {
+		this.pnum = pnum;
 	}
 
 	public String getReplyid() {

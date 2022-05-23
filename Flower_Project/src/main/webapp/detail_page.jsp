@@ -9,6 +9,14 @@
 <%@page import="com.smhrd.domain.ReplyDAO"%>
 <%@page import="com.smhrd.domain.PostVO"%>
 <%@page import="com.smhrd.domain.PostDAO"%>
+
+<%
+	ReplyDAO dao = new ReplyDAO();
+	List<ReplyVO> replyList = dao.selectAllReply();
+	pageContext.setAttribute("replyList", replyList);
+	System.out.print(replyList.get(0));
+%>
+
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
@@ -200,7 +208,7 @@
 
                     <div class="img_section">
                         <div class="trans_inner">
-                            <div><img src='<c:out value="${post.sname}" />' alt=""></div>
+                            <div><img src='<c:out value="upload/${post.sname}" />' alt=""></div>
                             
                         </div>
                         <br><br>
@@ -232,110 +240,34 @@
                         </header>
 
                         <section class="scroll_section">
-                            <div class="admin_container">
-                                <div class="admin"><img src="imgs/thumb.jpeg" alt="user"></div>
-                                <div class="comment">
-                                    <span class="user_id">Kindtiger</span>강아지가 많이 힘든가보다ㅜㅜㅜㅜㅜ조금만힘내
-                                    <div class="time">2시간</div>
-                                </div>
-                            </div>
+                            
+							
 							
 							<c:forEach var="r" items="${replyList}">
                             <div class="user_container-detail">
-                                <div class="user"><img src="imgs/thumb02.jpg" alt="user"></div>
                                 <div class="comment">
-                                    <span class="user_id"><c:out value="${r.replyid}"/>  </span><c:out value="${r.replucontent}" />
+                                    <span class="user_id"><c:out value="${r.replyid}"/></span>
+                                    <p><c:out value="${r.replycontent}" /></p>
                                     <div class="icon_wrap">
                                         <div class="more_trigger">
                                             <div class="sprite_more_icon"></div>
-                                        </div>
-                                        <div>
-                                            <div class="sprite_small_heart_icon_outline"></div>
-                                        </div>
+                                            <c:if test="${!empty (loginMember == replyid) }">
+									<div>
+										<input type="submit" id="replyUpdate" value="댓글 수정하기"
+											style="float: right" >
+										<input type="submit" id="replydelete" value="댓글 삭제하기"
+											style="float: right" >
+									</div>
+								</c:if>
+                                        </div>                             
                                     </div>
                                 </div>
                             </div>
                             </c:forEach>
 							
-                            <div class="user_container-detail">
-                                <div class="user"><img src="imgs/thumb02.jpg" alt="user"></div>
-                                <div class="comment">
-                                    <span class="user_id">in0.lee</span>너무귀엽네요 ㅎㅎㅎ맞팔해요~!
-                                    <div class="time">2시간 <span class="try_comment">답글 달기</span></div>
-                                    <div class="icon_wrap">
-                                        <div class="more_trigger">
-                                            <div class="sprite_more_icon"></div>
-                                        </div>
-                                        <div>
-                                            <div class="sprite_small_heart_icon_outline"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
 
-                            <div class="user_container-detail">
-                                <div class="user"><img src="imgs/thumb03.jpg" alt="user"></div>
-                                <div class="comment">
-                                    <span class="user_id">ye_solkim</span>강아지 이름이 뭐에요???
-                                    <div class="time">2시간 <span class="try_comment">답글 달기</span></div>
-                                    <div class="icon_wrap">
-                                        <div class="more_trigger">
-                                            <div class="sprite_more_icon"></div>
-                                        </div>
-                                        <div>
-                                            <div class="sprite_small_heart_icon_outline"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="user_container-detail">
-                                <div class="user"><img src="imgs/thumb02.jpg" alt="user"></div>
-                                <div class="comment">
-                                    <span class="user_id">in0.lee</span>너무귀엽네요 ㅎㅎㅎ맞팔해요~!
-                                    <div class="time">2시간 <span class="try_comment">답글 달기</span></div>
-                                    <div class="icon_wrap">
-                                        <div class="more_trigger">
-                                            <div class="sprite_more_icon"></div>
-                                        </div>
-                                        <div>
-                                            <div class="sprite_small_heart_icon_outline"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="user_container-detail">
-                                <div class="user"><img src="imgs/thumb03.jpg" alt="user"></div>
-                                <div class="comment">
-                                    <span class="user_id">in0.lee</span>너무귀엽네요
-                                    <div class="time">2시간 <span class="try_comment">답글 달기</span></div>
-                                    <div class="icon_wrap">
-                                        <div class="more_trigger">
-                                            <div class="sprite_more_icon"></div>
-                                        </div>
-                                        <div>
-                                            <div class="sprite_small_heart_icon_outline"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="user_container-detail">
-                                <div class="user"><img src="imgs/thumb02.jpg" alt="user"></div>
-                                <div class="comment">
-                                    <span class="user_id">in0.lee</span>너무귀엽네요 ㅎㅎㅎ맞팔해요~!
-                                    <div class="time">2시간 <span class="try_comment">답글 달기</span></div>
-                                    <div class="icon_wrap">
-                                        <div class="more_trigger">
-                                            <div class="sprite_more_icon"></div>
-                                        </div>
-                                        <div>
-                                            <div class="sprite_small_heart_icon_outline"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                                       
 
                         </section>
 
@@ -366,20 +298,15 @@
                         </div>
                         <div class="timer">2시간</div>
                         
-                        <form action="ReplyCon" method="post" name="replyform">
-                        	<input name="b_num" value="1" type="text" hidden>
+                        <form action="ReplyCon" id="replyUpdateForm" method="post" name="replyform">
+                        	<input name="pnum" value="${post.pnum}" type="text" hidden>
                         	<input name="replyid" value="${loginMember.id}" type="text" readonly>
                             <input name="replycontent" type="text" placeholder="댓글달기..">
 
                             <input type="submit" value="게시" class="upload_btn">  
                         
                         </form>
-								<c:if test="${!empty loginMember }">
-									<div>
-										<input type="button" id="replyUpdate" value="댓글 수정하기"
-											style="float: right" onclick="">
-									</div>
-								</c:if>
+								
 
 
 
@@ -421,6 +348,20 @@
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 </body>
 <script type="text/javascript">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        
+        $("#replyUpdate").click(function () {
+            $("#replyUpdateForm").attr("action","UpdateReplyCon");
+        });
+        
+        $("#replydelete").click(function () {
+            $("#replyUpdateForm").attr("action","DeleteReplyCon");
+        });
+    });
+ 
+</script>
 
 </script>
 </html>

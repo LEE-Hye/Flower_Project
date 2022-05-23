@@ -52,7 +52,7 @@ public class ReplyDAO {
 	}
 	
 	//댓글 수정기능
-	public int updateReply() {
+	public int updateReply(ReplyVO r_vo) {
 		int cnt=0;
 		try {
 			cnt = sqlSession.update("com.smhrd.domain.ReplyDAO.updateReply");
@@ -65,10 +65,10 @@ public class ReplyDAO {
 	}
 	
 	//댓글 삭제기능
-	public int deleteReply(int reply_num) {
+	public int deleteReply(String reply_content) {
 		int cnt =0;
 		try {
-			cnt = sqlSession.delete("com.smhrd.domain.ReplyDAO.deleteReply", reply_num);
+			cnt = sqlSession.delete("com.smhrd.domain.ReplyDAO.deleteReply", reply_content);
 			if(cnt>0) {
 				sqlSession.commit();
 			}else {
