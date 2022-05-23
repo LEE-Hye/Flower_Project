@@ -85,7 +85,6 @@
             </li>-->
         </ul>
     </div>
-    <input type='reset'>
     </form>
     
    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e98ea6bbf35f78f0fe5bed829537d85&libraries=clusterer"></script>
@@ -257,7 +256,7 @@
       var 축제markers = []
       var chkflag0 = true;
       <%for(int i =0 ; i<carnivalList.size();i++){ %>
-      축제.push([<%=carnivalList.get(i).getWi()%>, <%=carnivalList.get(i).getGy()%>, '<div style="padding:5px;"><%=carnivalList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=carnivalList.get(i).getFlower()%></a></div>'])
+      축제.push([<%=carnivalList.get(i).getWi()%>, <%=carnivalList.get(i).getGy()%>, '<div style="padding:5px;"><%=carnivalList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=carnivalList.get(i).getFlower()%></a></div>','<%=carnivalList.get(i).getName()%>'])
       <%}%>
       var 일월 = []
       var 일월markers = []
@@ -430,10 +429,12 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+축제[i][3]+','+축제[i][0]+','+축제[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
-        });
+           location.href = a;
+           });
         
         }
       }//반복문 끝 ~

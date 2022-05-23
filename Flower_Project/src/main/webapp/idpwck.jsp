@@ -155,25 +155,21 @@
     </div>
     <!-- End Navigation Section -->
     </div>
-    <form action="IdPwCheck" name="idfindscreen" method = "POST" onsubmit="return id_search()">
-         <div class = "wrapper">
-            <h3>아이디/비밀번호 확인</h3><br><br>
-         
-      <section class = "form-search">
-         <div class = "find-name">
-            <label>이름</label>
-            <input type="text" name="name" class = "btn-name" placeholder = "등록한 이름">
-         <br><br><br>
-         
-         <div class = "find-birth">
-            <label>생일</label>
-            <input type="date" name="birth" class = "btn-birth" placeholder = "등록한 생일">
-         </div>
-         <br><br><br>
-   </section>
-   <div class ="btnSearch">
+    <form action="IdPwCheck" name="idfindscreen" method = "POST" onsubmit="return id_search()" class="loginForm">
+       <h2>아이디/비밀번호 확인</h2>
+      <div class = "textForm">
+        <div class = "births">등록한 이름</div>
+           <input type="text" name="name" class = "name">
+        </div>
+        
+        <div class = "textForm">
+        <div class = "births">등록한 생년월일</div>
+           <input type="date" name="birth" class = "birth">
+        </div>
+        
+         <div class ="btnSearch">
       <input type="submit" name ="enter"  value="찾 기" class="btn">
-      <button class="btn btn-primary" onclick="back_main()" type="button">취소</button>
+      <button class="btn" onclick="back_main()" type="button">취소</button>
     </div>
     </div>
  </form>
