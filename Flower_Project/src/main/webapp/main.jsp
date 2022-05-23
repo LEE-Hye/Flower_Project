@@ -74,7 +74,7 @@
     <script src="js/supersubs.js"></script>
     <script src="js/styleswitcher.js"></script>
     <script src="js/script.js"></script>
-    
+   
 </head>
  <script type="text/javascript" src="js/d3.js"></script>
     <script type="text/javascript" src="js/korea.js"></script>
@@ -175,20 +175,19 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="http://tong.visitkorea.or.kr/cms/resource/89/2820589_image2_1.jpg" class="img-responsive" alt="Slider images 1">
+                            <img src="http://tong.visitkorea.or.kr/cms/resource/99/2717699_image2_1.jpeg" id="main_ban" alt="Slider images 1">
                             <div class="carousel-caption">
-                                <h1>제주 한림공원 2022 부겐빌레아 꽃축제</h1>
-                                <p>제주를 오롯이 느낄 수 있는 한림공원에서 5월 20일부터 제 5회 부겐빌레아 축제를 개최한다.
-한림공원은 국내에서 유일하게 부겐빌레아 축제를 열고 있으며, 열대지방에서만 볼 수 있는 부겐빌레아를 30년 이상 온실에서 재배하고 있다.
-한림공원 열대분재원 내 부겐빌레아는 붉은색, 노랑색, 보라색 등 화려한 색으로 관람객들의 눈길을 끌고 있으며, 꽃처럼 보이는 다양한 색의 꽃싸개 안에 나팔 모양으로 작게 피어있는 부겐빌레아 꽃을 보는 것 또한 부겐빌레아 관람의 묘미이다.
-한림공원 부겐빌레아 축제는 20일부터 다음달 19일까지 한림공원 내부에 있는 제주석분재원 내 열대분재원, 아열대식물원 관엽온실, 연못정원 등에서 볼 수 있다.<br>기간 : 2022년 05월20일 ~ 2022년 06월19일</p>
+                                <h1>원주 용수골양귀비축제</h1>
+                                <p>1만평 꽃양귀비 꽃밭에서 펼쳐지는 축제! 꽃양귀비 뿐만 아니라 청보랏빛 수레국화와 알리움도 함께 심어져 아름다움을 더하고 있으니 꼭 참여하세요!
+								<br>기간 : 2022년 05월25일 ~ 2022년 06월12일</p>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/slider/오두막이.jpg" class="img-responsive" alt="Slider images 2">
+                            <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=0c9e5ce6-f5a4-4a65-b189-eacaf0a6e959" id="main_ban2" alt="Slider images 2">
                             <div class="carousel-caption">
-                                <h1>오두막 축제</h1>
-                                <p>깜찍한 오두막이 있는 캠핑 축제<br>기간 : 2025년 93월 49일 ~ 2068년 58월 93일</p>
+                                <h1>곡성 세계장미축제</h1>
+                                <p>일제히 꽃문을 연 1,004 종의 장미와 함께 펼쳐지는 화려한 봄의 페스티벌! 쉽게 볼 수 없는 전 세계 명품 장미를 한 곳에서 볼 수 있는 국내 유일의 기회!
+                                <br>기간 : 2022년 05월 21일 ~ 2022년 06월 06일</p>
                             </div>
                         </div>
                     </div>
@@ -219,13 +218,13 @@
                 <article class="arts half">
                     <h3>5월 저 피었어요🌸<h3>
                     <div>
-                    <iframe width="100%" height="700px" src="api_main1.jsp"></iframe>       
+                    <iframe width="100%" height="700px" src="api_main1.jsp" scrolling="no"></iframe>       
                 	</div>
                 </article>
                 <article class="arts half">
                     <h3>5월 축제 뿜뿜🎉<h3>
                     <div>
-                    <iframe width="100%" height="700px" src="api_main2.jsp"></iframe>
+                    <iframe width="100%" height="700px" src="api_main2.jsp" scrolling="no"></iframe>
                     </div>
                 </article>
             </section>
@@ -233,19 +232,25 @@
     </div>
    
     <!-- End Services Section -->
-
+    <div class="row">
+        <div class="container227">
+            <h3>오늘의 날씨</h3>
+            <span class="weatherInfo"></span>
+             <img class="weatherIcon">
+        </div>
+         
+         
     <div class="row">
         <a href="flower_rec.jsp"><div class="col-md-5">
             <div class="home-about-us">
                 <h3 class="section-title">🌹꽃 요리 레시피🌹 </h3>
                 <img src="images/f_rec.jpg" class="img-responsive" alt="">
-                <p>꽃으로 만드는 맛있는 음식🌼</p>
             </div>
         </a>
         </div>
         <div class="col-md-7">
             <div class="running-project">
-                <h3 class="section-title">호감도 베스트 4개</h3>
+                <h3 class="section-title">꽃과 함께하는 OOTD٩( ᐛ )و</h3>
                 <div class="row">
                     
                     <div class="col-md-6 col-sm-6">
@@ -284,8 +289,8 @@
         <div class="col-md-12">
             <div class="call-to-action">
                 <div class="overlay">
-                    <h1>당신의 꽃구경을 자랑하세요!</h1>
-                    <p>게시판에 여러분의 자랑글을 작성하세요!</p>
+                    <h1>OOTD WITH FLOWERS</h1>
+                    <p>당신의 모습을 보여주세요!</p>
                     <a class="custom-btn" href="post_view.jsp" role="button">게시판으로 이동</a>
                 </div>
             </div>
@@ -385,8 +390,63 @@
     
     
     </div><!-- /.container -->
-
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+<script src="app.js"></script>
+         <script>
+            const API_KEY = "#"; //add your API KEY 
+    const COORDS = "coords"; //좌표를 받을 변수 
+    
+    //DOM객체들 
+    const weatherInfo = document.querySelector(".weatherInfo");
+    const weatherIconImg = document.querySelector(".weatherIcon");
+    
+    //초기화 
+    function init() {
+        askForCoords();
+    }
+    
+    //좌표를 물어보는 함수 
+    function askForCoords() {
+        navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
+    }
+    
+    //좌표를 얻는데 성공했을 때 쓰이는 함수 
+    function handleSuccess(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const coordsObj = {
+            latitude,
+            longitude
+        };
+        getWeather(latitude, longitude); //얻은 좌표값을 바탕으로 날씨정보를 불러온다.
+    }
+    //좌표를 얻는데 실패했을 때 쓰이는 함수 
+    function handleError() {
+        console.log("can't not access to location");
+    }
+    
+    //날씨 api를 통해 날씨에 관련된 정보들을 받아온다. 
+    function getWeather(lat, lon) {
+        fetch("http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${'591998c0423f5ab7c296cccae8075f9b'}&units=metric&lang=kr").then(function(response) {
+            return response.json();
+        })
+        
+        .then(function(json) {
+            //온도, 위치, 날씨묘사, 날씨아이콘을 받는다. 
+            const temperature = json.main.temp;
+            const place = json.name;
+            const weatherDescription = json.weather[0].description;
+            const weatherIcon = json.weather[0].icon;
+            const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+        
+            //받아온 정보들을 표현한다. 
+            weatherInfo.innerText = "${temperature} °C / @${place} / ${weatherDescription}";
+            weatherIconImg.setAttribute("src", weatherIconAdrs);
+        })
+        .catch((error) => console.log("error:", error));
+    }
+    
+    init();
+        </script> 
 </body>
-
+<script src="app.js"></script>
 </html>

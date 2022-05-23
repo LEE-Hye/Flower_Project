@@ -137,7 +137,6 @@ ul li {
 
 h3.section-title {
     padding-bottom: 10px;
-    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 22px;
     line-height: 22px;
@@ -252,6 +251,7 @@ ul.top-social li a i {
     padding: 0;
     background-color: #fff;
     border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);
 }
 
 
@@ -277,13 +277,13 @@ ul.top-social li a i {
 
 .navbar-default .navbar-nav > li > a {
 	color: #999;
-    border-right: 1px solid #333;
+    
 	display: block;
     font-size: 15px;
     font-family: 'Noto Sans KR', sans-serif;
     //text-transform: uppercase;
 	font-weight: 300;
-    padding: 5px 25px;
+    padding: 5px 75px;
 	overflow: hidden;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -415,11 +415,11 @@ ul.top-social li a i {
 
 .main-slider img {
     width: 100%;
-    height: auto;
+    height: 500px;
 }
 
 .main-slider .carousel-caption {
-    //position: absolute;
+    position: absolute;
     top: 40%;
     left: 5%;
     width: 50%;
@@ -534,6 +534,7 @@ ul.top-social li a i {
     border: 1px solid #f1f1f1;
     padding: 20px;
     padding-top: 0;
+    border-radius: 5px;
 }
 
 .home-about-us img {
@@ -566,6 +567,8 @@ ul.top-social li a i {
     background: #fff;
     padding: 0 20px 0 20px;
     border: 1px solid #f1f1f1;
+    margin-top: -140px;
+    border-radius : 5px;
 }
 
 .project {
@@ -2507,11 +2510,10 @@ h1 {
 
 input {
     text-align: left;
-    width:225px;
     height:30px;
     border: none;
     border-bottom: solid 1px black;
-    background: pink;
+    background: white;
 }
 
 
@@ -2743,6 +2745,7 @@ button {
             /* background-color: #ec9e9e; */
             color:white;
             height:290px;
+            border-radius: 10px
         }
         
         .dash-unit:hover {
@@ -2875,7 +2878,7 @@ button {
 
 
 .arrow{
-    padding-top: 220px;
+    padding-top: 250px;
 }
 
 .fsize{
@@ -2885,4 +2888,60 @@ button {
 
 .births{
     text-align: left;
+}
+
+#main_ban{
+   width:100%;
+   height:550px;
+}
+
+#main_ban2{
+   width:100%;
+   height:550px;
+}
+
+.loginForm{
+   position:relative;
+    width:400px;
+    height:540px;
+    padding: 20px, 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:50%;
+    left:40%;
+    transform: translate(-50%,-50%, -50%, -50%);
+    border-radius: 15px;
+}
+
+  .loginForm h2 {
+    text-align: center;
+    margin: 30px;
+    padding: 20px 10px;
+  }
+  
+  .container227 {
+    width: 457px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 0px;
+    flex-wrap: wrap;
+
+}
+
+.container227 h1 {
+    font-size: 30em;
+}
+.weatherInfo {
+    font-size: 1em;
+}
+
+#img-main{
+   width:100px;
+   height:100px;
 }

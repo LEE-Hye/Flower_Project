@@ -164,9 +164,8 @@
         <div class="galleries">
             <section class="gallery_main">
                 <article>
-                    <h3>현재 개화시기</h3>
-                    <div>
-                    <iframe width="1000px" height="900px" src="api_map_select.jsp"></iframe>       
+                    <h3>🎇🧨✨🎊🎉🎆🎊🎉🧨🎇선택해🎆🎇🧨✨🎊🎉🎆🎇🧨✨🎊🎉<div>
+                    <iframe width="1000px" height="900px" src="api_map_select.jsp" scrolling = "no"></iframe>       
                 	</div>
                 </article>
             </section>

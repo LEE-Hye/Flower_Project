@@ -85,7 +85,6 @@
             </li>-->
         </ul>
     </div>
-    <input type='reset'>
     </form>
     
    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e98ea6bbf35f78f0fe5bed829537d85&libraries=clusterer"></script>

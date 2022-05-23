@@ -160,30 +160,22 @@
     </div>
     <!-- End Navigation Section -->
     </div>
-    <form action="IdPwCheck" name="idfindscreen" method = "POST"onsubmit="return id_search()">
-         <div class = "wrapper">
-            <h3>아이디/비밀번호 결과</h3><br><br>
-            <h4>${showMember.name}의 정보</h4>
-      <section class = "form-search">
-         <div class = "find-name">
-            <label>아이디</label>
+    <form action="IdPwCheck" name="idfindscreen" method = "POST"onsubmit="return id_search()" class="loginForm">
+       <h2>아이디/비밀번호 결과</h2>
+        <h3>${showMember.name}의 정보</h3>
+        <div class = "textForm">
+        <div class = "births">아이디 결과</div>
             <h5><c:out value="${showMember.id}"/></h5>
-            
-         <br><br><br>
+      </div>
+        <div class = "textForm">
+        <div class = "births">비밀번호 결과</div>
+         <h5><c:out value="${showMember.pw}"/></h5>            
          </div>
-         
-         <div class = "find-birth">
-            <label>비밀번호</label>
-            <h5><c:out value="${showMember.pw}"/></h5>
-            
-         </div>
-         <br><br><br>
-   </section>
+
    <div class ="btnSearch">
-      
-      <button class="btn btn-primary" onclick="back_login()" type="button">로그인 하기</button>
+      <button class="btn" onclick="back_login()" type="button">로그인 하기</button>
     </div>
-    </div>
+
  </form>
  <script type="text/javascript">
    function back_login(){

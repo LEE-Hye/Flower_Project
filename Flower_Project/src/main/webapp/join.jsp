@@ -159,12 +159,13 @@
          <input name="id" type="text" class="id" id="userid">
       </div>
 
-      <button class="btn btn-primary" onclick="idCheck()" type="button">중복체크</button>
+      <button class="btn" onclick="idCheck()" type="button">중복체크</button>
 
       <div class="textForm">
       <div class="births">비밀번호</div>
          <input name="pw" type="password" class="pw" id="pw1">
       </div>
+      
       <div class="textForm">
       <div class="births">비밀번호 확인</div>
          <input name="loginPwConfirm" type="password" class="pw" id="pw2">

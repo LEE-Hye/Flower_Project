@@ -150,22 +150,20 @@
     <!-- End Navigation Section -->
     </div>
 
-    <form action="LoginCon" method="post">
-    <div class="wrapper">
-        <h1>LOGIN</h1>
-        <div class="id">
-            <input type="text" name ="id" text="id" id="id" placeholder="ID"><br>
+<form action="LoginCon" method="post" class="loginForm">
+        <h2>LOGIN</h2>
+        <div class="textForm">
+        <div class="births">아이디</div>
+            <input type="text" name ="id" text="id" id="id" class="id">
         </div>
-        <div class="pw">
-            <input type="password" name ="pw" text="pw" id="pw" placeholder="Password"><br><br>
+       
+        <div class="textForm">
+        <div class="births">비밀번호</div>
+            <input type="password" name ="pw" text="pw" id="pw" class="pw">
         </div>
+
         <div class="submit_button">
             <input type="submit" value="L o g   I n" class="btn"/>
-        </div>
-        <div>
-            <div class="join_member">
-                <a href="join.jsp">회원가입</a>
-            <div>
         </div>
         <div>
             <div class="find">

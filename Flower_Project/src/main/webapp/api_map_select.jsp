@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-   <div id="map" style="width:100%;height:70vh;"></div>
+   <div id="map" style="width:100%;height:100vh;"></div>
    <form>
        <div class="category">
         <ul>
@@ -84,15 +84,14 @@
             </li>
         </ul>
     </div>
-    <input type='reset'>
     </form>
     
    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e98ea6bbf35f78f0fe5bed829537d85&libraries=clusterer"></script>
    <script>
       var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
           mapOption = {
-              center: new kakao.maps.LatLng(35.149823, 126.919897), // 지도의 중심좌표
-              level: 10, // 지도의 확대 레벨
+              center: new kakao.maps.LatLng(36.36588486441299, 127.38796189978896), // 지도의 중심좌표
+              level: 13, // 지도의 확대 레벨
               mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
           }; 
 
