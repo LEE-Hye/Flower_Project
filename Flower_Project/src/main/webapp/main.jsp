@@ -165,30 +165,80 @@
         <div class="col-md-12">
             <div class="main-slider hidden-sm hidden-xs" id="main-slider">
                 
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                        
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
+                        <a href="https://xn--ok0b236bp0a.com/place/2499" target='_blank'>
                             <img src="http://tong.visitkorea.or.kr/cms/resource/99/2717699_image2_1.jpeg" id="main_ban" alt="Slider images 1">
                             <div class="carousel-caption">
                                 <h1>원주 용수골양귀비축제</h1>
                                 <p>1만평 꽃양귀비 꽃밭에서 펼쳐지는 축제! 꽃양귀비 뿐만 아니라 청보랏빛 수레국화와 알리움도 함께 심어져 아름다움을 더하고 있으니 꼭 참여하세요!
-								<br>기간 : 2022년 05월25일 ~ 2022년 06월12일</p>
+                        <br>기간 : 2022년 05월25일 ~ 2022년 06월12일</p>
                             </div>
+                        </a>    
                         </div>
                         <div class="item">
+                        <a href="https://xn--ok0b236bp0a.com/place/3764" target='_blank'>
                             <img src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=0c9e5ce6-f5a4-4a65-b189-eacaf0a6e959" id="main_ban2" alt="Slider images 2">
                             <div class="carousel-caption">
                                 <h1>곡성 세계장미축제</h1>
                                 <p>일제히 꽃문을 연 1,004 종의 장미와 함께 펼쳐지는 화려한 봄의 페스티벌! 쉽게 볼 수 없는 전 세계 명품 장미를 한 곳에서 볼 수 있는 국내 유일의 기회!
                                 <br>기간 : 2022년 05월 21일 ~ 2022년 06월 06일</p>
                             </div>
+                        </a>
+                        </div>
+                        <div class="item">
+                        <a href="https://xn--ok0b236bp0a.com/place/25997" target='_blank'>
+                            <img src="https://api.cdn.visitjeju.net/photomng/imgpath/202203/08/b8974c12-229b-4256-a007-9167d4080e21.jpg" id="main_ban3" alt="Slider images 1">
+                            <div class="carousel-caption">
+                                <h1>휴애리 봄 수국축제</h1>
+                                <p>오색빛깔 수국을 한 곳에서 올 봄 가장 먼저 수국을 만나 볼 수 있는 절호의 기회!
+                        <br>기간 : 2022년 03월 25일 ~ 2022년 06월 12일</p>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="item">
+                        <a href="https://xn--ok0b236bp0a.com/place/3781" target='_blank'>
+                            <img src="https://www.tournews21.com/news/photo/202004/42045_74001_722.jpg" id="main_ban4" alt="Slider images 1">
+                            <div class="carousel-caption">
+                                <h1>영주 소백산철쭉제</h1>
+                                <p>봄바람의 선율에 꽃망울을 터트리며, 국내 최대 철쭉 군락지인 소백산의 꽃길과 푸른 하늘을 바라보며 사랑의 기쁨을 느껴보자!
+                        <br>기간 : 2022년 05월 28일 ! 2022년 05월 29일</p>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="item">
+                        <a href="https://xn--ok0b236bp0a.com/place/26079" target='_blank'>
+                            <img src="http://tong.visitkorea.or.kr/cms/resource/03/2811503_image2_1.jpg" id="main_ban5" id="main_ban5" alt="Slider images 1">
+                            <div class="carousel-caption">
+                                <h1>백만송이 봄꽃축제</h1>
+                                <p>벽초지수목원의 동서양의 27개의 정원들을 봄맞이 대표꽃인 튤립, 크로커스, 수선화, 아이리스 등과 함께 화려함의 대명사인 다알리아와 수백종의 야생화들이 수놓아 맞이하고있으니 꼭 한번 참여하세요!
+                        <br>기간 : 2022년 04월 08일 ~ 2022년 05월 30일</p>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="item">
+                        <a href="https://xn--ok0b236bp0a.com/place/2638" target='_blank'>
+                            <img src="http://www.100ssd.co.kr/news/photo/201905/61773_41922_154.jpg" id="main_ban6" id="main_ban5" alt="Slider images 1">
+                            <div class="carousel-caption">
+                                <h1>부여서동연꽃축제</h1>
+                                <p>스무살, 연꽃화원의 초대 빛나는 이야기를 담다
+                                천만송이 연꽃의 향연, 부여서동연꽃축제에 여러분을 초대합니다!
+                        <br>기간 : 2022년 07월 14일 ~ 2022년 07월 17일</p>
+                            </div>
+                        </a>
                         </div>
                     </div>
 
