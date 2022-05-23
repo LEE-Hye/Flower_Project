@@ -26,11 +26,7 @@
 <title>Canvas</title>
 
     <meta charset="utf-8" />
-    <title>koreaMap</title>
-    <link rel="stylesheet" href="css/korea.css" />
-
-    <!-- Basic -->
-    <title>Construction | Home</title>
+    <title>Flower_Project</title>
 
     <!-- Define Charset -->
     <meta charset="utf-8">
