@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.domain.PostVO"%>
+<%@page import="com.smhrd.domain.PostDAO"%>
 <%@page import="com.smhrd.domain.BoardListVO"%>
 <%@page import="com.smhrd.domain.BoardListDAO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
@@ -8,9 +10,10 @@
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
 <% 
-	BoardListDAO dao = new BoardListDAO();
-	List<BoardListVO> BoardList = dao.selecAlltBoard();
-    pageContext.setAttribute("BoardList", BoardList);
+	PostDAO dao = new PostDAO();
+	List<PostVO> postList = dao.selectAllBoard();
+	System.out.println("갯수 : "+ postList.size());
+	pageContext.setAttribute("postList", postList);
 %>
 
 
@@ -320,19 +323,18 @@
 </div>
 
 
-<c:forEach var="b" items="${BoardList}">
+<c:forEach var="b" items="${postList}">
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
-        <a href="detail_page.jsp">
-
-        <dtitle><c:out value="${b.b_num}" /></dtitle>
+        <a href="SelectPostCon?pnum=${b.pnum}">
+        <dtitle><c:out value="${b.pnum}" /></dtitle>
         <hr>
       <div class="thumbnail">
-          <img src="images/flower/겨울_동백나무.jpg" class="img-circle">
+     <!--  <img src="images/flower/겨울_동백나무.jpg" class="img-circle"> -->
+         <img src='<c:out value="upload/${b.sname}" />' class="img-circle">
       </div><!-- /thumbnail -->
-      <h1><c:out value="${b.b_name}"/>님의 게시글입니다.</h1>
-      <h3><c:out value="${b.b_title}" /></h3>
-
+      <h1><c:out value="${b.mid}"/>님의 게시글입니다.</h1>
+      <h3><c:out value="${b.title}" /></h3>
       <br>
     </a>
     </div>
