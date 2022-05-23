@@ -4,9 +4,60 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace = "com.smhrd.domain.MapDAO">
    <select id ="Allmap" parameterType ="String" resultType="com.smhrd.domain.MapVO">
-      select * from map 
+      select * from map
    </select>
    
+   <select id ="Carnivalmap" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from Carnival1
+   </select>
+   
+   <select id ="month1" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '1'
+   </select>   
+   
+   <select id ="month2" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '2'
+   </select>
+   
+   <select id ="month3" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '3'
+   </select>
+   
+   <select id ="month4" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '4'
+   </select>
+   
+   <select id ="month5" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '5'
+   </select>
+   
+   <select id ="month6" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '6'
+   </select>
+   
+   <select id ="month7" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '7'
+   </select>
+   
+   <select id ="month8" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '8'
+   </select>
+   
+   <select id ="month9" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '9'
+   </select>
+   
+   <select id ="month10" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '10'
+   </select>
+   
+   <select id ="month11" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '11'
+   </select>
+   
+   <select id ="month12" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from map where time = '12'
+   </select>   
 <!--    <select id = "selectMessage" parameterType="String" resultType="com.smhrd.domain.Message">
       select * from web_message where receiveEmail = #{receiveEmail}
    </select>

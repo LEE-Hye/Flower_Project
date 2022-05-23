@@ -7,6 +7,18 @@ public class MapVO {
    private String gy;
    private String flower;
    private String num;
+   private String time;
+   
+   public MapVO(String name, String address, String wi, String gy, String flower, String num, String time) {
+      super();
+      this.name = name;
+      this.address = address;
+      this.wi = wi;
+      this.gy = gy;
+      this.flower = flower;
+      this.num = num;
+      this.time = time;
+   }
    
    public MapVO(String name, String address, String wi, String gy, String flower, String num) {
       super();
@@ -17,6 +29,7 @@ public class MapVO {
       this.flower = flower;
       this.num = num;
    }
+   
 
    public String getName() {
       return name;
@@ -65,6 +78,16 @@ public class MapVO {
    public void setNum(String num) {
       this.num = num;
    }
+
+   public String getTime() {
+      return time;
+   }
+
+   public void setTime(String time) {
+      this.time = time;
+   }
+   
+   
    
    
 }

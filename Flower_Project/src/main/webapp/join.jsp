@@ -155,24 +155,28 @@
 
       <h2>회원가입</h2>
       <div class="textForm">
-         <input name="id" type="text" class="id" id="userid" placeholder="아이디">
+      <div class="births">아이디</div>
+         <input name="id" type="text" class="id" id="userid">
       </div>
 
       <button class="btn btn-primary" onclick="idCheck()" type="button">중복체크</button>
 
       <div class="textForm">
-         <input name="pw" type="password" class="pw" id="pw1"
-            placeholder="비밀번호">
+      <div class="births">비밀번호</div>
+         <input name="pw" type="password" class="pw" id="pw1">
       </div>
       <div class="textForm">
-         <input name="loginPwConfirm" type="password" class="pw" id="pw2"
-            placeholder="비밀번호 확인">
+      <div class="births">비밀번호 확인</div>
+         <input name="loginPwConfirm" type="password" class="pw" id="pw2">
       </div>
       <div class="textForm">
-         <input name="name" type="text" class="name" placeholder="이름">
+      <div class="births">이름</div>
+         <input name="name" type="text" class="name">
       </div>
       <div class="textForm">
-         <input name="birth" type="date" class="birth" placeholder="생년월일">
+      <div class="births">생년월일</div>
+         <input name="birth" type="date" class="birth">
+         
       </div>
       <input type="submit" class="btn" value="J O I N" />
    </form>

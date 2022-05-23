@@ -177,10 +177,13 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="images/slider/공룡이.jpg" class="img-responsive" alt="Slider images 1">
+                            <img src="http://tong.visitkorea.or.kr/cms/resource/89/2820589_image2_1.jpg" class="img-responsive" alt="Slider images 1">
                             <div class="carousel-caption">
-                                <h1>공룡축제</h1>
-                                <p>귀여운 티라노 사우르스가 있는 공룡 축제<br>기간 : 2023년 05월 20일 ~ 2026년 49월 03일</p>
+                                <h1>제주 한림공원 2022 부겐빌레아 꽃축제</h1>
+                                <p>제주를 오롯이 느낄 수 있는 한림공원에서 5월 20일부터 제 5회 부겐빌레아 축제를 개최한다.
+한림공원은 국내에서 유일하게 부겐빌레아 축제를 열고 있으며, 열대지방에서만 볼 수 있는 부겐빌레아를 30년 이상 온실에서 재배하고 있다.
+한림공원 열대분재원 내 부겐빌레아는 붉은색, 노랑색, 보라색 등 화려한 색으로 관람객들의 눈길을 끌고 있으며, 꽃처럼 보이는 다양한 색의 꽃싸개 안에 나팔 모양으로 작게 피어있는 부겐빌레아 꽃을 보는 것 또한 부겐빌레아 관람의 묘미이다.
+한림공원 부겐빌레아 축제는 20일부터 다음달 19일까지 한림공원 내부에 있는 제주석분재원 내 열대분재원, 아열대식물원 관엽온실, 연못정원 등에서 볼 수 있다.<br>기간 : 2022년 05월20일 ~ 2022년 06월19일</p>
                             </div>
                         </div>
                         <div class="item">
@@ -218,13 +221,13 @@
                 <article class="arts half">
                     <h3>현재 개화시기</h3>
                     <div>
-                    <iframe width="100%" height="700px" src="ex02.jsp"></iframe>       
+                    <iframe width="100%" height="700px" src="api_main1.jsp"></iframe>       
                 	</div>
                 </article>
                 <article class="arts half">
                     <h3>현재 축제시기</h3>
                     <div>
-                    <iframe width="100%" height="700px" src="ex03.jsp"></iframe>
+                    <iframe width="100%" height="700px" src="api_main2.jsp"></iframe>
                     </div>
                 </article>
             </section>
