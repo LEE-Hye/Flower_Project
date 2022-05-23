@@ -4,11 +4,14 @@
 <%@page import="com.smhrd.domain.MapDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- Construction CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
 #mapwrap{position:relative;overflow:hidden;}
 .category, .category *{margin:0;padding:0;color:#000;background:pink;}   
@@ -19,10 +22,16 @@
 .category .pic1{display:block;margin:0 auto 2px;width:22px;height:26px;}
 .category .pic1{display:block;margin:0 auto 2px;width:22px;height:26px;} 
 .category .ico_carpark {background-position:-10px -72px;} 
+
+.map_div{
+	font-family: 'Happiness-Sans-Title';
+	text-area: 'center';
+}
+
 </style>
 </head>
 <body>
-   <div id="map" style="width:100%;height:100vh;"></div>
+   <div id="map" style="width:100%;height:70vh;"></div>
    <form>
        <div class="category">
         <ul>
@@ -84,14 +93,15 @@
             </li>
         </ul>
     </div>
+    <input type='reset'>
     </form>
     
    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e98ea6bbf35f78f0fe5bed829537d85&libraries=clusterer"></script>
    <script>
       var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
           mapOption = {
-              center: new kakao.maps.LatLng(36.36588486441299, 127.38796189978896), // 지도의 중심좌표
-              level: 13, // 지도의 확대 레벨
+              center: new kakao.maps.LatLng(36.498999, 127.914798), // 지도의 중심좌표
+              level: 12, // 지도의 확대 레벨
               mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
           }; 
 
@@ -249,85 +259,85 @@
       var chkflag = true;
       console.log(<%=MapList.size()%>)
       <%for(int i =0 ; i<MapList.size();i++){ %>
-         데이터.push([<%=MapList.get(i).getWi()%>, <%=MapList.get(i).getGy()%>, '<div style="padding:5px;"><%=MapList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=MapList.get(i).getFlower()%></a></div>'])
+         데이터.push([<%=MapList.get(i).getWi()%>, <%=MapList.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=MapList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=MapList.get(i).getFlower()%></a></div>','<%=MapList.get(i).getName()%>'])
       <%}%>
       var 축제 = []
       var 축제markers = []
       var chkflag0 = true;
       <%for(int i =0 ; i<carnivalList.size();i++){ %>
-      축제.push([<%=carnivalList.get(i).getWi()%>, <%=carnivalList.get(i).getGy()%>, '<div style="padding:5px;"><%=carnivalList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=carnivalList.get(i).getFlower()%></a></div>'])
+      축제.push([<%=carnivalList.get(i).getWi()%>, <%=carnivalList.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=carnivalList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=carnivalList.get(i).getFlower()%></a></div>','<%=carnivalList.get(i).getName()%>'])
       <%}%>
       var 일월 = []
       var 일월markers = []
       var chkflag1 = true;
       <%for(int i =0 ; i<month1.size();i++){ %>
-      일월.push([<%=month1.get(i).getWi()%>, <%=month1.get(i).getGy()%>, '<div style="padding:5px;"><%=month1.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month1.get(i).getFlower()%></a></div>'])
+      일월.push([<%=month1.get(i).getWi()%>, <%=month1.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month1.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month1.get(i).getFlower()%></a></div>','<%=month1.get(i).getName()%>'])
       <%}%>
       var 이월 = []
       var 이월markers = []
       var chkflag2 = true;
       <%for(int i =0 ; i<month2.size();i++){ %>
-      이월.push([<%=month2.get(i).getWi()%>, <%=month2.get(i).getGy()%>, '<div style="padding:5px;"><%=month2.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month2.get(i).getFlower()%></a></div>'])
+      이월.push([<%=month2.get(i).getWi()%>, <%=month2.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month2.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month2.get(i).getFlower()%></a></div>','<%=month2.get(i).getName()%>'])
       <%}%>
       var 삼월 = []
       var 삼월markers = []
       var chkflag3 = true;
       <%for(int i =0 ; i<month3.size();i++){ %>
-      삼월.push([<%=month3.get(i).getWi()%>, <%=month3.get(i).getGy()%>, '<div style="padding:5px;"><%=month3.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month3.get(i).getFlower()%></a></div>'])
+      삼월.push([<%=month3.get(i).getWi()%>, <%=month3.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month3.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month3.get(i).getFlower()%></a></div>','<%=month3.get(i).getName()%>'])
       <%}%>
       var 사월 = []
       var 사월markers = []
       var chkflag4 = true;
       <%for(int i =0 ; i<month4.size();i++){ %>
-      사월.push([<%=month4.get(i).getWi()%>, <%=month4.get(i).getGy()%>, '<div style="padding:5px;"><%=month4.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month4.get(i).getFlower()%></a></div>'])
+      사월.push([<%=month4.get(i).getWi()%>, <%=month4.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month4.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month4.get(i).getFlower()%></a></div>','<%=month4.get(i).getName()%>'])
       <%}%>
       var 오월 = []
       var 오월markers = []
       var chkflag5 = true;
       <%for(int i =0 ; i<month5.size();i++){ %>
-      오월.push([<%=month5.get(i).getWi()%>, <%=month5.get(i).getGy()%>, '<div style="padding:5px;"><%=month5.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month5.get(i).getFlower()%></a></div>'])
+      오월.push([<%=month5.get(i).getWi()%>, <%=month5.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month5.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month5.get(i).getFlower()%></a></div>','<%=month5.get(i).getName()%>'])
       <%}%>
       var 육월 = []
       var 육월markers = []
       var chkflag6 = true;
       <%for(int i =0 ; i<month6.size();i++){ %>
-      육월.push([<%=month6.get(i).getWi()%>, <%=month6.get(i).getGy()%>, '<div style="padding:5px;"><%=month6.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month6.get(i).getFlower()%></a></div>'])
+      육월.push([<%=month6.get(i).getWi()%>, <%=month6.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month6.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month6.get(i).getFlower()%></a></div>','<%=month6.get(i).getName()%>'])
       <%}%>
       var 칠월 = []
       var 칠월markers = []
       var chkflag7 = true;
       <%for(int i =0 ; i<month7.size();i++){ %>
-      칠월.push([<%=month7.get(i).getWi()%>, <%=month7.get(i).getGy()%>, '<div style="padding:5px;"><%=month7.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month7.get(i).getFlower()%></a></div>'])
+      칠월.push([<%=month7.get(i).getWi()%>, <%=month7.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month7.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month7.get(i).getFlower()%></a></div>','<%=month7.get(i).getName()%>'])
       <%}%>
       var 팔월 = []
       var 팔월markers = []
       var chkflag8 = true;
       <%for(int i =0 ; i<month8.size();i++){ %>
-      팔월.push([<%=month8.get(i).getWi()%>, <%=month8.get(i).getGy()%>, '<div style="padding:5px;"><%=month8.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month8.get(i).getFlower()%></a></div>'])
+      팔월.push([<%=month8.get(i).getWi()%>, <%=month8.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month8.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month8.get(i).getFlower()%></a></div>','<%=month8.get(i).getName()%>'])
       <%}%>
       var 구월 = []
       var 구월markers = []
       var chkflag9 = true;
       <%for(int i =0 ; i<month9.size();i++){ %>
-      구월.push([<%=month9.get(i).getWi()%>, <%=month9.get(i).getGy()%>, '<div style="padding:5px;"><%=month9.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month9.get(i).getFlower()%></a></div>'])
+      구월.push([<%=month9.get(i).getWi()%>, <%=month9.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month9.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month9.get(i).getFlower()%></a></div>','<%=month9.get(i).getName()%>'])
       <%}%>
       var 십월 = []
       var 십월markers = []
       var chkflagA = true;
       <%for(int i =0 ; i<monthA.size();i++){ %>
-      십월.push([<%=monthA.get(i).getWi()%>, <%=monthA.get(i).getGy()%>, '<div style="padding:5px;"><%=monthA.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=monthA.get(i).getFlower()%></a></div>'])
+      십월.push([<%=monthA.get(i).getWi()%>, <%=monthA.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=monthA.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=monthA.get(i).getFlower()%></a></div>','<%=monthA.get(i).getName()%>'])
       <%}%>
       var 십일월 = []
       var 십일월markers = []
       var chkflag11 = true;
       <%for(int i =0 ; i<month11.size();i++){ %>
-      십일월.push([<%=month11.get(i).getWi()%>, <%=month11.get(i).getGy()%>, '<div style="padding:5px;"><%=month11.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month11.get(i).getFlower()%></a></div>'])
+      십일월.push([<%=month11.get(i).getWi()%>, <%=month11.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month11.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month11.get(i).getFlower()%></a></div>','<%=month11.get(i).getName()%>'])
       <%}%>
       var 십이월 = []
       var 십이월markers = []
       var chkflagB = true;
       <%for(int i =0 ; i<monthB.size();i++){ %>
-      십이월.push([<%=monthB.get(i).getWi()%>, <%=monthB.get(i).getGy()%>, '<div style="padding:5px;"><%=monthB.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=monthB.get(i).getFlower()%></a></div>'])
+      십이월.push([<%=monthB.get(i).getWi()%>, <%=monthB.get(i).getGy()%>, '<div class="map_div" style="padding:5px;";><%=monthB.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=monthB.get(i).getFlower()%></a></div>','<%=monthB.get(i).getName()%>'])
       <%}%>
       
       
@@ -381,10 +391,12 @@ function createMarkers() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+데이터[i][3]+','+데이터[i][0]+','+데이터[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
-        });
+           location.href = a;
+           });
         
         }//반복문 끝 ~
         }
@@ -428,10 +440,12 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+축제[i][3]+','+축제[i][0]+','+축제[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
-        });
+           location.href = a;
+           });
         
         }
       }//반복문 끝 ~
@@ -473,9 +487,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+일월[i][3]+','+일월[i][0]+','+일월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }   
@@ -515,9 +531,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+이월[i][3]+','+이월[i][0]+','+이월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }
@@ -557,9 +575,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+삼월[i][3]+','+삼월[i][0]+','+삼월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }
@@ -599,9 +619,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+사월[i][3]+','+사월[i][0]+','+사월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }
@@ -641,9 +663,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+오월[i][3]+','+오월[i][0]+','+오월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }        
@@ -683,9 +707,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+육월[i][3]+','+육월[i][0]+','+육월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }
@@ -725,9 +751,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+칠월[i][3]+','+칠월[i][0]+','+칠월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }
@@ -767,9 +795,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+팔월[i][3]+','+팔월[i][0]+','+팔월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }
@@ -809,13 +839,15 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+구월[i][3]+','+구월[i][0]+','+구월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }    
-    //10월 꽃정보
+    //10~11월 꽃정보
     function createmonthA() {
         for (var i=0; i<십월.length; i++){
          // 지도에 마커를 생성하고 표시한다
@@ -851,15 +883,17 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+십월[i][3]+','+십월[i][0]+','+십월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }         
-    //11월 꽃정보
+    //12월 꽃정보
     function createmonthB() {
-        for (var i=0; i<십이월.length; i++){
+        for (let i=0; i<십이월.length; i++){
          // 지도에 마커를 생성하고 표시한다
       var marker = new kakao.maps.Marker({
           position: new kakao.maps.LatLng(십이월[i][0], 십이월[i][1]), // 마커의 좌표
@@ -893,13 +927,20 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        console.log('https://map.kakao.com/link/map/'+십이월[i][3]+','+십이월[i][0]+','+십이월[i][1]);
+        let a = 'https://map.kakao.com/link/map/'+십이월[i][3]+','+십이월[i][0]+','+십이월[i][1];
+
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
-      }        
-        
+      } 
+    /* 'https://map.kakao.com/link/map/'+십이월[i][3]+','+십이월[i][0]+','+십이월[i][1] */
+    <%-- <%for(int i =0 ; i<monthB.size();i++){ %> --%>
+    <%-- <%=monthB.get(i).getName()%>,<%=monthB.get(i).getWi()%>,<%=monthB.get(i).getGy()%> --%>
+    <%-- <%}%> --%>  
         
         
         

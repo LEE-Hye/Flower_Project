@@ -169,7 +169,7 @@
       var 오월markers = []
       var chkflag5 = true;
       <%for(int i =0 ; i<month5.size();i++){ %>
-      오월.push([<%=month5.get(i).getWi()%>, <%=month5.get(i).getGy()%>, '<div style="padding:5px;"><%=month5.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month5.get(i).getFlower()%></a></div>'])
+      오월.push([<%=month5.get(i).getWi()%>, <%=month5.get(i).getGy()%>, '<div style="padding:5px;"><%=month5.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month5.get(i).getFlower()%></a></div>','<%=month5.get(i).getName()%>'])
       <%}%>
      
       
@@ -317,9 +317,11 @@ function createMarkers1() {
         var level = map.getLevel() - 1;
         map.setLevel(level, {anchor: this.getPosition()});
         });
+        
+        let a = 'https://map.kakao.com/link/map/'+오월[i][3]+','+오월[i][0]+','+오월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = 'http://map.daum.net';
+           location.href = a;
            });
           }
       }        

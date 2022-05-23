@@ -426,7 +426,7 @@
     
     //날씨 api를 통해 날씨에 관련된 정보들을 받아온다. 
     function getWeather(lat, lon) {
-        fetch("http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${'591998c0423f5ab7c296cccae8075f9b'}&units=metric&lang=kr").then(function(response) {
+        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${'591998c0423f5ab7c296cccae8075f9b'}&units=metric&lang=kr`).then(function(response) {
             return response.json();
         })
         
@@ -439,7 +439,7 @@
             const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
         
             //받아온 정보들을 표현한다. 
-            weatherInfo.innerText = "${temperature} °C / @${place} / ${weatherDescription}";
+            weatherInfo.innerText = `${temperature} °C / @${place} / ${weatherDescription}`;
             weatherIconImg.setAttribute("src", weatherIconAdrs);
         })
         .catch((error) => console.log("error:", error));
