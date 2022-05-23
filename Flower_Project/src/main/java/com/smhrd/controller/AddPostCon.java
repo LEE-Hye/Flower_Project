@@ -27,8 +27,8 @@ public class AddPostCon extends HttpServlet {
 
 		//여기를 바꿔주면 다운받는 경로가 바뀜
 		String savePath = "upload";
-		//최대 업로드 파일 크기 10MB로 제한
-		int uploadFileSizeLimit = 10 * 1024 * 1024;
+		//최대 업로드 파일 크기 20MB로 제한
+		int uploadFileSizeLimit = 20 * 1024 * 1024;
 		String encType= "UTF-8";
 
 		ServletContext context = getServletContext();

@@ -20,42 +20,41 @@ public class PostVO {
 		
 	}
 	
-	
-	
-	public PostVO(int pnum, String mid, int hit) {
-		super();
-		this.pnum = pnum;
-		this.mid = mid;
-		this.hit = hit;
-	}
-
-
-
 	public PostVO(int pnum) {
 		super();
 		this.pnum = pnum;
 	}
-
-
-
+	
 	public PostVO(int pnum, String mid, String title) {
 		super();
 		this.pnum = pnum;
 		this.mid = mid;
 		this.title = title;
 	}
-	
-	
-	public PostVO(int pnum, String mid, String title, String content, String sload) {
+
+
+	public PostVO(int pnum, String mid, String title, String content, String fid) {
 		super();
 		this.pnum = pnum;
 		this.mid = mid;
 		this.title = title;
 		this.content = content;
+		this.fid = fid;
+	}
+	
+	public PostVO(int pnum, String mid, String title, String content, String fid, String oname, String sname,
+			String sload) {
+		super();
+		this.pnum = pnum;
+		this.mid = mid;
+		this.title = title;
+		this.content = content;
+		this.fid = fid;
+		this.oname = oname;
+		this.sname = sname;
 		this.sload = sload;
 	}
-
-
+	
 	public PostVO(String mid, String title, String content, String fid, int plike, int hit, String oname, String sname,
 			String sload) {
 		super();
@@ -185,5 +184,4 @@ public class PostVO {
 	
 	
 	
-	
-}
+}	

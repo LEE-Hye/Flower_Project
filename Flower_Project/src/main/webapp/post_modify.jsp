@@ -1,3 +1,4 @@
+<%@page import="java.net.URLEncoder"%>
 <%@page import="com.smhrd.domain.PostDAO"%>
 <%@page import="com.smhrd.domain.PostVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
@@ -282,9 +283,11 @@
     <div id="main_container">
 
         <div class="post_form_container">
-            <form action="UpdatePostCon" method="post" enctype="multipart/form-data" id="ModiForm" class="post_form">
+            <form action="" method="post" enctype="multipart/form-data" id="ModiForm" class="post_form">
+                <input name="pnum" type="text" value="${post.pnum}" readonly></input>
+                <input name="mid" type="text" value="${post.mid}" readonly></input>
                 <div id="in_title">
-                    <textarea name="title" value="${post.title}" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required></textarea>
+                    <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required><c:out value="${post.title}"></c:out></textarea>
                 </div>
                 <div class="preview">
                     <div class="upload">
@@ -295,12 +298,16 @@
                             </div>
                             <p>대표 이미지 추가</p>
                             <canvas id="imageCanvas"></canvas>
+                            <%
+                            String sname = URLEncoder.encode(post.getSname(), "UTF-8");
+                            %>
                             <!--<p><img id="img_id" src="#" style="width: 300px; height: 300px; object-fit: cover" alt="thumbnail"></p>-->
                         </div>
                     </div>
                 </div>
                 <p>
-                    <input type="file" name="photo" id="id_photo" required="required">
+                    <input type="file" name="photo" id="id_photo">
+                    (주의사항 : 이미지를 변경하고자 할때만 선택하시오.)
                 </p>
                 <p>
                     <textarea name="content" id="text_field" cols="50" rows="5" ><c:out value="${post.content}" /></textarea>
@@ -308,15 +315,9 @@
                 </p>
                 <br>
 
-               <%--  <form enctype="multipart/form-data" action="write_ok.php?board_id=<?echo $board_id;?>" method="post"> --%>
-                    
-                   
-
 
                     <div class="wi_line"></div>
-                    
- 
-                    
+
                           
                       <br>
                       <div>대표 꽃 태그를 선택해 주세요</div>
@@ -329,7 +330,7 @@
                          </tr>
                         <tr>
                             <td>
-                                <input type="text" id="flower_hash"  readonly>
+                                <input type="text" name="fid" value="${post.fid}" id="flower_hash"  readonly>
                                 
                             </td>
                         </tr>
@@ -482,7 +483,7 @@
                           
                       </div>
 
-                  </form>
+                  
 
                 <input class="submit_btn" id = "update" type="submit" value="수정" >
                 <input class="submit_btn" id = "delete" type="submit" value="삭제" >
@@ -521,6 +522,14 @@
        fileInput.addEventListener('change', handleImage, false);
        var canvas = document.getElementById('imageCanvas');
        var ctx = canvas.getContext('2d');
+       var img = new Image();
+       img.onload = function(){
+    	   canvas.width = 300;
+           canvas.height = 300;
+    	   ctx.drawImage(img,0,0,300,300);
+    	 }
+    	// 이미지 URL
+    	img.src = 'upload/<%=post.getSname()%>';
 
 
         function handleImage(e){

@@ -14,8 +14,12 @@
 		select * from post where pnum = #{pnum}
 	</select>
 	
+	<update id="updateFilePost" parameterType="com.smhrd.domain.PostVO">
+		update post set title=#{title}, content=#{content}, fid=#{fid}, oname=#{oname}, sname=#{sname}, sload=#{sload} where mid=#{mid} and pnum=#{pnum}
+	</update>
+	
 	<update id="updatePost" parameterType="com.smhrd.domain.PostVO">
-		update post set title=#{title}, content=#{content}, fid=#{fid}, where mid=#{mid}
+		update post set title=#{title}, content=#{content}, fid=#{fid} where mid=#{mid} and pnum=#{pnum}
 	</update>
 	
 	<delete id="deletePost" parameterType="int">

@@ -10,12 +10,12 @@
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
 <% 
-	PostDAO dao = new PostDAO();
-	List<PostVO> postList = dao.selectAllBoard();
-	System.out.println("갯수 : "+ postList.size());
-	pageContext.setAttribute("postList", postList);
-	
-	System.out.print(postList.get(0));
+   PostDAO dao = new PostDAO();
+   List<PostVO> postList = dao.selectAllBoard();
+   System.out.println("갯수 : "+ postList.size());
+   pageContext.setAttribute("postList", postList);
+   
+   System.out.print(postList.get(0));
 %>
 
 
@@ -290,7 +290,7 @@
     <!-- 로그인해야지만 글쓰기 버튼누르기 -->
    
     <c:if test="${!empty loginMember }">
-    	<div>
+       <div>
         <input type="button" id="write" value="글쓰기" style="float: right" onclick="location.href='post_write.jsp'">
         </div>
     </c:if>
@@ -364,20 +364,20 @@
     
     
     <tr align="center">
-				<td colspan="5">
-					<form action="boardSearch.do" method="post">
-						<select name="part">
-							<option value="b_subject">제목</option>
-							<option value="b_content">내용</option>
-						</select> <input type="text" name="searchData" required="required" /> <input
-							type="submit" value="검색" />
-					</form>
-				</td>
-			</tr>
+            <td colspan="5">
+               <form action="boardSearch.do" method="post">
+                  <select name="part">
+                     <option value="b_subject">제목</option>
+                     <option value="b_content">내용</option>
+                  </select> <input type="text" name="searchData" required="required" /> <input
+                     type="submit" value="검색" />
+               </form>
+            </td>
+         </tr>
 
 
 
-		</li>
+      </li>
     
    
    

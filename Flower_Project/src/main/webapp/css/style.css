@@ -111,6 +111,7 @@ ul li {
             width: 100%;
             display: flex;
             justify-content: space-around;
+            border-radius: 5px;
         }
         
         .gallery_main .cont {
@@ -2852,7 +2853,9 @@ button {
              -moz-box-shadow: 0px;
                   box-shadow: 0px;
             background: none;
-            text-align: center;      
+            text-align: center;  
+            max-height: 100px;
+    		min-height: 100px;    
             
         }
 
@@ -2974,4 +2977,13 @@ button {
 #img-main{
    width:100px;
    height:100px;
+}
+
+#img-res{
+   width:80px;
+   height:80px;
+}
+
+.img-circle{
+   width:100px;
 }

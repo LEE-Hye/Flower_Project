@@ -7,6 +7,10 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.database.SqlSessionManager;
 
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+
 public class PostDAO {
 	
 	SqlSessionFactory sqlSessionFactory=SqlSessionManager.getSqlSession();
@@ -84,37 +88,72 @@ public class PostDAO {
 			
 		}
 	
-	//게시글 수정
-		public int updatePost() {
-			int cnt=0;
-			try {
-				cnt = sqlSession.update("com.smhrd.domain.PostDAO.updatePost");
-			}  catch (Exception e) {
-				e.printStackTrace();
-			}finally {
-				sqlSession.close();
-			}
-			return cnt;
-		}
 		
-	//게시글 삭제 메서드
-		public int deletePost(int pnum) {
-			int cnt = 0;
-			try {
-				cnt = sqlSession.delete("com.smhrd.domain.PostDAO.deletePost", pnum);	
-				if(cnt>0) {
-					sqlSession.commit();
-				} else {
-					sqlSession.rollback();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}finally {
-				sqlSession.close();
-			}
-			 return cnt;
-			
-		}
+		// 변경할 파일O 수정 메서드
+	      public int updateFilePost(PostVO p_vo) {
+	         SqlSession sqlSession = sqlSessionFactory.openSession();
+	         int cnt = 0;
+
+	         try {
+	            cnt = sqlSession.update("com.smhrd.domain.PostDAO.updateFilePost", p_vo);
+
+	            if (cnt > 0) {
+	               sqlSession.commit();
+	            } else {
+	               sqlSession.rollback();
+	            }
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	         } finally {
+	            sqlSession.close();
+	         }
+	         return cnt;
+	      }
+
+		
+	      // 변경할 파일X 수정 메서드
+	      public int updatePost(PostVO p_vo) {
+	         SqlSession sqlSession =sqlSessionFactory.openSession();
+	         int cnt=0;
+	         
+	         try {
+	            cnt = sqlSession.update("com.smhrd.domain.PostDAO.updatePost", p_vo);
+	            
+	            if(cnt>0) {
+	               sqlSession.commit();
+	            }else {
+	               sqlSession.rollback();
+	            }
+	         }catch (Exception e) {
+	            e.printStackTrace();
+	         }finally {
+	            sqlSession.close();
+	         }
+	         return cnt;
+	      }
+
+		
+		
+	      //게시글 삭제 메서드
+	      public int deletePost(int pnum) {
+	         SqlSession sqlSession =sqlSessionFactory.openSession();
+	         int cnt = 0;
+	         
+	         try {
+	            cnt = sqlSession.delete("com.smhrd.domain.PostDAO.deletePost", pnum);   
+	            if(cnt>0) {
+	               sqlSession.commit();
+	            } else {
+	               sqlSession.rollback();
+	            }
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	         }finally {
+	            sqlSession.close();
+	         }
+	          return cnt;
+	         
+	      }
 
 	//좋아요 메서드
 		

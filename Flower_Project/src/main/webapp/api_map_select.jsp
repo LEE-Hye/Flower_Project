@@ -14,8 +14,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
 #mapwrap{position:relative;overflow:hidden;}
-.category, .category *{margin:0;padding:0;color:#000;background:pink;}   
-.category {position:absolute;overflow:hidden;top:10px;left:10px;width:650px;height:50px;z-index:10;border:1px solid black;font-family:'Malgun Gothic','맑은 고딕',sans-serif;font-size:12px;text-align:center;background-color:#fff;}
+.category, .category *{margin:0;padding:0;color:#000;background:white;box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);}   
+.category {position:absolute;overflow:hidden;top:10px;left:10px;width:650px;height:50px;z-index:10;border:1px solid black;font-family:'Malgun Gothic','맑은 고딕',sans-serif;font-size:12px;text-align:center;background-color:#fff;border-radius: 5px;}
 .category .menu_selected {background:#FF5F4A;color:#fff;border-left:1px solid #915B2F;border-right:1px solid #915B2F;margin:0 -1px;} 
 .category li{list-style:none;float:left;width:50px;height:45px;padding-top:5px;cursor:pointer;} 
 .category .ico_comm {display:block;margin:0 auto 2px;width:22px;height:26px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/category.png') no-repeat;} 
