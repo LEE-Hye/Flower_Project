@@ -11,7 +11,7 @@
     </select>
 	
 	<select id="selectPost" parameterType="int" resultType="com.smhrd.domain.PostVO">
-		select * from post where pnum = #{pnum}
+		select * from post where pnum = #{pnum} order by pnum
 	</select>
 	
 	<update id="updatePost" parameterType="com.smhrd.domain.PostVO">

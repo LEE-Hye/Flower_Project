@@ -1,5 +1,7 @@
 package com.smhrd.domain;
 
+import java.math.BigDecimal;
+
 public class ReplyVO {
 	private int reply_num;
 	private int pnum;
@@ -10,6 +12,14 @@ public class ReplyVO {
 	
 	public ReplyVO() {
 		super();
+	}
+
+
+
+	public ReplyVO(String replyid, String replycontent) {
+		super();
+		this.replyid = replyid;
+		this.replycontent = replycontent;
 	}
 
 
