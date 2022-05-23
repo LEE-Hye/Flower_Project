@@ -219,6 +219,7 @@
                                 </div>
                                 <div class="user_name">
                                     <div class="nick_name"><c:out value="${post.mid}"/></div>
+                                    <div class="nick_name"><c:out value="${post.pdate}"/></div>
                                 </div>
                             </div>
                             <div class="sprite_more_icon" data-name="more">

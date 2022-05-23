@@ -282,7 +282,7 @@
     <div id="main_container">
 
         <div class="post_form_container">
-            <form action="#" id="ModiForm" class="post_form">
+            <form action="UpdatePostCon" method="post" enctype="multipart/form-data" id="ModiForm" class="post_form">
                 <div id="in_title">
                     <textarea name="title" value="${post.title}" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required></textarea>
                 </div>
@@ -303,12 +303,12 @@
                     <input type="file" name="photo" id="id_photo" required="required">
                 </p>
                 <p>
-                    <textarea name="content" id="text_field" cols="50" rows="5" placeholder="내용은 1000자 까지 가능합니다"></textarea>
+                    <textarea name="content" id="text_field" cols="50" rows="5" ><c:out value="${post.content}" /></textarea>
 
                 </p>
                 <br>
 
-                <form enctype="multipart/form-data" action="write_ok.php?board_id=<?echo $board_id;?>" method="post">
+               <%--  <form enctype="multipart/form-data" action="write_ok.php?board_id=<?echo $board_id;?>" method="post"> --%>
                     
                    
 
