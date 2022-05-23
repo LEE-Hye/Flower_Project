@@ -11,6 +11,10 @@
       select * from Carnival1
    </select>
    
+   <select id ="Carnivalmap5" parameterType ="String" resultType="com.smhrd.domain.MapVO">
+      select * from Carnival1 where time = '5'
+   </select>
+   
    <select id ="month1" parameterType ="String" resultType="com.smhrd.domain.MapVO">
       select * from map where time = '1'
    </select>   

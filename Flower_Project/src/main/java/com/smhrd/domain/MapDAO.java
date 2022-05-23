@@ -52,6 +52,25 @@ public class MapDAO {
    }
    
    //월별 값가져오기
+   public List<MapVO>Carnivalmap5(){
+      List<MapVO> carnivalList5 = null;
+      System.out.println("시작");
+      try {
+         carnivalList5 = sqlSession.selectList("com.smhrd.domain.MapDAO.Carnivalmap5");
+         System.out.println("세션데이터" + carnivalList5);
+         if(carnivalList5 != null) {
+            sqlSession.commit();
+         }else {
+            sqlSession.rollback();
+         }
+      } catch (Exception e) {
+         e.printStackTrace();
+      }finally {
+         
+      }return carnivalList5;
+   }
+   
+   //월별 값가져오기
    public List<MapVO>month1(){
       List<MapVO> month1 = null;
       System.out.println("시작");
