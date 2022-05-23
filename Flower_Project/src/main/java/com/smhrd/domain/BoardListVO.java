@@ -1,66 +1,71 @@
 package com.smhrd.domain;
 
 public class BoardListVO {
-	private String b_num;
-	private String b_name;
-	private String b_title;
-	private String b_content;
+	private int pnum;
+	private String mid;
+	private String title;
+	private String content;
 	
-	public BoardListVO(String b_num, String b_name, String b_title) {
+
+	
+	public BoardListVO(int pnum, String mid, String title) {
 		super();
-		this.b_num = b_num;
-		this.b_name = b_name;
-		this.b_title = b_title;
+		this.pnum = pnum;
+		this.mid = mid;
+		this.title = title;
 	}
-
-
-	public BoardListVO(String b_num, String b_name, String b_title, String b_content) {
+	
+	
+	public BoardListVO(int pnum, String mid, String title, String content) {
 		super();
-		this.b_num = b_num;
-		this.b_name = b_name;
-		this.b_title = b_title;
-		this.b_content = b_content;
+		this.pnum = pnum;
+		this.mid = mid;
+		this.title = title;
+		this.content = content;
 	}
 
 
-	public String getB_content() {
-		return b_content;
+	public int getPnum() {
+		return pnum;
 	}
 
 
-	public void setB_content(String b_content) {
-		this.b_content = b_content;
+	public void setPnum(int pnum) {
+		this.pnum = pnum;
 	}
 
 
-	public String getB_num() {
-		return b_num;
+	public String getMid() {
+		return mid;
 	}
 
 
-	public void setB_num(String b_num) {
-		this.b_num = b_num;
+	public void setMid(String mid) {
+		this.mid = mid;
 	}
 
 
-	public String getB_name() {
-		return b_name;
+	public String getTitle() {
+		return title;
 	}
 
 
-	public void setB_name(String b_name) {
-		this.b_name = b_name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 
-	public String getB_title() {
-		return b_title;
+	public String getContent() {
+		return content;
 	}
 
 
-	public void setB_title(String b_title) {
-		this.b_title = b_title;
+	public void setContent(String content) {
+		this.content = content;
 	}
+
+
+	
 	
 	
 	
