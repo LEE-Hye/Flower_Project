@@ -229,7 +229,7 @@
         <article class="myarticle_img"><img class="fsize" src='<c:out value="${f.f_img}" />'></article>
         <article class="myarticle"><c:out value="${f.f_month}" />월</article>
         <article class="myarticle"><c:out value="${f.f_story}" /></article>
-        <article><input class = "f_btn" type="button" value="조회"  onclick ="location.href = 'main.jsp'"></article>
+        <article><input class = "f_btn" type="button" value="🔍" onclick ='location.href="<c:out value='${f.f_search}'/>"'></article>
     </section><br>
     </c:forEach>
 
