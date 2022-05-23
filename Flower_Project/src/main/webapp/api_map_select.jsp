@@ -395,7 +395,8 @@ function createMarkers() {
         let a = 'https://map.kakao.com/link/map/'+데이터[i][3]+','+데이터[i][0]+','+데이터[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+        //   location.href = a;
            });
         
         }//반복문 끝 ~
@@ -444,7 +445,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+축제[i][3]+','+축제[i][0]+','+축제[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+         //  location.href = a;
            });
         
         }
@@ -491,7 +493,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+일월[i][3]+','+일월[i][0]+','+일월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+          // location.href = a;
            });
           }
       }   
@@ -535,7 +538,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+이월[i][3]+','+이월[i][0]+','+이월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+         //  location.href = a;
            });
           }
       }
@@ -579,7 +583,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+삼월[i][3]+','+삼월[i][0]+','+삼월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+        //   location.href = a;
            });
           }
       }
@@ -623,7 +628,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+사월[i][3]+','+사월[i][0]+','+사월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);	
+        //   location.href = a;
            });
           }
       }
@@ -667,7 +673,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+오월[i][3]+','+오월[i][0]+','+오월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);	
+       //    location.href = a;
            });
           }
       }        
@@ -711,7 +718,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+육월[i][3]+','+육월[i][0]+','+육월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+        //   location.href = a;
            });
           }
       }
@@ -755,7 +763,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+칠월[i][3]+','+칠월[i][0]+','+칠월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+         //  location.href = a;
            });
           }
       }
@@ -799,7 +808,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+팔월[i][3]+','+팔월[i][0]+','+팔월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+          // location.href = a;
            });
           }
       }
@@ -843,7 +853,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+구월[i][3]+','+구월[i][0]+','+구월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+          // location.href = a;
            });
           }
       }    
@@ -887,7 +898,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+십월[i][3]+','+십월[i][0]+','+십월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+         //  location.href = a;
            });
           }
       }         
@@ -933,7 +945,8 @@ function createMarkers1() {
 
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+           //location.href = a;
            });
           }
       } 

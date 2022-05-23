@@ -433,7 +433,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+축제[i][3]+','+축제[i][0]+','+축제[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+        //   location.href = a;
            });
         
         }

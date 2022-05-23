@@ -321,7 +321,8 @@ function createMarkers1() {
         let a = 'https://map.kakao.com/link/map/'+오월[i][3]+','+오월[i][0]+','+오월[i][1];
         //오른쪽 클릭시 이동 
         kakao.maps.event.addListener(marker, 'rightclick', function() {
-           location.href = a;
+        	window.open(a);
+        //   location.href = a;
            });
           }
       }        
