@@ -22,6 +22,15 @@ public class PostVO {
 	
 	
 	
+	public PostVO(int pnum, String mid, int hit) {
+		super();
+		this.pnum = pnum;
+		this.mid = mid;
+		this.hit = hit;
+	}
+
+
+
 	public PostVO(int pnum) {
 		super();
 		this.pnum = pnum;

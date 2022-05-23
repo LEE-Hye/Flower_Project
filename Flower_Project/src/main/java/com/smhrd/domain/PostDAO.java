@@ -115,5 +115,8 @@ public class PostDAO {
 			 return cnt;
 			
 		}
+
+	//좋아요 메서드
+		
 		
 }

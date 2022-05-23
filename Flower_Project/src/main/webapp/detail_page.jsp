@@ -14,7 +14,10 @@
 	ReplyDAO dao = new ReplyDAO();
 	List<ReplyVO> replyList = dao.selectAllReply();
 	pageContext.setAttribute("replyList", replyList);
-	System.out.print(replyList.get(0));
+ 	/* for(ReplyVO vo: replyList){
+		System.out.println("id : "+vo.getReplyid());
+		System.out.println("content : "+vo.getReplycontent()); 
+	} */
 %>
 
 <!doctype html>
@@ -246,8 +249,8 @@
 							<c:forEach var="r" items="${replyList}">
                             <div class="user_container-detail">
                                 <div class="comment">
-                                    <span class="user_id"><c:out value="${r.replyid}"/></span>
-                                    <p><c:out value="${r.replycontent}" /></p>
+                                    <span class="user_id">아이디 : <c:out value="${r.replyid}"/></span>
+                                    <p>내용 : <c:out value="${r.replycontent}" /></p>
                                     <div class="icon_wrap">
                                         <div class="more_trigger">
                                             <div class="sprite_more_icon"></div>
@@ -341,13 +344,12 @@
    </div>
 
 </section>
-   
+   </div>
    
     <br><br><br><br><br><br><br><br><br><br><br><br>
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 </body>
-<script type="text/javascript">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
     $(function () {
@@ -363,5 +365,4 @@
  
 </script>
 
-</script>
 </html>

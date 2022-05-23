@@ -43,11 +43,17 @@ public class ReplyDAO {
 			}else {
 				sqlSession.rollback();
 			}
+			
+			for(ReplyVO vo: replyList) {
+				System.out.println("toString"+vo.toString());
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sqlSession.close();
 		}
+		
+		
 		return replyList;
 	}
 	
@@ -55,7 +61,7 @@ public class ReplyDAO {
 	public int updateReply(ReplyVO r_vo) {
 		int cnt=0;
 		try {
-			cnt = sqlSession.update("com.smhrd.domain.ReplyDAO.updateReply");
+			cnt = sqlSession.update("com.smhrd.domain.ReplyDAO.updateReply",r_vo);
 		}  catch (Exception e) {
 			e.printStackTrace();
 		}finally {

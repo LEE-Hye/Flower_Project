@@ -73,6 +73,14 @@ public class ReplyVO {
 	public void setReplycontent(String replycontent) {
 		this.replycontent = replycontent;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "ReplyVO [reply_num=" + reply_num + ", pnum=" + pnum + ", replyid=" + replyid + ", replycontent="
+				+ replycontent + "]";
+	}
 	
 	
 	
