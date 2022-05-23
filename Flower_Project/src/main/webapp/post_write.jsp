@@ -471,10 +471,10 @@
                           <a onclick="inputNum('매화')" style="cursor: pointer;"><td>#매화 </td></a>
                           
                       </div>
-
+					<input class="submit_btn" type="submit" value="저장">
                   </form>
 
-                <input class="submit_btn" type="submit" value="저장">
+                
             </div>
 
         </div>

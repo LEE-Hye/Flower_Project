@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.domain.PostDAO"%>
+<%@page import="com.smhrd.domain.PostVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
@@ -5,6 +7,15 @@
 <%@ page import = "com.smhrd.domain.MemberVO" %>
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+	int pnum = Integer.parseInt(request.getParameter("pnum"));
+	System.out.print("pnum가져왓나?");
+	PostVO p_vo = new PostVO(pnum);
+	PostDAO dao = new PostDAO();
+	PostVO post = dao.selectPost(pnum);
+%>
 
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -271,9 +282,9 @@
     <div id="main_container">
 
         <div class="post_form_container">
-            <form action="#" class="post_form">
+            <form action="#" id="ModiForm" class="post_form">
                 <div id="in_title">
-                    <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required></textarea>
+                    <textarea name="title" value="${post.title}" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required></textarea>
                 </div>
                 <div class="preview">
                     <div class="upload">
@@ -473,10 +484,10 @@
 
                   </form>
 
-                <input class="submit_btn" type="submit" value="수정" >
-                <input class="submit_btn" type="submit" value="삭제" >
+                <input class="submit_btn" id = "update" type="submit" value="수정" >
+                <input class="submit_btn" id = "delete" type="submit" value="삭제" >
             </form>
-
+				
         </div>
 
     </div>
@@ -486,6 +497,20 @@
 
 
 <script src="js/insta.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        
+        $("#update").click(function () {
+            $("#ModiForm").attr("action","UpdatePostCon");
+        });
+        
+        $("#delete").click(function () {
+            $("#ModiForm").attr("action","DeletePostCon");
+        });
+    });
+ 
+</script>
 
 <script>
        var fileInput  = document.querySelector( "#id_photo" ),

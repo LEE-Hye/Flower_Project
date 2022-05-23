@@ -7,6 +7,8 @@
 <%@ page import = "java.util.List" %>
 <%@page import="com.smhrd.domain.ReplyVO"%>
 <%@page import="com.smhrd.domain.ReplyDAO"%>
+<%@page import="com.smhrd.domain.PostVO"%>
+<%@page import="com.smhrd.domain.PostDAO"%>
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
@@ -174,9 +176,10 @@
     
     <!-- 로그인해야지만 글쓰기 버튼누르기 -->
    
-    <c:if test="${!empty loginMember }">
+   
+    <c:if test="${post.mid eq loginMember.id }">
     	<div>
-        <input type="button" id="write" value="수정" style="float: right" onclick="location.href='post_modify.jsp'" >
+        <input type="button" id="write" value="수정" style="float: right" onclick="location.href='post_modify.jsp?pnum=${post.pnum}'" >
         </div>
     </c:if>
     
@@ -197,12 +200,12 @@
 
                     <div class="img_section">
                         <div class="trans_inner">
-                            <div><img src="imgs/img_section/img03.jpg" alt=""></div>
+                            <div><img src='<c:out value="${post.sname}" />' alt=""></div>
                             
                         </div>
                         <br><br>
                         <div>
-                            <span id="cont_show">안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</span>
+                            <span id="cont_show"><c:out value="${post.content}"/></span>
                         </div>
                     </div>
 
@@ -215,13 +218,11 @@
                                     <img src="imgs/thumb.jpeg" alt="">
                                 </div>
                                 <div class="user_name">
-                                    <div class="nick_name">KindTiger</div>
-                                    <div class="country">Seoul, South Korea</div>
+                                    <div class="nick_name"><c:out value="${post.mid}"/></div>
                                 </div>
                             </div>
                             <div class="sprite_more_icon" data-name="more">
                                 <ul class="more_detail">
-                                    <li>팔로우</li>
                                     <li>수정</li>
                                     <li>삭제</li>
                                 </ul>

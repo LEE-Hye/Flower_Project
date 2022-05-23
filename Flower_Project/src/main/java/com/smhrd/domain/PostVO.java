@@ -16,7 +16,37 @@ public class PostVO {
 	private String sname;
 	private String sload;
 	
+	public PostVO() {
+		
+	}
 	
+	
+	
+	public PostVO(int pnum) {
+		super();
+		this.pnum = pnum;
+	}
+
+
+
+	public PostVO(int pnum, String mid, String title) {
+		super();
+		this.pnum = pnum;
+		this.mid = mid;
+		this.title = title;
+	}
+	
+	
+	public PostVO(int pnum, String mid, String title, String content, String sload) {
+		super();
+		this.pnum = pnum;
+		this.mid = mid;
+		this.title = title;
+		this.content = content;
+		this.sload = sload;
+	}
+
+
 	public PostVO(String mid, String title, String content, String fid, int plike, int hit, String oname, String sname,
 			String sload) {
 		super();
@@ -32,6 +62,62 @@ public class PostVO {
 	}
 	
 	
+	
+	public void setPnum(int pnum) {
+		this.pnum = pnum;
+	}
+
+
+	public void setMid(String mid) {
+		this.mid = mid;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+
+	public void setFid(String fid) {
+		this.fid = fid;
+	}
+
+
+	public void setPlike(int plike) {
+		this.plike = plike;
+	}
+
+
+	public void setPdate(Timestamp pdate) {
+		this.pdate = pdate;
+	}
+
+
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+
+
+	public void setOname(String oname) {
+		this.oname = oname;
+	}
+
+
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+
+
+	public void setSload(String sload) {
+		this.sload = sload;
+	}
+
+
 	public int getPnum() {
 		return pnum;
 	}
