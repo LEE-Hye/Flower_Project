@@ -24,16 +24,16 @@ public class ReplyCon extends HttpServlet {
 		System.out.println("[REPLYCON]");
 			request.setCharacterEncoding("UTF-8");
 			
-			int b_num = Integer.parseInt(request.getParameter("b_num"));
+			int pnum = Integer.parseInt(request.getParameter("pnum"));
 			String replyid = request.getParameter("replyid");
 			String replycontent = request.getParameter("replycontent");
 			
 			System.out.println(replyid);
 			
 			
-			ReplyVO r_vo = new ReplyVO(b_num, replyid, replycontent);
+			ReplyVO r_vo = new ReplyVO(pnum, replyid, replycontent);
 			
-			System.out.println(r_vo.getB_num());
+			System.out.println(r_vo.getpnum());
 			System.out.println(r_vo.getReplyid());
 			System.out.println(r_vo.getReplycontent());
 			

@@ -5,11 +5,11 @@
         
 <mapper namespace="com.smhrd.domain.ReplyDAO">
 	<insert id="insertReply" parameterType="com.smhrd.domain.ReplyVO">
-     	insert into reply values (reply_num_seq.nextval, #{b_num}, #{replyid}, #{replycontent})
+     	insert into reply values (reply_num_seq.nextval, #{pnum}, #{replyid}, #{replycontent})
    </insert>
 
 	<select id="selectAllReply" parameterType="String" resultType="com.smhrd.domain.ReplyVO">
-		select * from reply where b_num=#{b_num}
+		select * from reply where pnum=#{pnum}
 	</select>
 	
 	<update id="updateReply" parameterType="com.smhrd.domain.ReplyVO">

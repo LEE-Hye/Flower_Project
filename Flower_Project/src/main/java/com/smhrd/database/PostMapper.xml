@@ -7,7 +7,7 @@
 		insert into post values (pnumseq.nextval , #{mid}, #{title}, #{content}, #{fid}, #{plike}, sysdate, #{hit}, #{oname}, #{sname}, #{sload})
 	</insert>
 	<select id="selectAllBoard" resultType="com.smhrd.domain.PostVO">
-        select pnum, mid, title, sload, content from post
+        select pnum, mid, title, sname, content from post
     </select>
 	
 	<select id="selectPost" parameterType="int" resultType="com.smhrd.domain.PostVO">
