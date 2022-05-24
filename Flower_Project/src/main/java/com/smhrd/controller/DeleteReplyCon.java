@@ -12,12 +12,13 @@ public class DeleteReplyCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("[DeletReplyCon]");
 		request.setCharacterEncoding("UTF-8");
 		
-		String reply_content = request.getParameter("reply_content");
-		
+		int reply_num = Integer.parseInt(request.getParameter("reply_num"));
+		System.out.println("댓글번호 : "+ reply_num);
 		ReplyDAO dao = new ReplyDAO();
-		int cnt = dao.deleteReply(reply_content);
+		int cnt = dao.deleteReply(reply_num);
 		
 		if(cnt>0) {
 			System.out.println("댓글삭제 성공");

@@ -13,6 +13,13 @@ public class ReplyVO {
 	public ReplyVO() {
 		super();
 	}
+	
+
+
+	public ReplyVO(int pnum) {
+		super();
+		this.pnum = pnum;
+	}
 
 
 

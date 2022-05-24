@@ -43,7 +43,7 @@ public class ReplyCon extends HttpServlet {
 			
 			ReplyDAO dao = new ReplyDAO();
 			int cnt = dao.insertReply(r_vo);
-			
+			System.out.println("cnt값확인"+cnt);
 			 if(cnt>0) {
 		         System.out.println("댓글 등록 성공");
 		         RequestDispatcher rd = request.getRequestDispatcher("detail_page.jsp");
