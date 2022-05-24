@@ -486,7 +486,7 @@
                   
 
                 <input class="submit_btn" id = "update" type="submit" value="수정" >
-                <input class="submit_btn" id = "delete" type="submit" value="삭제" >
+                
             </form>
 				
         </div>
