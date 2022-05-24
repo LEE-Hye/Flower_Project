@@ -11,14 +11,15 @@
 <%@page import="com.smhrd.domain.PostDAO"%>
 
 <%
-	ReplyDAO dao = new ReplyDAO();
-	List<ReplyVO> replyList = dao.selectAllReply();
-	pageContext.setAttribute("replyList", replyList);
- 	/* for(ReplyVO vo: replyList){
-		System.out.println("id : "+vo.getReplyid());
-		System.out.println("content : "+vo.getReplycontent()); 
-	} */
+   ReplyDAO dao = new ReplyDAO();
+   List<ReplyVO> replyList = dao.selectAllReply();
+   pageContext.setAttribute("replyList", replyList);
+    /* for(ReplyVO vo: replyList){
+      System.out.println("id : "+vo.getReplyid());
+      System.out.println("content : "+vo.getReplycontent()); 
+   } */
 %>
+
 
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -189,7 +190,7 @@
    
    
     <c:if test="${post.mid eq loginMember.id }">
-    	<div>
+       <div>
         <input type="button" id="write" value="수정" style="float: right" onclick="location.href='post_modify.jsp?pnum=${post.pnum}'" >
         </div>
     </c:if>
@@ -244,31 +245,30 @@
 
                         <section class="scroll_section">
                             
-							
-							
-							<c:forEach var="r" items="${replyList}">
+                     
+                     
+                     <c:forEach var="r" items="${replyList}">
+                     <c:if test="${r.pnum eq post.pnum}">
                             <div class="user_container-detail">
                                 <div class="comment">
                                     <span class="user_id">아이디 : <c:out value="${r.replyid}"/></span>
                                     <p>내용 : <c:out value="${r.replycontent}" /></p>
-                                    <div class="icon_wrap">
-                                        <div class="more_trigger">
-                                            <div class="sprite_more_icon"></div>
-                                            <c:if test="${!empty (loginMember == replyid) }">
-									<div>
-										<input type="submit" id="replyUpdate" value="댓글 수정하기"
-											style="float: right" >
-										<input type="submit" id="replydelete" value="댓글 삭제하기"
-											style="float: right" >
-									</div>
-								</c:if>
-                                        </div>                             
-                                    </div>
-                                </div>
+                                    <c:if test="${loginMember.id eq r.replyid}">
+                                    
+                                    <form id="replyUpdateForm" action=""  method="get">
+	                                      <input type="text" name="reply_num" value="${r.reply_num}"/>
+			                              <input type="submit" id="replyUpdate" value="댓글 수정하기"
+			                                 style="float: right" >
+			                              <input type="submit" id="replydelete" value="댓글 삭제하기"
+			                                 style="float: right" >
+                           			</form>
+                        </c:if>
+                               </div>
                             </div>
+                            </c:if>
                             </c:forEach>
-							
-                            
+                     
+                           
 
                                                        
 
@@ -292,7 +292,7 @@
                                 <div class="sprite_bookmark_outline" data-name="book-mark"></div>
                             </div>
                         </div>
-					
+               
                         <div class="count_likes">
                             <input type="button" value="🌼" class="like_button"></input>
                             좋아요
@@ -301,31 +301,15 @@
                         </div>
                         <div class="timer">2시간</div>
                         
-                        <form action="ReplyCon" id="replyUpdateForm" method="post" name="replyform">
-                        	<input name="pnum" value="${post.pnum}" type="text" hidden>
-                        	<input name="replyid" value="${loginMember.id}" type="text" readonly>
+                        <form action="ReplyCon" method="post" name="replyform">
+                           <input name="pnum" value="${post.pnum}" type="text" hidden>
+                           <input name="replyid" value="${loginMember.id}" type="text" readonly>
                             <input name="replycontent" type="text" placeholder="댓글달기..">
 
                             <input type="submit" value="게시" class="upload_btn">  
                         
                         </form>
-								
-
-
-
-
-
-								<!-- 수정전    
-					<form action="ReplyCon" method="post" name="replyform">
-                        <div class="commit_field">
-                        	<input name="b_num" type="text" hidden>
-                        	<input name="replyid" value="${loginMember.id}" type="text" readonly>
-                            <input name="replyContent" type="text" placeholder="댓글달기..">
-
-                            <input type="submit" value="게시" class="upload_btn">                        </div>
-					</form>
-					 -->
-
+                        
                     </div>
 
 
@@ -355,10 +339,11 @@
     $(function () {
         
         $("#replyUpdate").click(function () {
-            $("#replyUpdateForm").attr("action","UpdateReplyCon");
+            $("#replyUpdateForm").attr("action","reply_Modify.jsp");
         });
         
         $("#replydelete").click(function () {
+           
             $("#replyUpdateForm").attr("action","DeleteReplyCon");
         });
     });

@@ -9,15 +9,15 @@
    </insert>
 
 	<select id="selectAllReply" resultType="com.smhrd.domain.ReplyVO">
-		select * from reply
+		select * from reply 
 	</select>
 	
 	<update id="updateReply" parameterType="com.smhrd.domain.ReplyVO">
-		update reply set reply_content=#{reply_content} where reply_id=#{reply_id}
+		update reply set replycontent=#{replycontent} where replyid=#{replyid} and reply_num=#{reply_num}
 	</update>
 	
-	<delete id="deleteReplyCon" parameterType="String">
-		delete from reply where replyid=#{replyid}
+	<delete id="deleteReply" parameterType="int">
+		delete from reply where reply_num=#{reply_num}
 	</delete>
 	
 </mapper>  
