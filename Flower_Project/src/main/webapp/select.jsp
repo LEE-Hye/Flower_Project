@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import = "com.smhrd.domain.MemberVO" %>
+<%@ page import = "com.smhrd.domain.MemberDAO" %>
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
@@ -8,7 +11,7 @@
 <head>
     <meta charset="utf-8" />
     <title>koreaMap</title>
-    <link rel="stylesheet" href="css/korea.css" />
+    <link rel="stylesheet" href="css/korea.css" /> 
 
     <!-- Basic -->
     <title>Construction | 꽃</title>
@@ -98,18 +101,24 @@
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div class="logo-img">
-                    <a href="main.jsp"><img src="images/client/5055151.jpg" class="img-responsive" id="main_pic"></a>
+                    <a href="main.jsp"><img id="main_pic" src="images/client/5055151.jpg" class="img-responsive" alt=""></a>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                        <a href = "login.jsp">
-                            <li>로그인</li>
-                        </a>
-                        <a href = "join.jsp">
-                            <li>회원가입</li>
-                        </a>
+                    <c:choose>
+                       <c:when test="${empty loginMember }">
+                           <a href = "login.jsp"><li>로그인</li></a>
+                           <a href = "join.jsp"><li>회원가입</li></a>
+                        </c:when>
+                        <c:otherwise>
+                           <c:if test="${!empty loginMember }">
+                              <h5>${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon">로그아웃</a>   
+                           </c:if>
+                        </c:otherwise>
+                    </c:choose>
                     </ul>
                 </div>
             </div>

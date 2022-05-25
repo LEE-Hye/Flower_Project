@@ -4,7 +4,8 @@
 <%@page import="com.smhrd.domain.FlowerDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    
+<%@ page import = "com.smhrd.domain.MemberVO" %>
+<%@ page import = "com.smhrd.domain.MemberDAO" %>
     
     
     <% 
@@ -104,7 +105,7 @@
     
     
     <!-- Start Header Section -->
-    <div class="header-section">
+   <div class="header-section">
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div class="logo-img">
@@ -114,12 +115,18 @@
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                        <a href = "login.jsp">
-                            <li>로그인</li>
-                        </a>
-                        <a href = "join.jsp">
-                            <li>회원가입</li>
-                        </a>
+                    <c:choose>
+                       <c:when test="${empty loginMember }">
+                           <a href = "login.jsp"><li>로그인</li></a>
+                           <a href = "join.jsp"><li>회원가입</li></a>
+                        </c:when>
+                        <c:otherwise>
+                           <c:if test="${!empty loginMember }">
+                              <h5>${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon">로그아웃</a>   
+                           </c:if>
+                        </c:otherwise>
+                    </c:choose>
                     </ul>
                 </div>
             </div>

@@ -113,18 +113,23 @@
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                        <a href = "login.jsp">
-                            <li>로그인</li>
-                        </a>
-                        <a href = "join.jsp">
-                            <li>회원가입</li>
-                        </a>
+                    <c:choose>
+                       <c:when test="${empty loginMember }">
+                           <a href = "login.jsp"><li>로그인</li></a>
+                           <a href = "join.jsp"><li>회원가입</li></a>
+                        </c:when>
+                        <c:otherwise>
+                           <c:if test="${!empty loginMember }">
+                              <h5>${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon">로그아웃</a>   
+                           </c:if>
+                        </c:otherwise>
+                    </c:choose>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Header Section -->
+    </div>    <!-- End Header Section -->
     
 
 
