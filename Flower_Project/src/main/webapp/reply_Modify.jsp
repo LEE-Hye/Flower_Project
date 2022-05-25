@@ -16,9 +16,9 @@
 <body>
 
 	<form action="UpdateReplyCon" method="post" name="replyform">
-	<input name="reply_num" value="${param.reply_num}" type="text">
-    <input name="pnum" value="${post.pnum}" type="text" >
-    <input name="replyid" value="${loginMember.id}" type="text" readonly>
+	댓글번호:<input name="reply_num" value="${param.reply_num}" type="text"><br>
+    게시판번호:<input name="pnum" value="${post.pnum}" type="text" ><br>
+    아이디:<input name="replyid" value="${loginMember.id}" type="text" readonly><br>
     <input name="replycontent" type="text" placeholder="댓글달기..">
 
     <input type="submit" value="게시" class="upload_btn">

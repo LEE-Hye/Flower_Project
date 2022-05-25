@@ -253,16 +253,15 @@
                                     <span class="user_id">아이디 : <c:out value="${r.replyid}"/></span>
                                     <p>내용 : <c:out value="${r.replycontent}" /></p>
                                     <c:if test="${loginMember.id eq r.replyid}">
-                                    
                                     <form id="replyUpdateForm" action=""  method="get">
-	                                      <input type="text" name="reply_num" value="${r.reply_num}"/>
-			                              <input type="submit" id="replyUpdate" value="댓글 수정하기"
+	                                      <input type="text" name="reply_num" value="${r.reply_num}" readonly/>
+			                              <input type="submit" class="replyUpdate" value="댓글 수정하기"
 			                                 style="float: right" >
-			                              <input type="submit" id="replydelete" value="댓글 삭제하기"
+			                              <input type="submit" class="replydelete" value="댓글 삭제하기"
 			                                 style="float: right" >
                            			</form>
                         </c:if>
-                               </div>
+                           </div>
                             </div>
                             </c:if>
                             </c:forEach>
@@ -383,13 +382,13 @@
     
     $(function () {
         
-        $("#replyUpdate").click(function () {
-            $("#replyUpdateForm").attr("action","reply_Modify.jsp");
+        $(".replyUpdate").click(function () {
+            $(this).parent().attr("action","reply_Modify.jsp");
         });
         
-        $("#replydelete").click(function () {
+        $(".replydelete").click(function () {
            
-            $("#replyUpdateForm").attr("action","DeleteReplyCon");
+        	$(this).parent().attr("action","DeleteReplyCon");
         });
     });
  
