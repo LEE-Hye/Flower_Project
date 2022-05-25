@@ -2565,7 +2565,7 @@ button {
   .joinForm {
     position:relative;
     width:400px;
-    height:900px;
+    height:750px;
     padding: 20px, 20px;
     background-color:#FFFFFF;
     text-align:center;
@@ -2582,9 +2582,7 @@ button {
   }
   
   .textForm {
-    border-bottom: 2px solid #adadad;
-    margin: 30px;
-    padding: 20px 10px;
+    padding: 5px 10px;
   }
   
   
@@ -2633,7 +2631,7 @@ button {
     position:relative;
     left:40%;
     transform: translateX(-50%);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     width:80%;
     height:40px;
     background: linear-gradient(125deg,#ffb6b9,#fae3d9,#f6f6f6);
@@ -2887,8 +2885,10 @@ button {
 }
 
 #cont_show{
-    width: 597px;
-    height: 390px;
+    width: 600px;
+    word-break: break-all; 
+    padding-left: 10px;  
+    padding-right: 10px;
 }
 
 
@@ -2943,7 +2943,7 @@ button {
 .loginForm{
    position:relative;
     width:400px;
-    height:540px;
+    height:440px;
     padding: 20px, 20px;
     background-color:#FFFFFF;
     text-align:center;

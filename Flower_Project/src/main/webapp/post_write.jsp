@@ -298,7 +298,7 @@
                     <input type="file" name="photo" id="id_photo" required="required">
                 </p>
                 <p>
-                    <textarea style="resize: none;" name="content" id="text_field" cols="50" rows="5" placeholder="내용은 1000자 까지 가능합니다"></textarea>
+                    <textarea style="resize: none;" name="content" id="text_field" cols="50" rows="5" maxlength="1000" placeholder="내용은 1000자 까지 가능합니다"></textarea>
 
                 </p>
                 <br>

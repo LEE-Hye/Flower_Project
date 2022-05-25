@@ -156,7 +156,6 @@
         <div class="births">아이디</div>
             <input type="text" name ="id" text="id" id="id" class="id">
         </div>
-       
         <div class="textForm">
         <div class="births">비밀번호</div>
             <input type="password" name ="pw" text="pw" id="pw" class="pw">
