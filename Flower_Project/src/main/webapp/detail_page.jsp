@@ -200,8 +200,6 @@
 <section id="container">
 
 
-
-
     <div id="main_container">
 
         <section class="b_inner">
@@ -232,6 +230,7 @@
                                 <div class="user_name">
                                     <div class="nick_name"><c:out value="${post.mid}"/></div>
                                     <div class="nick_name"><c:out value="${post.pdate}"/></div>
+                                    <h5>조회수 : <c:out value="${post.hit}" /></h5>
                                 </div>
                             </div>
                             <div class="sprite_more_icon" data-name="more">
@@ -294,11 +293,19 @@
                         </div>
                
                         <div class="count_likes">
-                            <input type="button" value="🌼" class="like_button"></input>
-                            좋아요
-                            <span class="count">2,351</span>
-                            개
+                        <c:choose>
+                        	<c:when test="${!empty loginMember }">
+                        		<input type="button" value="🌼좋아요" id='like' class="like_button"></input>
+                         		<span class="count">${post.plike}</span>
+                        	</c:when>
+                        	
+                        	<c:otherwise>
+                        		<span class="count">🌼좋아요${post.plike}</span>
+                        	</c:otherwise>
+ 
+                        </c:choose>
                         </div>
+                        
                         <div class="timer">2시간</div>
                         
                         <form action="ReplyCon" method="post" name="replyform">
@@ -336,6 +343,44 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
+	
+	$(document).on("click","#like",function(){ 
+		$.ajax({
+			data : {status : "like", pnum : ${post.pnum}},
+			url : "LikeAjaxCon",
+			method : "GET",
+			dataType : "text",
+			context : this, //sucess 안에서 this(#like)를 사용하고 싶은 경우
+			success: function(data){
+				$('#like+span').text(data)
+	            $(this).attr('id','dislike')	
+			},
+			error: function(){
+				alert("통신실패!")
+			}
+		})
+	});
+	    
+	$(document).on("click","#dislike",function(){ 
+	    $.ajax({
+			data : {status : "dislike", pnum : ${post.pnum}},
+			url : "LikeAjaxCon",
+			method : "GET",
+			dataType : "text",
+			context : this,
+			success: function(data){
+					$('#dislike+span').text(data)
+		            $(this).attr('id','like')
+			},
+			error: function(){
+				alert("통신실패!")
+			}
+		})
+	
+	});
+	 
+
+    
     $(function () {
         
         $("#replyUpdate").click(function () {

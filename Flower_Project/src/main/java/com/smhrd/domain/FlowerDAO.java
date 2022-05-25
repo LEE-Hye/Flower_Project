@@ -126,7 +126,27 @@ public class FlowerDAO {
 		
 		}
 		
+		//전체 F_ID가지고 오기
+		public List<FlowerVO> selectAllFid() {
+			SqlSession sqlSession = sqlSessionFactory.openSession();
+			List<FlowerVO> flowerList = null;
+			
+			try {
+				flowerList = sqlSession.selectList("com.smhrd.domain.FlowerDAO.selectAll");
 		
+				if(flowerList!=null) {
+					sqlSession.commit();
+				}else {
+					sqlSession.rollback();
+				}
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}return flowerList;
+		
+		}
 		
 		
 }

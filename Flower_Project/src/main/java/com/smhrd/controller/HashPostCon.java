@@ -14,29 +14,28 @@ import com.smhrd.domain.PostVO;
 import com.smhrd.domain.ReplyDAO;
 import com.smhrd.domain.ReplyVO;
 
-/**
- * Servlet implementation class SelectPostCon
- */
-public class SelectPostCon extends HttpServlet {
+public class HashPostCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("[SelectPostCon]");
+		System.out.println("[HashPostCon]");
+		request.setCharacterEncoding("UTF-8");
 		
-		int pnum = Integer.parseInt(request.getParameter("pnum"));		
+		String fid = request.getParameter("flower_hash");		
+		System.out.println(fid);
 		
-		PostVO p_vo = new PostVO(pnum);		
+		PostVO p_vo = new PostVO();
+		p_vo.setFid(fid);
 		PostDAO dao = new PostDAO();		
-		PostVO post = dao.selectPost(pnum);
-		ReplyDAO r_dao = new ReplyDAO();
-		List<ReplyVO> r_vo = r_dao.selectAllReply();
+		List<PostVO> hashList = dao.hashBoard(fid);
 		
-		if(post != null) {
-			System.out.println("값가지고오기성공 ");
+		
+		if(hashList != null) {
 			
 			HttpSession session = request.getSession();
-			session.setAttribute("post", post);
-			response.sendRedirect("detail_page.jsp?="+r_vo.get(0).getpnum());
+			session.setAttribute("hashList", hashList);
+			response.sendRedirect("post_view_search.jsp");
+			System.out.println("값가지고오기성공 ");
 			
 		}else {
 			System.out.println("실패");

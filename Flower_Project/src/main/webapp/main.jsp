@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.domain.PostVO"%>
+<%@page import="com.smhrd.domain.PostDAO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
@@ -5,7 +7,11 @@
 <%@ page import = "com.smhrd.domain.MemberVO" %>
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
-
+<% 
+   PostDAO dao = new PostDAO();
+   List<PostVO> likeList = dao.selectLikeAllBoard();
+   pageContext.setAttribute("likeList", likeList);
+%>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -302,32 +308,18 @@
             <div class="running-project">
                 <h3 class="section-title">꽃과 함께하는 OOTD٩( ᐛ )و</h3>
                 <div class="row">
-                    
-                    <div class="col-md-6 col-sm-6">
-                        <div class="project">
-                            <img src="images/running-project/running1.jpg" class="img-responsive" alt="">
+                    <c:forEach var="like" items="${likeList}" begin="0" end="3">
+							<div class="col-md-6 col-sm-6">
+							<a href="SelectPostCon?pnum=${like.pnum}">
+								<div class="project">
+									<img src='<c:out value="upload/${like.sname}" />'
+										class="img-responsive" alt="호감도순사진">
+								</div>
+							</div>
+					</c:forEach>
 
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-sm-6">
-                        <div class="project">
-                            <img src="images/running-project/running2.jpg" class="img-responsive" alt="">
-                        </div>
-                    </div>
                 
-                    <div class="col-md-6 col-sm-6">
-                        <div class="project">
-                            <img src="images/running-project/running3.jpg" class="img-responsive" alt="">
-
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-sm-6">
-                        <div class="project">
-                            <img src="images/running-project/running4.jpg" class="img-responsive" alt="">
-                        </div>
-                    </div>
+                   
                     
                 </div>
             </div>

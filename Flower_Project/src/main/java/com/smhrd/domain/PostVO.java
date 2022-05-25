@@ -70,7 +70,22 @@ public class PostVO {
 	}
 	
 	
-	
+	public PostVO(int pnum, String mid, String title, String content, String fid, int plike, Timestamp pdate, int hit,
+			String oname, String sname, String sload) {
+		super();
+		this.pnum = pnum;
+		this.mid = mid;
+		this.title = title;
+		this.content = content;
+		this.fid = fid;
+		this.plike = plike;
+		this.pdate = pdate;
+		this.hit = hit;
+		this.oname = oname;
+		this.sname = sname;
+		this.sload = sload;
+	}
+
 	public void setPnum(int pnum) {
 		this.pnum = pnum;
 	}

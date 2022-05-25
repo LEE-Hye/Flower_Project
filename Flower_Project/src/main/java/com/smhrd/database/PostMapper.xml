@@ -25,6 +25,33 @@
 	<delete id="deletePost" parameterType="int">
 		delete from post where pnum = #{pnum}
 	</delete>
+	 
+	<update id="addCount" parameterType="int">
+		update post set hit=hit+1 where pnum=#{pnum}
+	</update>
+	
+	<update id ="like" parameterType="int">
+		update post set plike=plike+1 where pnum=#{pnum}
+	</update>
+	
+	<update id="dislike" parameterType="int">
+		update post set plike=plike-1 where pnum=#{pnum}
+	</update>
+	
+	<select id = "getLike" resultType="int" parameterType="int">
+		select plike from post where pnum=#{pnum} 
+	</select>
+	
+	<select id="hashBoard" parameterType="String" resultType="com.smhrd.domain.PostVO">
+        select * from post where fid=#{fid} order by pnum
+    </select>
+    
+    <select id="selectLikeAllBoard" resultType="com.smhrd.domain.PostVO">
+		select * from post order by plike desc
+	</select>
+
+    
+	
 	
 	
 	
