@@ -14,16 +14,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 
+	  <form action="UpdateReplyCon" method="post" name="replyform">
+	<input name="reply_num" value="${param.reply_num}" type="text" hidden>
+    <input name="pnum" value="${post.pnum}" type="text" hidden>
+    <input name="replyid" value="${loginMember.id}" type="text" readonly hidden>
+    <input name="replycontent" type="text" placeholder="댓글수정.." maxlength="50" >
 
-	<form action="UpdateReplyCon" method="post" name="replyform">
-	<input name="reply_num" value="${param.reply_num}" type="text">
-    <input name="pnum" value="${post.pnum}" type="text" >
-    <input name="replyid" value="${loginMember.id}" type="text" readonly>
-    <input name="replycontent" type="text" placeholder="댓글달기..">
-
-    <input type="submit" value="게시" class="upload_btn">
-                        
+    <input type="submit" value="게시" class="upload_btn">              
     </form>
+  -->   
     
     
     

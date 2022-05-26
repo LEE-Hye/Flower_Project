@@ -142,7 +142,8 @@ body{
 #main_container{
     padding-top: 130px;
     display: flex;
-    justify-content: center;
+    width:550px;
+    justify-content: center;    
 }
 
 #main_container .inner{
@@ -154,7 +155,8 @@ body{
 }
 
 .contents_box{
-
+	    width: 898px;
+    margin-left:640px;
 }
 
 
@@ -234,7 +236,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
 }
 
 .contents .bottom_icons .left_icons{
@@ -479,7 +481,10 @@ body{
     }
 
     #main_container{
-        padding-top: 220px;
+    padding-top: 130px;
+    display: flex;
+    width: 550px;
+    justify-content: center;
     }
     #main_container .inner{
         width: 93.5%;
@@ -514,13 +519,6 @@ body{
 
 
 }
-
-
-
-
-
-
-
 
 
 

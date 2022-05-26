@@ -7,7 +7,7 @@
 		insert into post values (pnumseq.nextval , #{mid}, #{title}, #{content}, #{fid}, #{plike}, sysdate, #{hit}, #{oname}, #{sname}, #{sload})
 	</insert>
 	<select id="selectAllBoard" resultType="com.smhrd.domain.PostVO">
-        select pnum, mid, title, sname, content from post order by pnum
+        select pnum, mid, title, sname, content, fid from post order by pnum desc
     </select>
 	
 	<select id="selectPost" parameterType="int" resultType="com.smhrd.domain.PostVO">
@@ -26,6 +26,28 @@
 		delete from post where pnum = #{pnum}
 	</delete>
 	
+	<update id="addCount" parameterType="int">
+		update post set hit=hit+1 where pnum=#{pnum}
+	</update>
+	
+	<update id ="like" parameterType="int">
+		update post set plike=plike+1 where pnum=#{pnum}
+	</update>
+	
+	<update id="dislike" parameterType="int">
+		update post set plike=plike-1 where pnum=#{pnum}
+	</update>
+	
+	<select id = "getLike" resultType="int" parameterType="int">
+		select plike from post where pnum=#{pnum} 
+	</select>
+	
+	<select id="selectLikeAllBoard" resultType="com.smhrd.domain.PostVO">
+		select * from post order by plike desc
+	</select>
+	<select id="hashBoard" parameterType="String" resultType="com.smhrd.domain.PostVO">
+        select * from post where fid=#{fid} order by pnum
+    </select>
 	
 	
 </mapper>

@@ -106,12 +106,18 @@
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                        <a href = "login.jsp">
-                            <li>로그인</li>
-                        </a>
-                        <a href = "join.jsp">
-                            <li>회원가입</li>
-                        </a>
+                                            <c:choose>
+                       <c:when test="${empty loginMember }">
+                           <a href = "login.jsp"><li class="font_tong">로그인</li></a>
+                           <a href = "join.jsp"><li class="font_tong">회원가입</li></a>
+                        </c:when>
+                        <c:otherwise>
+                           <c:if test="${!empty loginMember }">
+                              <h5 class="font_tong">${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon" class="font_tong">로그아웃</a>   
+                           </c:if>
+                        </c:otherwise>
+                    </c:choose>
                     </ul>
                 </div>
             </div>
@@ -165,11 +171,11 @@
         <h3>${showMember.name}의 정보</h3>
         <div class = "textForm">
         <div class = "births">아이디 결과</div>
-            <h5><c:out value="${showMember.id}"/></h5>
+            <h5 class="result_idpw"><c:out value="${showMember.id}"/></h5>
       </div>
         <div class = "textForm">
         <div class = "births">비밀번호 결과</div>
-         <h5><c:out value="${showMember.pw}"/></h5>            
+         <h5 class="result_idpw"><c:out value="${showMember.pw}"/></h5>            
          </div>
 
    <div class ="btnSearch">

@@ -114,10 +114,10 @@
                 <div class="top-info">
                     <ul class="top-social">
                         <a href = "login.jsp">
-                            <li>로그인</li>
+                            <li class="font_tong">로그인</li>
                         </a>
                         <a href = "join.jsp">
-                            <li>회원가입</li>
+                            <li class="font_tong">회원가입</li>
                         </a>
                     </ul>
                 </div>

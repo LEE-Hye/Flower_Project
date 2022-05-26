@@ -13,8 +13,9 @@
 	</select>
 	
 	<update id="updateReply" parameterType="com.smhrd.domain.ReplyVO">
-		update reply set replycontent=#{replycontent} where replyid=#{replyid} and reply_num=#{reply_num}
-	</update>
+      update reply set replycontent=#{replycontent} where replyid=#{replyid} and reply_num=#{reply_num} and pnum=#{pnum}
+   </update>
+	
 	
 	<delete id="deleteReply" parameterType="int">
 		delete from reply where reply_num=#{reply_num}

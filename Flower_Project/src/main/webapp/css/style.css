@@ -94,7 +94,7 @@ ul li {
 }
 
 /* * { margin: 0; padding: 0; } */
-        body { background-color: rgb(255, 226, 226);; color: rgb(0, 0, 0); font-family: 'Noto Sans KR', sans-serif;}
+        body { background-color: white; color: rgb(0, 0, 0); font-family: '양진체';}
 
         /* .wrap { width: 60%; margin: 4em auto; text-align: center; } */
 
@@ -107,7 +107,7 @@ ul li {
         }
 
         .galleries {
-            padding: 10px;
+            padding: 70px;
             display: flex;
         }
 
@@ -119,6 +119,12 @@ ul li {
             display: flex;
             justify-content: space-around;
             border-radius: 5px;
+        }
+        #gallery_mainsss{
+            display: flex;
+            justify-content: space-around;
+            border-radius: 5px;
+            margin-left:50px;
         }
         
         .gallery_main .cont {
@@ -241,6 +247,8 @@ ul.top-social li a i {
     padding: 20px 100px 20px 20px;
     margin-top: 30px;
     margin-bottom: 30px;
+    box-shadow: 0 1px 5px #d4d4d4;
+    border-radius: 5px;
 }
 
 .default-page p {
@@ -548,6 +556,7 @@ ul.top-social li a i {
     padding: 20px;
     padding-top: 0;
     border-radius: 5px;
+    box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);
 }
 
 .home-about-us img {
@@ -582,6 +591,7 @@ ul.top-social li a i {
     border: 1px solid #f1f1f1;
     margin-top: -140px;
     border-radius : 5px;
+    box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);
 }
 
 .project {
@@ -2594,6 +2604,9 @@ button {
     font-size:16px;
     height:25px;
     background: none;
+    border-bottom: solid 1px;
+    margin-bottom: 30px;
+    width: 320px;
   }
   
   .pw {
@@ -2604,6 +2617,9 @@ button {
     font-size:16px;
     height:25px;
     background: none;
+    border-bottom: solid 1px;
+    margin-bottom: 30px;
+    width: 320px;
   }
   
   .name {
@@ -2614,6 +2630,9 @@ button {
     font-size:16px;
     height:25px;
     background: none;
+    border-bottom: solid 1px;
+    margin-bottom: 30px;
+    width: 320px;
   }
   
   .birth {
@@ -2624,6 +2643,9 @@ button {
     font-size:16px;
     height:25px;
     background: none;
+    border-bottom: solid 1px;
+    margin-bottom: 30px;
+    width: 320px;    
   }
 
   
@@ -2672,16 +2694,18 @@ button {
 
 
         .mysection {
-            background-color: rgb(255, 226, 226);
+            background-color: white;
             display: grid;
             border-top: 1px solid white;
             border-bottom: 1px solid white;
             /* border-bottom: 1px solid #333; */
             grid-template-columns: 5% 20% 15% 10% 40% 10%;
+            box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);
+            border-radius: 5px;
             
         }
         .myarticle {
-            background-color: rgb(255, 226, 226);
+            background-color: white;
             color: black;
             margin: 0.6em;
             font-size: 25px;
@@ -2690,13 +2714,12 @@ button {
             align-items: center; /* 수직 정렬 */
             flex-direction: row; /* default: row */
             justify-content: center; /* flex direction에 대해서 정렬방식 선택 */
-            border-radius: 
         }
         
         
         
         .myarticle_img{
-            background-color:rgb(255, 226, 226);
+            background-color:white;
             margin: 0.6em;
             min-height: 2em;
             padding-left: 10px;
@@ -2710,7 +2733,7 @@ button {
         }
         
         .f_btn{
-            background-color: rgb(255, 226, 226);
+            background-color: white;
             height: 50px;
             width: 70px;
             margin-top: 18px;
@@ -2750,13 +2773,14 @@ button {
         .dash-unit {		
             margin-bottom: 30px;
             padding-bottom:10px;
-            border: 1px solid #383737;
+            
             background-image:url('../images/sep-half.png');
             background-color: white;
             /* background-color: #ec9e9e; */
             color:white;
             height:290px;
-            border-radius: 10px
+            border-radius: 10px;
+            box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);
         }
         
         .dash-unit:hover {
@@ -2778,9 +2802,8 @@ button {
             }
             
         .dash-unit hr {
-              border: 0;
-              border-top: 1px solid #151515;
-              border-top-style: dashed;
+             
+             
             margin-top:3px;
         }
         
@@ -2791,7 +2814,7 @@ button {
             line-height: auto;
             letter-spacing: 0px;
             color: #000000;
-            padding-top:10px;
+            padding-top:45px;
             padding-left:5px;
             margin-top:2px;
             text-align:center;
@@ -2887,8 +2910,9 @@ button {
 #cont_show{
     width: 600px;
     word-break: break-all; 
-    padding-left: 10px;  
-    padding-right: 10px;
+   padding-left: 15px;
+    padding-right: 45px;
+    margin-top: 15px;
 }
 
 
@@ -2898,11 +2922,13 @@ button {
 
 .fsize{
 	width : 100px;
-	height : 100px
+	height : 100px;
+	border-radius: 10px;
 }
 
 .births{
     text-align: left;
+    padding-left:35px;
 }
 
 #main_ban{
@@ -2971,6 +2997,7 @@ button {
     margin-left: 15px;
     margin-right: 0px;
     flex-wrap: wrap;
+    box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);
 
 }
 
@@ -2992,5 +3019,48 @@ button {
 }
 
 .img-circle{
-   width:100px;
+    width: 250px;
+    min-width: 200px;
+    min-height: 240px;
+    max-height: 240px;
+    border-radius: inherit;
+    padding-bottom: 30px;
+}
+
+.hash_tag {
+    text-align: right;
+    margin-right: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.select_ban{
+	font-family: 'Noto Sans KR', sans-serif;
+	color:white;
+}
+
+.font_tong{
+	font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.result_idpw{
+	border-bottom:1px solid;
+	width:300px;
+	margin-left:30px;
+}
+
+#main_r {
+    margin-top: 18px;
+}
+
+.items.active {
+    border-right: black 1px solid;
+}    
+
+#mainjpg {
+    margin-left: 30px;
+    max-width: 240px;
+    max-height: 210px;
+    min-width: 240px;
+    min-height: 210px;
 }

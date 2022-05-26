@@ -202,13 +202,13 @@
                     <ul id=login class="top-social" >
                     <c:choose>
                        <c:when test="${empty loginMember }">
-                           <a href = "login.jsp"><li>로그인</li></a>
-                           <a href = "join.jsp"><li>회원가입</li></a>
+                           <a href = "login.jsp"><li class="font_tong">로그인</li></a>
+                           <a href = "join.jsp"><li class="font_tong">회원가입</li></a>
                         </c:when>
                         <c:otherwise>
                            <c:if test="${!empty loginMember }">
-                              <h5>${loginMember.id}님 환영합니다</h5>
-                              <a href="LogoutCon">로그아웃</a>   
+                              <h5 class="font_tong">${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon" class="font_tong">로그아웃</a>   
                            </c:if>
                         </c:otherwise>
                     </c:choose>

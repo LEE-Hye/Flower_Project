@@ -10,9 +10,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
 #mapwrap{position:relative;overflow:hidden;}
-.category, .category *{margin:0;padding:0;color:#000;background:pink;}   
+.category, .category *{margin:0;padding:0;color:#000;background:white;border-radius:10px;}   
 .category {position:absolute;overflow:hidden;top:10px;left:10px;width:50px;height:50px;z-index:10;border:1px solid black;font-family:'Malgun Gothic','맑은 고딕',sans-serif;font-size:12px;text-align:center;background-color:#fff;}
 .category .menu_selected {background:#FF5F4A;color:#fff;border-left:1px solid #915B2F;border-right:1px solid #915B2F;margin:0 -1px;} 
 .category li{list-style:none;float:left;width:50px;height:45px;padding-top:5px;cursor:pointer;} 
@@ -20,6 +21,17 @@
 .category .pic1{display:block;margin:0 auto 2px;width:22px;height:26px;}
 .category .pic1{display:block;margin:0 auto 2px;width:22px;height:26px;} 
 .category .ico_carpark {background-position:-10px -72px;} 
+
+.map_div{
+	   font-family: 'Happiness-Sans-Title';
+   text-align: center;
+   background-color: withe;
+   background-image: url('https://cdn4.iconfinder.com/data/icons/landscape-and-interior-background-1/1920/27._Forest_Background-256.png');
+   background-size: 75px;
+   width: 150px;
+   border: 3px solid #c6d38f;
+   z-index: 3;
+}
 </style>
 </head>
 <body>
@@ -256,7 +268,7 @@
       var 축제markers = []
       var chkflag0 = true;
       <%for(int i =0 ; i<carnivalList.size();i++){ %>
-      축제.push([<%=carnivalList.get(i).getWi()%>, <%=carnivalList.get(i).getGy()%>, '<div style="padding:5px;"><%=carnivalList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=carnivalList.get(i).getFlower()%></a></div>','<%=carnivalList.get(i).getName()%>'])
+      축제.push([<%=carnivalList.get(i).getWi()%>, <%=carnivalList.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=carnivalList.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=carnivalList.get(i).getFlower()%></a></div>','<%=carnivalList.get(i).getName()%>'])
       <%}%>
       var 일월 = []
       var 일월markers = []
@@ -286,7 +298,7 @@
       var 오월markers = []
       var chkflag5 = true;
       <%for(int i =0 ; i<month5.size();i++){ %>
-      오월.push([<%=month5.get(i).getWi()%>, <%=month5.get(i).getGy()%>, '<div style="padding:5px;"><%=month5.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month5.get(i).getFlower()%></a></div>'])
+      오월.push([<%=month5.get(i).getWi()%>, <%=month5.get(i).getGy()%>, '<div class="map_div" style="padding:5px;"><%=month5.get(i).getName()%><br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank"><%=month5.get(i).getFlower()%></a></div>'])
       <%}%>
       var 육월 = []
       var 육월markers = []

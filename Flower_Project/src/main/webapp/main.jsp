@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.domain.PostVO"%>
+<%@page import="com.smhrd.domain.PostDAO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
@@ -5,12 +7,18 @@
 <%@ page import = "com.smhrd.domain.MemberVO" %>
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
+<% 
+   PostDAO dao = new PostDAO();
+   List<PostVO> likeList = dao.selectLikeAllBoard();
+   pageContext.setAttribute("likeList", likeList);
+%>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8" />
-    <title>Flower_Project</title>\
+    <title>Flower_Project</title>
     <link rel="stylesheet" href="css/korea.css" />
 
 
@@ -74,7 +82,30 @@
     <script src="js/supersubs.js"></script>
     <script src="js/styleswitcher.js"></script>
     <script src="js/script.js"></script>
-   
+   <style>
+   		#mainjpg {
+    margin-left: 30px;
+    max-width: 240px;
+    max-height: 210px;
+    min-width: 240px;
+    min-height: 210px;
+    box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);
+    border-radius: 5px;
+}
+
+.cani_sel{
+text-align: right;
+    font-size: 17px;
+    margin-right: -298px;
+    color: #ffb5b9;
+}
+    
+.cani_sels{
+font-size: 15px;
+    color: gray;
+    margin-right: 327px;
+}
+   </style>
 </head>
  <script type="text/javascript" src="js/d3.js"></script>
     <script type="text/javascript" src="js/korea.js"></script>
@@ -104,13 +135,13 @@
                     <ul class="top-social">
                     <c:choose>
                        <c:when test="${empty loginMember }">
-                           <a href = "login.jsp"><li>로그인</li></a>
-                           <a href = "join.jsp"><li>회원가입</li></a>
+                           <a href = "login.jsp"><li class="font_tong">로그인</li></a>
+                           <a href = "join.jsp"><li class="font_tong">회원가입</li></a>
                         </c:when>
                         <c:otherwise>
                            <c:if test="${!empty loginMember }">
-                              <h5>${loginMember.id}님 환영합니다</h5>
-                              <a href="LogoutCon">로그아웃</a>   
+                              <h5 class="font_tong">${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon" class="font_tong">로그아웃</a>   
                            </c:if>
                         </c:otherwise>
                     </c:choose>
@@ -270,13 +301,16 @@
                     <div>
                     <iframe width="100%" height="700px" src="api_main1.jsp" scrolling="no"></iframe>       
                 	</div>
+                	<span class="cani_sels">마커 우클릭 : 길찾기 이동</span>
                 </article>
                 <article class="arts half">
-                    <h3>5월 축제 뿜뿜🎉<h3>
+                    <h3>5월 축제 뿜뿜🎉<a class ="mouse-click"><h3>
                     <div>
-                    <iframe width="100%" height="700px" src="api_main2.jsp" scrolling="no"></iframe>
+                    <iframe width="100%" height="700px" src="api_main2.jsp" scrolling="no"></iframe> 
                     </div>
+                    <a href="select.jsp"><span class="cani_sel" >축제 나들이 조회로 이동 ▶</span></a>
                 </article>
+               
             </section>
         </div>
     </div>
@@ -291,7 +325,7 @@
          
          
     <div class="row">
-        <a href="flower_rec.jsp"><div class="col-md-5">
+        <a href="flower_rec.jsp"><div class="col-md-5" id="main_r">
             <div class="home-about-us">
                 <h3 class="section-title">🌹꽃 요리 레시피🌹 </h3>
                 <img src="images/f_rec.jpg" class="img-responsive" alt="">
@@ -303,31 +337,15 @@
                 <h3 class="section-title">꽃과 함께하는 OOTD٩( ᐛ )و</h3>
                 <div class="row">
                     
-                    <div class="col-md-6 col-sm-6">
-                        <div class="project">
-                            <img src="images/running-project/running1.jpg" class="img-responsive" alt="">
-
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-sm-6">
-                        <div class="project">
-                            <img src="images/running-project/running2.jpg" class="img-responsive" alt="">
-                        </div>
-                    </div>
-                
-                    <div class="col-md-6 col-sm-6">
-                        <div class="project">
-                            <img src="images/running-project/running3.jpg" class="img-responsive" alt="">
-
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-sm-6">
-                        <div class="project">
-                            <img src="images/running-project/running4.jpg" class="img-responsive" alt="">
-                        </div>
-                    </div>
+                    <c:forEach var="like" items="${likeList}" begin="0" end="3">
+							<div class="col-md-6 col-sm-6">
+							<a href="SelectPostCon?pnum=${like.pnum}">
+								<div class="project">
+									<img id="mainjpg" src='<c:out value="upload/${like.sname}" />'
+										class="img-responsive" alt="호감도순사진">
+								</div>
+							</div>
+					</c:forEach>
                     
                 </div>
             </div>
@@ -438,9 +456,9 @@
     
     
     </div><!-- /.container -->
-<script src="app.js"></script>
-         <script>
-            const API_KEY = "#"; //add your API KEY 
+
+ <script>
+    const API_KEY = "591998c0423f5ab7c296cccae8075f9b"; //add your API KEY 
     const COORDS = "coords"; //좌표를 받을 변수 
     
     //DOM객체들 
@@ -474,8 +492,11 @@
     
     //날씨 api를 통해 날씨에 관련된 정보들을 받아온다. 
     function getWeather(lat, lon) {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${'591998c0423f5ab7c296cccae8075f9b'}&units=metric&lang=kr`).then(function(response) {
-            return response.json();
+       console.log('getWeather:', lat, lon);
+       
+        fetch("http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+API_KEY+"&units=metric&lang=kr").then(function(response) {
+           
+           return response.json();
         })
         
         .then(function(json) {
@@ -484,10 +505,10 @@
             const place = json.name;
             const weatherDescription = json.weather[0].description;
             const weatherIcon = json.weather[0].icon;
-            const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+            const weatherIconAdrs = "http://openweathermap.org/img/wn/"+weatherIcon+"@2x.png";
         
             //받아온 정보들을 표현한다. 
-            weatherInfo.innerText = `${temperature} °C / @${place} / ${weatherDescription}`;
+            weatherInfo.innerText = temperature+" °C / @"+place+" / "+weatherDescription;
             weatherIconImg.setAttribute("src", weatherIconAdrs);
         })
         .catch((error) => console.log("error:", error));
@@ -496,5 +517,5 @@
     init();
         </script> 
 </body>
-<script src="app.js"></script>
+
 </html>

@@ -7,14 +7,8 @@
 <%@ page import = "com.smhrd.domain.MemberVO" %>
 <%@ page import = "com.smhrd.domain.MemberDAO" %>
 <%@ page import = "java.util.List" %>
-<% 
-   PostDAO dao = new PostDAO();
-   List<PostVO> postList = dao.selectAllBoard();
-   System.out.println("갯수 : "+ postList.size());
-   pageContext.setAttribute("postList", postList);
-   
-   System.out.print(postList.get(0));
-%>
+
+
 
 
 <!DOCTYPE html>
@@ -88,6 +82,7 @@
     <script src="js/script.js"></script>
     
 <style type="text/css">
+
 @font-face {
     font-family: 'Happiness-Sans-Title';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
@@ -95,21 +90,14 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: '양진체';
-    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
- }
 
-
-	#flower_hash{
-		width:138px;
-	}
-	
     #login{
         text-align: right;
     }
+
+	#flower_hash2{
+		width:138px;
+	}
 
 
     body{
@@ -246,13 +234,13 @@ font-family: 'Happiness-Sans-Title';
                     <ul id=login class="top-social" >
                     <c:choose>
                        <c:when test="${empty loginMember }">
-                           <a href = "login.jsp"><li class="font_tong">로그인</li></a>
-                           <a href = "join.jsp"><li class="font_tong">회원가입</li></a>
+                           <a href = "login.jsp"><li>로그인</li></a>
+                           <a href = "join.jsp"><li>회원가입</li></a>
                         </c:when>
                         <c:otherwise>
                            <c:if test="${!empty loginMember }">
-                              <h5 class="font_tong">${loginMember.id}님 환영합니다</h5>
-                              <a href="LogoutCon" class="font_tong">로그아웃</a>   
+                              <h5>${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon">로그아웃</a>   
                            </c:if>
                         </c:otherwise>
                     </c:choose>
@@ -313,7 +301,7 @@ font-family: 'Happiness-Sans-Title';
         </div>
     </div>
 </div>
-<br>
+<br><br><br>
      
     <!-- 로그인해야지만 글쓰기 버튼누르기 -->
    
@@ -323,43 +311,31 @@ font-family: 'Happiness-Sans-Title';
         </div>
     </c:if>
     
+    <br><br><br>
     
-
- 
-<br><br><br>
     
-
-
-    
-
-
-
-
-
-<c:forEach var="b" items="${postList}">
+<c:forEach var="f" items="${hashList}">
 <div class="col-sm-3 col-lg-3">
     <div class="dash-unit">
-        <a href="SelectPostCon?pnum=${b.pnum}">
-        <div>
-        <!--  
-        <span class="post_number"><c:out value="${b.pnum}" /></span>
-        -->
-        <div class= "hash_tag">${b.fid}</div>
+        <a href="SelectPostCon?pnum=${f.pnum}">
+		<div>
+	        <div class= "hash_tag">${f.fid}</div>
         </div>
-       
       <div class="thumbnail">
-      <!--  <h3 id="titleda"><c:out value="${b.title}" /></h3>-->
-         <img src='<c:out value="upload/${b.sname}" />' class="img-circle">
+     <!--  <img src="images/flower/겨울_동백나무.jpg" class="img-circle"> -->
+         <img src='<c:out value="upload/${f.sname}" />' class="img-circle">
       </div><!-- /thumbnail -->
-      <p id="idda"><c:out value="${b.title}"/><p>
-      
+      <p id="idda"><c:out value="${f.title}"/><p>
+
       <br>
     </a>
     </div>
 </div>
-</c:forEach>
+</c:forEach>    
 
-<li id='liSearchOption'>
+ 
+<br>
+            <li id='liSearchOption'>
             <tr>
             <td colspan="5">
                <form action="HashPostCon" method="post" name="boardfrom" class="boardFrom">
@@ -370,7 +346,7 @@ font-family: 'Happiness-Sans-Title';
          </tr>
 
       </li>
-
+    
     
     <li>
         <div id="divPaging">
@@ -527,52 +503,55 @@ font-family: 'Happiness-Sans-Title';
                           <a onclick="inputNum('매화')" style="cursor: pointer;"><td>#매화 </td></a>
                           
                       </div>
+               
+             
+
+
+<br><br><br>
 
 
 
-
-
-
-
-
-
-
-
-    <!-- 검색 폼 영역 -->
-    <li id='liSearchOption'>
-    
-    <!--  
-    <tr align="center">
-            <td colspan="5">
-               <form action="boardSearch.do" method="post">
-                  <select name="part">
-                     <option value="b_subject">제목</option>
-                     <option value="b_content">내용</option>
-                  </select> 
-                  <input type="text" name="searchData" required="required" /> 
-                  <input type="submit"  value="검색" />
-               </form>
-            </td>
-         </tr>
-
--->
-
-
-      </li>
-    
-   
+  
    
     <br><br><br><br><br><br><br><br><br><br><br><br>
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
     
-    <script>
-    function inputNum(text){
-        document.getElementById('flower_hash').value = text;
-    }
-    
-    </script>
-    
+    <script src="js/insta.js"></script>
+
+<script>
+       var fileInput  = document.querySelector( "#id_photo" ),
+           button     = document.querySelector( ".input-file-trigger" ),
+           the_return = document.querySelector(".file-return");
+
+       // Show image
+       fileInput.addEventListener('change', handleImage, false);
+       var canvas = document.getElementById('imageCanvas');
+       var ctx = canvas.getContext('2d');
+
+
+        function handleImage(e){
+           var reader = new FileReader();
+           reader.onload = function(event){
+               var img = new Image();
+               // var imgWidth =
+               img.onload = function(){
+                   canvas.width = 300;
+                   canvas.height = 300;
+                   ctx.drawImage(img,0,0,300,300);
+               };
+               img.src = event.target.result;
+               // img.width = img.width*0.5
+               // canvas.height = img.height;
+           };
+           reader.readAsDataURL(e.target.files[0]);
+       }
+
+       function inputNum(text){
+                  document.getElementById('flower_hash').value = text;
+              }
+
+</script>
 </body>
 
 </html>

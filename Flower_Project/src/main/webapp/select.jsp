@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!doctype html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
@@ -7,11 +8,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>koreaMap</title>
-    <link rel="stylesheet" href="css/korea.css" />
+    <title>Flower_Project</title>
 
-    <!-- Basic -->
-    <title>Construction | 꽃</title>
 
     <!-- Define Charset -->
     <meta charset="utf-8">
@@ -104,12 +102,18 @@
             <div class="col-md-7 col-sm-7">
                 <div class="top-info">
                     <ul class="top-social">
-                        <a href = "login.jsp">
-                            <li>로그인</li>
-                        </a>
-                        <a href = "join.jsp">
-                            <li>회원가입</li>
-                        </a>
+          			<c:choose>
+                       <c:when test="${empty loginMember }">
+                           <a href = "login.jsp"><li class="font_tong">로그인</li></a>
+                           <a href = "join.jsp"><li class="font_tong">회원가입</li></a>
+                        </c:when>
+                        <c:otherwise>
+                           <c:if test="${!empty loginMember }">
+                              <h5 class="font_tong">${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon" class="font_tong">로그아웃</a>   
+                           </c:if>
+                        </c:otherwise>
+                    </c:choose>
                     </ul>
                 </div>
             </div>
@@ -157,15 +161,28 @@
         
     </div>
     <!-- End Navigation Section -->
-    
+        <div class="row">
+        <div class="col-md-12">
+            <div class="call-to-action">
+                <div class="overlay">
+                    <h1>
+                  		꽃구경 갈까요?
+                 	</h1>
+                 	<h3 class="select_ban">
+                 	원하시는 카테고리를 선택하세요.<br><br>
+좌클릭 : 확대<br>
+우클릭 : 길찾기 이동</h3>
+                 </div>
+            </div>
+        </div>
+    </div>
     
     
     <div class="wrap">
         <div class="galleries">
-            <section class="gallery_main">
+            <section id="gallery_mainsss">
                 <article>
-                    <h3>🎇🧨✨🎊🎉🎆🎊🎉🧨🎇선택해🎆🎇🧨✨🎊🎉🎆🎇🧨✨🎊🎉<div>
-                    <iframe width="1000px" height="900px" src="api_map_select.jsp" scrolling = "no"></iframe>       
+                    <iframe width="900px" height="900px" src="api_map_select.jsp" scrolling = "no"></iframe>       
                 	</div>
                 </article>
             </section>

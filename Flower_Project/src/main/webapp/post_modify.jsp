@@ -214,13 +214,13 @@
                     <ul id=login class="top-social" >
                     <c:choose>
                        <c:when test="${empty loginMember }">
-                           <a href = "login.jsp"><li>로그인</li></a>
-                           <a href = "join.jsp"><li>회원가입</li></a>
+                           <a href = "login.jsp"><li class="font_tong">로그인</li></a>
+                           <a href = "join.jsp"><li class="font_tong">회원가입</li></a>
                         </c:when>
                         <c:otherwise>
                            <c:if test="${!empty loginMember }">
-                              <h5>${loginMember.id}님 환영합니다</h5>
-                              <a href="LogoutCon">로그아웃</a>   
+                              <h5 class="font_tong">${loginMember.id}님 환영합니다</h5>
+                              <a href="LogoutCon" class="font_tong">로그아웃</a>   
                            </c:if>
                         </c:otherwise>
                     </c:choose>
@@ -284,7 +284,7 @@
 
         <div class="post_form_container">
             <form action="" method="post" enctype="multipart/form-data" id="ModiForm" class="post_form">
-                <input name="pnum" type="text" value="${post.pnum}" readonly></input>
+                <input name="pnum" type="text" value="${post.pnum}" hidden></input>
                 <input name="mid" type="text" value="${post.mid}" readonly></input>
                 <div id="in_title">
                     <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="20" required><c:out value="${post.title}"></c:out></textarea>
@@ -310,7 +310,7 @@
                     (주의사항 : 이미지를 변경하고자 할때만 선택하시오.)
                 </p>
                 <p>
-                    <textarea name="content" id="text_field" cols="50" rows="5" ><c:out value="${post.content}" /></textarea>
+                    <textarea name="content" id="text_field" cols="50" rows="5" maxlength="1000"><c:out value="${post.content}" /></textarea>
 
                 </p>
                 <br>
@@ -486,6 +486,7 @@
                   
 
                 <input class="submit_btn" id = "update" type="submit" value="수정" >
+                <input class="submit_btn" id="delete" type="submit" value="삭제">
                 
             </form>
 				

@@ -15,7 +15,7 @@
     <style>
 #mapwrap{position:relative;overflow:hidden;}
 .category, .category *{margin:0;padding:0;color:#000;background:white;box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);}   
-.category {position:absolute;overflow:hidden;top:10px;left:10px;width:650px;height:50px;z-index:10;border:1px solid black;font-family:'Malgun Gothic','맑은 고딕',sans-serif;font-size:12px;text-align:center;background-color:#fff;border-radius: 5px;}
+.category {position:absolute;overflow:hidden;top:10px;left:10px;width:650px;height:50px;z-index:10;border:1px solid black;font-family:'Malgun Gothic','맑은 고딕',sans-serif;font-size:12px;text-align:center;background-color:#fff;border-radius: 10px;}
 .category .menu_selected {background:#FF5F4A;color:#fff;border-left:1px solid #915B2F;border-right:1px solid #915B2F;margin:0 -1px;} 
 .category li{list-style:none;float:left;width:50px;height:45px;padding-top:5px;cursor:pointer;} 
 .category .ico_comm {display:block;margin:0 auto 2px;width:22px;height:26px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/category.png') no-repeat;} 
@@ -24,14 +24,20 @@
 .category .ico_carpark {background-position:-10px -72px;} 
 
 .map_div{
-	font-family: 'Happiness-Sans-Title';
-	text-area: 'center';
+   font-family: 'Happiness-Sans-Title';
+   text-align: center;
+   background-color: withe;
+   background-image: url('https://cdn4.iconfinder.com/data/icons/landscape-and-interior-background-1/1920/27._Forest_Background-256.png');
+   background-size: 75px;
+   width: 150px;
+   border: 3px solid #c6d38f;
+   z-index: 3;
 }
 
 </style>
 </head>
 <body>
-   <div id="map" style="width:100%;height:70vh;"></div>
+   <div id="map" style="width:100%;height:100vh;"></div>
    <form>
        <div class="category">
         <ul>

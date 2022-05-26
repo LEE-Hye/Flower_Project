@@ -60,27 +60,26 @@ public class ReplyDAO {
 	}
 	
 	//댓글 수정기능
-	public int updateReply(ReplyVO r_vo) {
-		
-		System.out.println(r_vo);
-		
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		int cnt=0;
-		try {
-			cnt = sqlSession.update("com.smhrd.domain.ReplyDAO.updateReply",r_vo);
-			if(cnt>0) {
-	            sqlSession.commit();
-	         }else {
-	            sqlSession.rollback();
-	         }
-		}  catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			sqlSession.close();
-		}
-		System.out.println("쿼리실행결과:"+cnt);
-		return cnt;
-	}
+	   public int updateReply(ReplyVO r_vo) {
+	      SqlSession sqlSession = sqlSessionFactory.openSession();
+	      int cnt=0;
+	      
+	      try {
+	         cnt = sqlSession.update("com.smhrd.domain.ReplyDAO.updateReply",r_vo);
+	         if(cnt>0) {
+	               sqlSession.commit();
+	            }else {
+	               sqlSession.rollback();
+	            }
+	      }  catch (Exception e) {
+	         e.printStackTrace();
+	      }finally {
+	         sqlSession.close();
+	      }
+	      
+	      System.out.println("쿼리실행결과:"+cnt);
+	      return cnt;
+	   }
 	
 	//댓글 삭제기능
 	public int deleteReply(int reply_num) {
