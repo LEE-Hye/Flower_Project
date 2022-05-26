@@ -42,6 +42,9 @@
 ### 옷 정보/코디 추천(날씨, 팁, 오늘의 코디, 참고할 수 있는 코디)
 ![image](https://user-images.githubusercontent.com/99248886/166612875-aee9b25d-00ff-4c07-a21f-975ccd8e6a0f.png)
 
+### 로그인한 경우 게시판 수정/삭제 가능
+![image](https://user-images.githubusercontent.com/104408990/170410445-cabaf451-0740-4dd3-aa8e-b11a134d618a.png)
+
 ### 일정/고객센터
 ![image](https://user-images.githubusercontent.com/99248886/166612374-a2f6d85b-501d-4a51-a0d1-8cde0c07ebf2.png)
 
