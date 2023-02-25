@@ -69,7 +69,8 @@
 ![image](https://user-images.githubusercontent.com/104408832/170409380-577d3309-a57c-4ae6-97de-c5e360e75fda.png)
 
 ## 6. 제작 일정
-![image](https://user-images.githubusercontent.com/99248886/166612988-dc4d1968-a694-456c-b7fe-b65feef835bb.png)
+![캡처](https://user-images.githubusercontent.com/91482127/221341702-bcec77c1-ca4a-4a48-b0f4-be5287047a30.PNG)
+
 
 ## 7. 팀원 단위 업무 분장 및 결과표
 ![image](https://user-images.githubusercontent.com/104408832/170409491-1f8a6152-03f1-4af5-9c00-be84a7928a52.png)
