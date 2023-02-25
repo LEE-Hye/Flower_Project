@@ -44,7 +44,7 @@
 #### 서비스 흐름도(웹 화면설계서)
 ![image](https://user-images.githubusercontent.com/104408832/170409136-dc898696-069d-4191-be46-021d7cb6135b.png)
 #### ER 다이어그램
-![image](https://user-images.githubusercontent.com/25995055/169925318-102784c2-893f-4fd7-bec9-a54c44b669d4.png)
+![캡처](https://user-images.githubusercontent.com/91482127/221341585-ff1730f9-bf65-45e1-bf33-0444aed10676.PNG)
 
 ## 5. SW 동작 화면
 
