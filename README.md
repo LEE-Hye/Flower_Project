@@ -51,7 +51,7 @@
 ### 로그인/회원가입/회원괸리/회원수정/회원탈퇴
 ![image](https://user-images.githubusercontent.com/104408832/170409263-a2f813b4-39ab-4993-baa0-3d330b01f486.png)
 
-### 옷 정보/코디 추천(날씨, 팁, 오늘의 코디, 참고할 수 있는 코디)
+### 현재 개화된 꽃, 축제 정보 카카오 map을 통해 확인
 ![image](https://user-images.githubusercontent.com/104408832/170409305-7920428d-dd2b-4fd1-a858-bfe97ef66118.png)
 
 ### 꽃 도감 기능
