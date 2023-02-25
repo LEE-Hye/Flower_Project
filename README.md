@@ -3,8 +3,8 @@
 
 
 ## 1. 프로젝트명
-* 꽃 나들이를 위한 정보 제공 서비스
-* 서비스설명: 꽃 개화 시기별 우리 지역 근처 데이트/드라이브 추천 장소 및 꽃 축제 추천 
+* 나들이가는 사람들을 위한 꽃 구경 정보 제공 서비스
+* 서비스설명: 꽃 축제 장소 추천, 개화 시기, 꽃 요리 레시피 정보 제공 등
 
 ## 2. 주요기능
 * 메인
@@ -14,7 +14,10 @@
    - 오른쪽 하단 이주의 추천글(3개정도) 
  
 * 카테고리
-
+   - 개화시기 알려줌
+   - 장소
+   - 꽃 관련축제
+   - 게시판
 
 * 회원가입 시 게시판 이용 가능
    - 게시판 내에 후기 작성하는 곳
@@ -24,11 +27,11 @@
 ## 3. 개발환경
 |구분|내용|
 |------|---|
-|사용언어|Java, HTML, CSS, JavaScript|
+|사용언어|Java / HTML / CSS / JavaScript / python / etc...|
 |사용한 라이브러리| Bootstrap / Kakao Map / etc...|
-|개발도구|Eclipse / RaspberryPi  /  Arduino  /  VisualStudioCode  /  AndroidStudio  / SpringFramework / etc...|
+|개발도구|Eclipse / VisualStudioCode|
 |서버환경|tomcat 9.0|
-|데이터베이스|Firebase  /  oracle 11g / etc..|
+|데이터베이스|ORACLE|
 
 ## 4. 아키텍처(구조)
 ![서비스 아키텍처](https://user-images.githubusercontent.com/25995055/169925538-15867bd9-aa0b-42fc-a39b-88981e926e51.png)
