@@ -65,7 +65,6 @@
 ### 로그인한 경우 게시판 수정/삭제 가능
 ![image](https://user-images.githubusercontent.com/104408990/170410445-cabaf451-0740-4dd3-aa8e-b11a134d618a.png)
 
-### 일정/고객센터
 ![image](https://user-images.githubusercontent.com/104408832/170409380-577d3309-a57c-4ae6-97de-c5e360e75fda.png)
 
 ## 6. 제작 일정
