@@ -99,7 +99,7 @@
     </div>
     </form>
     
-   <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e98ea6bbf35f78f0fe5bed829537d85&libraries=clusterer"></script>
+   <script src="http//dapi.kakao.com/v2/maps/sdk.js?appkey=3e98ea6bbf35f78f0fe5bed829537d85&libraries=clusterer"></script>
    <script>
       var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
           mapOption = {
