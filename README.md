@@ -30,7 +30,7 @@
 ## 3. 개발환경
 |구분|내용|
 |------|---|
-|사용언어|Java / HTML / CSS / JavaScript / etc...|
+|사용언어|Java / HTML / Python / JavaScript / etc...|
 |사용한 라이브러리| Bootstrap / Kakao Map / etc...|
 |개발도구|Eclipse / VisualStudioCode|
 |서버환경|tomcat 9.0|
